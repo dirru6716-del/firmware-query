@@ -190,8 +190,8 @@ function query() {
   if (!firmwareDB) { status.textContent = '資料庫尚未載入，請稍後再試'; return; }
 
   const fields = raw.split(',');
-  if (fields.length < 34) {
-    status.textContent = `欄位數不足（偵測到 ${fields.length} 欄，需至少 34 欄）`;
+  if (fields.length < 10) {
+    status.textContent = `欄位數不足（偵測到 ${fields.length} 欄），請確認字串格式正確`;
     return;
   }
 
