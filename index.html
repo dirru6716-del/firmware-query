@@ -200,14 +200,28 @@ function query() {
   const overall = fields[2].trim();
 
   // ── 自動偵測版本日期：掃描所有欄位，不寫死索引 ──────────────
-  const VER_RE = /(\d{8}_\d{4})/;
+  //const VER_RE = /(\d{8}_\d{4})/;
+  //let versionDate = '';
+  //let verIdx = -1;
+  //for (let i = 3; i < fields.length; i++) {
+  //  const m = fields[i].trim().match(VER_RE);
+  //  if (m) { versionDate = m[1]; verIdx = i; break; }
+  //}
+
+  // ── 修正後的版本日期偵測 ──────────────
+  // 支援 YYYYMMDD_HHMM 或 YYYY_MMDD_HHMM
+  const VER_RE = /(\d{4}_?\d{4}_\d{4})/;
   let versionDate = '';
   let verIdx = -1;
   for (let i = 3; i < fields.length; i++) {
     const m = fields[i].trim().match(VER_RE);
-    if (m) { versionDate = m[1]; verIdx = i; break; }
+    if (m) {
+      versionDate = m[1];
+      verIdx = i;
+      break;
+    }
   }
-
+  
   if (!versionDate) {
     status.textContent = `無法從字串解析版本日期（格式：YYYYMMDD_HHMM，共 ${fields.length} 欄）`;
     return;
