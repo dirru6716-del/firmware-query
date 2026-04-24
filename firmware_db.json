@@ -1,7 +1,254 @@
 {
-  "generated": "2026-04-24T15:33:45",
-  "version": "2026_0424_1630",
+  "generated": "2026-04-24T16:45:53",
+  "version": "2026_0424_1730",
   "firmware": [
+    {
+      "version_date": "20260423_0945",
+      "folder_name": "Main_BOARD_TESTER_20260423_0945_0x6952.hex",
+      "folder_path": "D:/yuanyu/733/TMC3/9Q/M/Main_BOARD_TESTER_20260423_0945",
+      "excel_sheet": "733-TMC3 ECU半成品&成品",
+      "case_name": "733-TMC3 ECU半成品&成品",
+      "change_notes": "1.修改通過UR測試後，但是ECU的TX 線材出現問題，會導致卡在某測項，新增TIME OUT機制。",
+      "release_date": "2026-04-23",
+      "test_results": [
+        "OS_TEST_result",
+        "POWER_ON_Test_result",
+        "show_test_result",
+        "COMM_test_result",
+        "BACK_test_result",
+        "BACK_OUT_result",
+        "CAR_RIGHT_TEST_result",
+        "CAR_LEFT_TEST_result",
+        "SPEED_TEST_result",
+        "Voltage_TEST_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 2,
+          "name": "sys_on_current_DATA"
+        },
+        {
+          "idx": 4,
+          "name": "CAR_BACK_OUT_V_DATA"
+        },
+        {
+          "idx": 5,
+          "name": "Dynmic_current_DATA"
+        },
+        {
+          "idx": 6,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 9,
+          "name": "TESTER_NAME_DATA"
+        },
+        {
+          "idx": 10,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 11,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 12,
+          "name": "ERR_DATA_2"
+        }
+      ],
+      "test_steps": {
+        "1": "OS_TEST_1_1_STEP",
+        "2": "OS_TEST_1_2_STEP",
+        "3": "OS_TEST_1_3_STEP",
+        "4": "OS_TEST_1_4_STEP",
+        "5": "CHACK_Current_1_1_STEP",
+        "6": "CHACK_Current_2_1_STEP",
+        "7": "CHACK_Current_2_2_STEP",
+        "8": "CCD_POWER_CHECK_STEP",
+        "9": "OS_TEST_2_1_STEP",
+        "10": "OS_TEST_2_2_STEP",
+        "11": "Check_Screen_STEP",
+        "12": "UR_NG_STEP",
+        "13": "CAR_RIGHT_TEST_1_STEP",
+        "14": "CAR_RIGHT_TEST_2_STEP",
+        "15": "CAR_LEFT_TEST_STEP",
+        "16": "CAR_BACK_TEST_1_STEP",
+        "17": "CAR_BACK_TEST_2_STEP",
+        "18": "SPEED_TEST_STEP",
+        "19": "MCU_VER_STEP",
+        "20": "SOC_VER_STEP",
+        "21": "voltage_test_STEP",
+        "22": "Work_current_test_STEP",
+        "23": "SLEEP_MODE_1_STEP",
+        "24": "SLEEP_MODE_2_STEP",
+        "25": "SLEEP_MODE_3_STEP",
+        "26": "PASS_STEP",
+        "30": "Temp_STEP_1",
+        "31": "Temp_STEP_2",
+        "32": "Check_Ver_STEP",
+        "33": "OS_TEST_1_1_2_STEP",
+        "35": "Check_Screen_STEP_2"
+      },
+      "ng_reasons": {
+        "1": {
+          "step_name": "OS_TEST_1_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "OS_TEST_1_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "OS_TEST_1_3_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "OS_TEST_1_4_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "CHACK_Current_1_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "CHACK_Current_2_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "CHACK_Current_2_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "CCD_POWER_CHECK_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "OS_TEST_2_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "OS_TEST_2_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "Check_Screen_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "12": {
+          "step_name": "UR_NG_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "13": {
+          "step_name": "CAR_RIGHT_TEST_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "14": {
+          "step_name": "CAR_RIGHT_TEST_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "15": {
+          "step_name": "CAR_LEFT_TEST_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "16": {
+          "step_name": "CAR_BACK_TEST_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "17": {
+          "step_name": "CAR_BACK_TEST_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "18": {
+          "step_name": "SPEED_TEST_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "19": {
+          "step_name": "MCU_VER_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "20": {
+          "step_name": "SOC_VER_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "21": {
+          "step_name": "voltage_test_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "22": {
+          "step_name": "Work_current_test_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "23": {
+          "step_name": "SLEEP_MODE_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "24": {
+          "step_name": "SLEEP_MODE_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "25": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "26": {
+          "step_name": "PASS_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "30": {
+          "step_name": "Temp_STEP_1",
+          "description": "",
+          "err_data": []
+        },
+        "31": {
+          "step_name": "Temp_STEP_2",
+          "description": "",
+          "err_data": []
+        },
+        "32": {
+          "step_name": "Check_Ver_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "33": {
+          "step_name": "OS_TEST_1_1_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "35": {
+          "step_name": "Check_Screen_STEP_2",
+          "description": "",
+          "err_data": []
+        }
+      }
+    },
     {
       "version_date": "20260422_1437",
       "folder_name": "Main_BOARD_TESTER_20260422_1437_0x6c0f.hex",
@@ -754,6 +1001,253 @@
               "map": {}
             }
           ]
+        }
+      }
+    },
+    {
+      "version_date": "20260402_1548",
+      "folder_name": "Main_BOARD_TESTER_20260402_1548_0XB4DA.hex",
+      "folder_path": "D:/yuanyu/733/TMC3/9Q/M/Main_BOARD_TESTER_20260402_1548",
+      "excel_sheet": "733-TMC3 ECU半成品&成品",
+      "case_name": "733-TMC3 ECU半成品&成品",
+      "change_notes": "1.有更改，需檢查軟體。",
+      "release_date": "2026-04-02",
+      "test_results": [
+        "OS_TEST_result",
+        "POWER_ON_Test_result",
+        "show_test_result",
+        "COMM_test_result",
+        "BACK_test_result",
+        "BACK_OUT_result",
+        "CAR_RIGHT_TEST_result",
+        "CAR_LEFT_TEST_result",
+        "SPEED_TEST_result",
+        "Voltage_TEST_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 2,
+          "name": "sys_on_current_DATA"
+        },
+        {
+          "idx": 4,
+          "name": "CAR_BACK_OUT_V_DATA"
+        },
+        {
+          "idx": 5,
+          "name": "Dynmic_current_DATA"
+        },
+        {
+          "idx": 6,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 9,
+          "name": "TESTER_NAME_DATA"
+        },
+        {
+          "idx": 10,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 11,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 12,
+          "name": "ERR_DATA_2"
+        }
+      ],
+      "test_steps": {
+        "1": "OS_TEST_1_1_STEP",
+        "2": "OS_TEST_1_2_STEP",
+        "3": "OS_TEST_1_3_STEP",
+        "4": "OS_TEST_1_4_STEP",
+        "5": "CHACK_Current_1_1_STEP",
+        "6": "CHACK_Current_2_1_STEP",
+        "7": "CHACK_Current_2_2_STEP",
+        "8": "CCD_POWER_CHECK_STEP",
+        "9": "OS_TEST_2_1_STEP",
+        "10": "OS_TEST_2_2_STEP",
+        "11": "Check_Screen_STEP",
+        "12": "UR_NG_STEP",
+        "13": "CAR_RIGHT_TEST_1_STEP",
+        "14": "CAR_RIGHT_TEST_2_STEP",
+        "15": "CAR_LEFT_TEST_STEP",
+        "16": "CAR_BACK_TEST_1_STEP",
+        "17": "CAR_BACK_TEST_2_STEP",
+        "18": "SPEED_TEST_STEP",
+        "19": "MCU_VER_STEP",
+        "20": "SOC_VER_STEP",
+        "21": "voltage_test_STEP",
+        "22": "Work_current_test_STEP",
+        "23": "SLEEP_MODE_1_STEP",
+        "24": "SLEEP_MODE_2_STEP",
+        "25": "SLEEP_MODE_3_STEP",
+        "26": "PASS_STEP",
+        "30": "Temp_STEP_1",
+        "31": "Temp_STEP_2",
+        "32": "Check_Ver_STEP",
+        "33": "OS_TEST_1_1_2_STEP",
+        "35": "Check_Screen_STEP_2"
+      },
+      "ng_reasons": {
+        "1": {
+          "step_name": "OS_TEST_1_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "OS_TEST_1_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "OS_TEST_1_3_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "OS_TEST_1_4_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "CHACK_Current_1_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "CHACK_Current_2_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "CHACK_Current_2_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "CCD_POWER_CHECK_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "OS_TEST_2_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "OS_TEST_2_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "Check_Screen_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "12": {
+          "step_name": "UR_NG_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "13": {
+          "step_name": "CAR_RIGHT_TEST_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "14": {
+          "step_name": "CAR_RIGHT_TEST_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "15": {
+          "step_name": "CAR_LEFT_TEST_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "16": {
+          "step_name": "CAR_BACK_TEST_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "17": {
+          "step_name": "CAR_BACK_TEST_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "18": {
+          "step_name": "SPEED_TEST_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "19": {
+          "step_name": "MCU_VER_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "20": {
+          "step_name": "SOC_VER_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "21": {
+          "step_name": "voltage_test_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "22": {
+          "step_name": "Work_current_test_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "23": {
+          "step_name": "SLEEP_MODE_1_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "24": {
+          "step_name": "SLEEP_MODE_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "25": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "26": {
+          "step_name": "PASS_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "30": {
+          "step_name": "Temp_STEP_1",
+          "description": "",
+          "err_data": []
+        },
+        "31": {
+          "step_name": "Temp_STEP_2",
+          "description": "",
+          "err_data": []
+        },
+        "32": {
+          "step_name": "Check_Ver_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "33": {
+          "step_name": "OS_TEST_1_1_2_STEP",
+          "description": "",
+          "err_data": []
+        },
+        "35": {
+          "step_name": "Check_Screen_STEP_2",
+          "description": "",
+          "err_data": []
         }
       }
     },
