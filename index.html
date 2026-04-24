@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>測試資料查詢工具</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      color: #1a1a2e;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .input-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    textarea {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: "Consolas", monospace;
+      font-size: 0.82rem;
+      resize: vertical;
+      min-height: 56px;
+    }
+    button#queryBtn {
+      padding: 8px 20px;
+      background: #4a6cf7;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+    button#queryBtn:hover { background: #3a5be0; }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 5px 14px;
+      font-size: 0.9rem;
+    }
+    .meta-grid .label { color: #666; white-space: nowrap; }
+    .meta-grid .value { font-weight: 500; }
+    .result-ok  { color: #16a34a; font-weight: bold; }
+    .result-ng  { color: #dc2626; font-weight: bold; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    th {
+      background: #f4f6fb;
+      padding: 7px 10px;
+      text-align: left;
+      border-bottom: 2px solid #dde3f0;
+      font-weight: 600;
+      color: #444;
+    }
+    td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #eef0f5;
+    }
+    tr:hover td { background: #f9faff; }
+    .pass { color: #16a34a; font-weight: bold; }
+    .fail { color: #dc2626; font-weight: bold; }
+    .dash { color: #aaa; }
+    .ng-box {
+      background: #fff8f8;
+      border: 1px solid #fca5a5;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+    .ng-box h3 { color: #b91c1c; margin-bottom: 12px; }
+    .ng-detail { font-size: 0.9rem; line-height: 1.8; }
+    .ng-detail strong { color: #222; }
+    .hidden { display: none; }
+    #status {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    #dbInfo {
+      font-size: 0.78rem;
+      color: #999;
+      text-align: right;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+    .not-found {
+      color: #b45309;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>測試資料查詢工具</h1>
+
+  <div id="dbInfo">資料庫載入中...</div>
+
+  <div class="card">
+    <div class="input-row">
+      <textarea id="dataInput" placeholder="貼上測試字串，例如：DATA,2615103179,OK,P,P,..."></textarea>
+      <button id="queryBtn" onclick="query()">查詢</button>
+    </div>
+    <div id="status"></div>
+  </div>
+
+  <div id="resultArea" class="hidden">
+    <!-- 版本資訊 -->
+    <div class="card" id="metaCard">
+      <div class="meta-grid" id="metaGrid"></div>
+    </div>
+
+    <!-- NG 分析（只在 NG 時顯示） -->
+    <div class="ng-box hidden" id="ngBox">
+      <h3>⚠ NG 分析</h3>
+      <div class="ng-detail" id="ngDetail"></div>
+    </div>
+
+    <!-- 測試項目表格 -->
+    <div class="card">
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>測試項目</th>
+            <th>結果 (P/F)</th>
+            <th>測量數值</th>
+          </tr>
+        </thead>
+        <tbody id="dataBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="notFound" class="not-found hidden"></div>
+
+<script>
+// ─── 資料庫 ─────────────────────────────────────────────────────────────────
+let firmwareDB = null;
+
+(function loadDB() {
+  const jsonUrl = './firmware_db.json';
+  fetch(jsonUrl)
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then(data => {
+      firmwareDB = data;
+      const count = (data.firmware || []).length;
+      document.getElementById('dbInfo').textContent =
+        `資料庫版本 ${data.version || '?'}　產生時間 ${data.generated || '?'}　共 ${count} 筆韌體版本`;
+    })
+    .catch(err => {
+      document.getElementById('dbInfo').textContent =
+        `⚠ 資料庫載入失敗：${err.message}　（請確認 firmware_db.json 與本頁同目錄）`;
+    });
+})();
+
+// ─── 查詢主函式 ──────────────────────────────────────────────────────────────
+function query() {
+  const raw    = document.getElementById('dataInput').value.trim();
+  const status = document.getElementById('status');
+  hideAll();
+  status.textContent = '';
+
+  if (!raw) { status.textContent = '請先貼入測試字串'; return; }
+  if (!firmwareDB) { status.textContent = '資料庫尚未載入，請稍後再試'; return; }
+
+  const fields = raw.split(',');
+  if (fields.length < 34) {
+    status.textContent = `欄位數不足（偵測到 ${fields.length} 欄，需至少 34 欄）`;
+    return;
+  }
+
+  const header    = fields[0].trim();
+  const serial    = fields[1].trim();
+  const overall   = fields[2].trim();
+  const results   = fields.slice(3, 11).map(f => f.trim());    // [3..10] 8項
+  const dataVals  = fields.slice(11, 28).map(f => parseInt(f.trim(), 10)); // [11..27] 17項
+  const versionRaw = fields[29] ? fields[29].trim() : '';
+
+  // version_date 格式：20260311_0855
+  const verMatch = versionRaw.match(/(\d{8}_\d{4})/);
+  const versionDate = verMatch ? verMatch[1] : '';
+
+  if (!versionDate) {
+    status.textContent = `無法從字串解析版本日期（位置[29]="${versionRaw}"）`;
+    return;
+  }
+
+  // 找對應韌體版本
+  const fw = (firmwareDB.firmware || []).find(f => f.version_date === versionDate);
+
+  if (!fw) {
+    const el = document.getElementById('notFound');
+    el.innerHTML =
+      `找不到版本 <strong>${versionDate}</strong> 的資料。<br>` +
+      `請重新執行 <code>scanner.py</code>（或雙擊 <code>update_and_push.bat</code>）並更新資料庫。`;
+    el.classList.remove('hidden');
+    return;
+  }
+
+  // ── 版本資訊 ────────────────────────────────────────────────
+  const overallLabel = overall === 'OK'
+    ? '<span class="result-ok">✅ OK</span>'
+    : '<span class="result-ng">❌ NG</span>';
+
+  const metaRows = [
+    ['韌體版本',   versionDate],
+    ['來源資料夾', fw.folder_name || '-'],
+    ['所屬專案',   fw.case_name  || '-'],
+    ['發行日期',   fw.release_date || '-'],
+    ['變更說明',   fw.change_notes || '-'],
+    ['產品序號',   serial],
+    ['整體結果',   overallLabel],
+  ];
+  const grid = document.getElementById('metaGrid');
+  grid.innerHTML = metaRows.map(([l, v]) =>
+    `<span class="label">${l}</span><span class="value">${v}</span>`
+  ).join('');
+
+  // ── 測試項目表格 ─────────────────────────────────────────────
+  const tbody = document.getElementById('dataBody');
+  tbody.innerHTML = '';
+
+  // TEST_result 行（P/F）
+  const testResults = fw.test_results || [];
+  results.forEach((r, i) => {
+    const name = testResults[i] || `TEST_result[${i}]`;
+    const cellR = r === 'P'
+      ? `<span class="pass">P</span>`
+      : r === 'F'
+        ? `<span class="fail">F</span>`
+        : `<span class="dash">-</span>`;
+    tbody.innerHTML += `<tr><td>${escHtml(name)}</td><td>${cellR}</td><td><span class="dash">-</span></td></tr>`;
+  });
+
+  // TEST_DATA 行（數值）
+  const testData = fw.test_data || [];
+  testData.forEach(item => {
+    const rawVal = dataVals[item.idx];
+    const val = (rawVal === undefined || isNaN(rawVal)) ? '-' : rawVal;
+    tbody.innerHTML += `<tr><td>${escHtml(item.name)}</td><td><span class="dash">-</span></td><td>${val}</td></tr>`;
+  });
+
+  // ── NG 分析 ──────────────────────────────────────────────────
+  const ngBox = document.getElementById('ngBox');
+  if (overall === 'NG') {
+    const stepDataIdx = (fw.test_data || []).find(d => d.name === 'TEST_STEP_DATA');
+    const stepVal = stepDataIdx !== undefined ? dataVals[stepDataIdx.idx] : undefined;
+
+    const stepCode  = stepVal !== undefined ? String(stepVal) : '';
+    const stepName  = (fw.test_steps || {})[stepCode] || '(未知步驟)';
+    const ngReasons = fw.ng_reasons || {};
+    const ngInfo    = ngReasons[stepCode];
+
+    let html = '';
+
+    if (stepCode) {
+      html += `<p><strong>停止步驟：</strong>${escHtml(stepName)}（代碼 ${stepCode}）`;
+      if (ngInfo && ngInfo.description) {
+        html += `　— ${escHtml(ngInfo.description)}`;
+      }
+      html += '</p>';
+    } else {
+      html += `<p><strong>停止步驟：</strong>未知（TEST_STEP_DATA 未解析）</p>`;
+    }
+
+    // ERR_DATA 動態欄位（支援 ERR1～ERRn）
+    const errDataItems = (fw.test_data || []).filter(d => /ERR_DATA/i.test(d.name));
+    const errArr = ngInfo ? (ngInfo.err_data || []) : [];
+    errDataItems.forEach((item, i) => {
+      const val = dataVals[item.idx];
+      if (val === undefined) return;
+      const errInfo  = errArr[i];
+      const label    = errInfo ? errInfo.meaning || item.name : item.name;
+      let   text     = `<strong>${escHtml(label)}：</strong>${val}`;
+      if (errInfo && errInfo.map && errInfo.map[String(val)]) {
+        text += ` → ${escHtml(errInfo.map[String(val)])}`;
+      }
+      html += `<p>${text}</p>`;
+    });
+
+    document.getElementById('ngDetail').innerHTML = html || '（無詳細 NG 資訊）';
+    ngBox.classList.remove('hidden');
+  }
+
+  document.getElementById('resultArea').classList.remove('hidden');
+}
+
+// ─── 工具函式 ────────────────────────────────────────────────────────────────
+function hideAll() {
+  document.getElementById('resultArea').classList.add('hidden');
+  document.getElementById('notFound').classList.add('hidden');
+  document.getElementById('ngBox').classList.add('hidden');
+}
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// Enter 鍵觸發查詢（Shift+Enter 換行）
+document.getElementById('dataInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    query();
+  }
+});
+</script>
+</body>
+</html>

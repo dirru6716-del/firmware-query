@@ -1,0 +1,25 @@
+# 公司內部資料，不上傳 GitHub
+*.xlsx
+*.xlsm
+*.skill
+
+# 本機工具程式
+scanner.py
+ng_prepare.py
+update_records_20260319.py
+update_and_push.bat
+測試資料查詢工具_規劃.md
+
+# Python 暫存
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# 備份副本（時間戳記命名）
+*_副本_*.xlsx
+*_NG準備副本_*.xlsx
+
+# 編輯器
+.vscode/
+.claude/
