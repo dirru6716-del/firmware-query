@@ -195,21 +195,33 @@ function query() {
     return;
   }
 
-  const header    = fields[0].trim();
-  const serial    = fields[1].trim();
-  const overall   = fields[2].trim();
-  const results   = fields.slice(3, 11).map(f => f.trim());    // [3..10] 8項
-  const dataVals  = fields.slice(11, 28).map(f => parseInt(f.trim(), 10)); // [11..27] 17項
-  const versionRaw = fields[29] ? fields[29].trim() : '';
+  const header  = fields[0].trim();
+  const serial  = fields[1].trim();
+  const overall = fields[2].trim();
 
-  // version_date 格式：20260311_0855
-  const verMatch = versionRaw.match(/(\d{8}_\d{4})/);
-  const versionDate = verMatch ? verMatch[1] : '';
+  // ── 自動偵測版本日期：掃描所有欄位，不寫死索引 ──────────────
+  const VER_RE = /(\d{8}_\d{4})/;
+  let versionDate = '';
+  let verIdx = -1;
+  for (let i = 3; i < fields.length; i++) {
+    const m = fields[i].trim().match(VER_RE);
+    if (m) { versionDate = m[1]; verIdx = i; break; }
+  }
 
   if (!versionDate) {
-    status.textContent = `無法從字串解析版本日期（位置[29]="${versionRaw}"）`;
+    status.textContent = `無法從字串解析版本日期（格式：YYYYMMDD_HHMM，共 ${fields.length} 欄）`;
     return;
   }
+
+  // ── 自動偵測 TEST_result 起始位置 ────────────────────────────
+  // TEST_result 欄位只含 P 或 F（單字元）；若 [3] 不是 P/F，代表有額外欄位
+  const PF_RE = /^[PF]$/i;
+  const resultStart = PF_RE.test(fields[3].trim()) ? 3 : 4;
+  const results  = fields.slice(resultStart, resultStart + 8).map(f => f.trim());
+
+  // TEST_DATA 緊接在 TEST_result 後面（共 17 欄）
+  const dataStart = resultStart + 8;
+  const dataVals  = fields.slice(dataStart, dataStart + 17).map(f => parseInt(f.trim(), 10));
 
   // 找對應韌體版本
   const fw = (firmwareDB.firmware || []).find(f => f.version_date === versionDate);
@@ -217,7 +229,7 @@ function query() {
   if (!fw) {
     const el = document.getElementById('notFound');
     el.innerHTML =
-      `找不到版本 <strong>${versionDate}</strong> 的資料。<br>` +
+      `找不到版本 <strong>${versionDate}</strong> 的資料（偵測到版本日期位於欄位 [${verIdx}]）。<br>` +
       `請重新執行 <code>scanner.py</code>（或雙擊 <code>update_and_push.bat</code>）並更新資料庫。`;
     el.classList.remove('hidden');
     return;
