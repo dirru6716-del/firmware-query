@@ -112,10 +112,30 @@
       padding: 12px 16px;
       font-size: 0.9rem;
     }
+    .notice-banner {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin-bottom: 14px;
+      font-size: 0.85rem;
+      color: #1e40af;
+    }
+    #pageVersion {
+      font-size: 0.75rem;
+      color: #aaa;
+      float: right;
+      margin-top: 4px;
+    }
   </style>
 </head>
 <body>
-  <h1>測試資料查詢工具</h1>
+  <h1>測試資料查詢工具<span id="pageVersion"></span></h1>
+
+  <div class="notice-banner">
+    &#x1F4C2; 檢具燒錄檔及軟體變更總表放置於
+    <strong>\\192.168.100.15\製造工程課\卓元裕\半測燒錄檔_output</strong>
+  </div>
 
   <div id="dbInfo">資料庫載入中...</div>
 
@@ -157,6 +177,9 @@
   <div id="notFound" class="not-found hidden"></div>
 
 <script>
+const PAGE_VERSION = "2026_0427_0900";
+document.getElementById('pageVersion').textContent = ' v' + PAGE_VERSION;
+
 // ─── 資料庫 ─────────────────────────────────────────────────────────────────
 let firmwareDB = null;
 
