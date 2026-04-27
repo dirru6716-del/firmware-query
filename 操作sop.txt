@@ -1,0 +1,14 @@
+操作sop
+1. 執行 ng_prepare.py
+   → 選擇 Software Change Log Excel
+   → 產出 _AI 副本（NG_Reasons 已插入新步驟範本列）
+
+2. 用 skill 開啟副本，填寫 NG 項目
+   （不良描述、ERR意義、ERR對照等欄位）
+   填完後將副本內容存回原始 Excel（或另存為原檔名覆蓋）
+
+3. 執行 update_and_push.bat
+   → 選擇已填好的原始 Excel
+   → 掃描路徑、複製 hex、產出 firmware_db.json、push 到 GitHub
+
+4. 完成，GitHub Pages 約 1~2 分鐘後更新
