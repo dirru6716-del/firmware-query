@@ -1,0 +1,4 @@
+安裝方式（在 Claude Code 中使用）：
+在終端機執行：
+bashclaude skill install "D:\Python_project\Test data query\firmware-ng-analyzer.skill"
+安裝後，當你在 Claude Code 說「幫我分析這個韌體版本的 NG 原因」、「看一下 Define.h」或直接給出韌體資料夾路徑，SKILL 就會自動啟動，依照標準流程分析並輸出可貼入 Excel NG_Reasons 分頁的表格。
