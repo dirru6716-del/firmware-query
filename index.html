@@ -208,20 +208,28 @@ function query() {
   //  if (m) { versionDate = m[1]; verIdx = i; break; }
   //}
 
-  // ── 修正後的版本日期偵測 ──────────────
-  // 支援 YYYYMMDD_HHMM 或 YYYY_MMDD_HHMM
+  // ── 版本日期正規化：統一轉為 YYYYMMDD_HHMM ──────────────────
+  // 支援 YYYYMMDD_HHMM 或 YYYY_MMDD_HHMM（部分韌體年份後多一底線）
+  function normalizeVersionDate(raw) {
+    const digits = raw.replace(/_/g, '');   // 去掉所有底線，只留 12 位數字
+    if (digits.length === 12) {
+      return digits.slice(0, 8) + '_' + digits.slice(8);  // 統一格式
+    }
+    return raw;
+  }
+
   const VER_RE = /(\d{4}_?\d{4}_\d{4})/;
   let versionDate = '';
   let verIdx = -1;
   for (let i = 3; i < fields.length; i++) {
     const m = fields[i].trim().match(VER_RE);
     if (m) {
-      versionDate = m[1];
+      versionDate = normalizeVersionDate(m[1]);  // 正規化後儲存
       verIdx = i;
       break;
     }
   }
-  
+
   if (!versionDate) {
     status.textContent = `無法從字串解析版本日期（格式：YYYYMMDD_HHMM，共 ${fields.length} 欄）`;
     return;
