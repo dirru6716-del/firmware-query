@@ -1,6 +1,6 @@
 {
-  "generated": "2026-04-24T16:45:53",
-  "version": "2026_0424_1730",
+  "generated": "2026-04-27T11:16:46",
+  "version": "2026_0427_1107",
   "firmware": [
     {
       "version_date": "20260423_0945",
@@ -94,128 +94,291 @@
       "ng_reasons": {
         "1": {
           "step_name": "OS_TEST_1_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "2": {
           "step_name": "OS_TEST_1_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "3": {
           "step_name": "OS_TEST_1_3_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "1 量測值",
+              "map": {}
+            }
+          ]
         },
         "4": {
           "step_name": "OS_TEST_1_4_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "5": {
           "step_name": "CHACK_Current_1_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "CHACK_Current_1_1_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "6": {
           "step_name": "CHACK_Current_2_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "CHACK_Current_2_1_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "7": {
           "step_name": "CHACK_Current_2_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "CHACK_Current_2_2_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
         },
         "8": {
           "step_name": "CCD_POWER_CHECK_STEP",
-          "description": "",
-          "err_data": []
+          "description": "功能檢查失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "失敗的量測通道索引（0=1.8V, 1=3.3V, 2=5V, 3=1.1V）",
+              "map": {}
+            }
+          ]
         },
         "9": {
           "step_name": "OS_TEST_2_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "10": {
           "step_name": "OS_TEST_2_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "11": {
           "step_name": "Check_Screen_STEP",
-          "description": "",
-          "err_data": []
+          "description": "功能檢查失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "旗標值",
+              "map": {}
+            }
+          ]
         },
         "12": {
           "step_name": "UR_NG_STEP",
-          "description": "",
-          "err_data": []
+          "description": "UR_NG_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "旗標值",
+              "map": {}
+            }
+          ]
         },
         "13": {
           "step_name": "CAR_RIGHT_TEST_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "14": {
           "step_name": "CAR_RIGHT_TEST_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "15": {
           "step_name": "CAR_LEFT_TEST_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "16": {
           "step_name": "CAR_BACK_TEST_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "17": {
           "step_name": "CAR_BACK_TEST_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "CAR_BACK_OUT_V 量測值",
+              "map": {}
+            }
+          ]
         },
         "18": {
           "step_name": "SPEED_TEST_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 2,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
         },
         "19": {
           "step_name": "MCU_VER_STEP",
-          "description": "",
-          "err_data": []
+          "description": "MCU_VER_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "20": {
           "step_name": "SOC_VER_STEP",
-          "description": "",
-          "err_data": []
+          "description": "SOC_VER_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "21": {
           "step_name": "voltage_test_STEP",
-          "description": "",
+          "description": "電源電壓測試失敗",
           "err_data": []
         },
         "22": {
           "step_name": "Work_current_test_STEP",
-          "description": "",
+          "description": "測試失敗",
           "err_data": []
         },
         "23": {
           "step_name": "SLEEP_MODE_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "SLEEP_MODE_1_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
         },
         "24": {
           "step_name": "SLEEP_MODE_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "SLEEP_MODE_2_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
         },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
-          "description": "",
-          "err_data": []
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
         },
         "26": {
           "step_name": "PASS_STEP",
@@ -224,35 +387,74 @@
         },
         "30": {
           "step_name": "Temp_STEP_1",
-          "description": "",
-          "err_data": []
+          "description": "Temp_STEP_1 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "電流量測值",
+              "map": {}
+            }
+          ]
         },
         "31": {
           "step_name": "Temp_STEP_2",
-          "description": "",
-          "err_data": []
+          "description": "Temp_STEP_2 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "電流量測值",
+              "map": {}
+            }
+          ]
         },
         "32": {
           "step_name": "Check_Ver_STEP",
-          "description": "",
+          "description": "功能檢查失敗",
           "err_data": []
         },
         "33": {
           "step_name": "OS_TEST_1_1_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "35": {
           "step_name": "Check_Screen_STEP_2",
-          "description": "",
-          "err_data": []
+          "description": "功能檢查失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "旗標值",
+              "map": {}
+            }
+          ]
         }
       }
     },
     {
       "version_date": "20260422_1437",
       "folder_name": "Main_BOARD_TESTER_20260422_1437_0x6c0f.hex",
-      "folder_path": "D:/yuanyu/733/TMC3/9Q/M/Main_BOARD_TESTER_20260423_0945",
+      "folder_path": "D:/yuanyu/733/TMC3/9Q/M/Main_BOARD_TESTER_20260422_1437",
       "excel_sheet": "733-TMC3 ECU半成品&成品",
       "case_name": "733-TMC3 ECU半成品&成品",
       "change_notes": "1.修改先顯示PASS後，再將資料上拋置MES。避免LCM當機不更新畫面。",
@@ -1096,128 +1298,291 @@
       "ng_reasons": {
         "1": {
           "step_name": "OS_TEST_1_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "2": {
           "step_name": "OS_TEST_1_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "3": {
           "step_name": "OS_TEST_1_3_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "1 量測值",
+              "map": {}
+            }
+          ]
         },
         "4": {
           "step_name": "OS_TEST_1_4_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "5": {
           "step_name": "CHACK_Current_1_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "CHACK_Current_1_1_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "6": {
           "step_name": "CHACK_Current_2_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "CHACK_Current_2_1_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "7": {
           "step_name": "CHACK_Current_2_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "CHACK_Current_2_2_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
         },
         "8": {
           "step_name": "CCD_POWER_CHECK_STEP",
-          "description": "",
-          "err_data": []
+          "description": "功能檢查失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "失敗的量測通道索引（0=1.8V, 1=3.3V, 2=5V, 3=1.1V）",
+              "map": {}
+            }
+          ]
         },
         "9": {
           "step_name": "OS_TEST_2_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "10": {
           "step_name": "OS_TEST_2_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
         },
         "11": {
           "step_name": "Check_Screen_STEP",
-          "description": "",
-          "err_data": []
+          "description": "功能檢查失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "旗標值",
+              "map": {}
+            }
+          ]
         },
         "12": {
           "step_name": "UR_NG_STEP",
-          "description": "",
-          "err_data": []
+          "description": "UR_NG_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "旗標值",
+              "map": {}
+            }
+          ]
         },
         "13": {
           "step_name": "CAR_RIGHT_TEST_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "14": {
           "step_name": "CAR_RIGHT_TEST_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "15": {
           "step_name": "CAR_LEFT_TEST_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "16": {
           "step_name": "CAR_BACK_TEST_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "17": {
           "step_name": "CAR_BACK_TEST_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "CAR_BACK_OUT_V 量測值",
+              "map": {}
+            }
+          ]
         },
         "18": {
           "step_name": "SPEED_TEST_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 2,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
         },
         "19": {
           "step_name": "MCU_VER_STEP",
-          "description": "",
-          "err_data": []
+          "description": "MCU_VER_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "20": {
           "step_name": "SOC_VER_STEP",
-          "description": "",
-          "err_data": []
+          "description": "SOC_VER_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "21": {
           "step_name": "voltage_test_STEP",
-          "description": "",
+          "description": "電源電壓測試失敗",
           "err_data": []
         },
         "22": {
           "step_name": "Work_current_test_STEP",
-          "description": "",
+          "description": "測試失敗",
           "err_data": []
         },
         "23": {
           "step_name": "SLEEP_MODE_1_STEP",
-          "description": "",
-          "err_data": []
+          "description": "SLEEP_MODE_1_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
         },
         "24": {
           "step_name": "SLEEP_MODE_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "SLEEP_MODE_2_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
         },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
-          "description": "",
-          "err_data": []
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
         },
         "26": {
           "step_name": "PASS_STEP",
@@ -1226,28 +1591,67 @@
         },
         "30": {
           "step_name": "Temp_STEP_1",
-          "description": "",
-          "err_data": []
+          "description": "Temp_STEP_1 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "電流量測值",
+              "map": {}
+            }
+          ]
         },
         "31": {
           "step_name": "Temp_STEP_2",
-          "description": "",
-          "err_data": []
+          "description": "Temp_STEP_2 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "電流量測值",
+              "map": {}
+            }
+          ]
         },
         "32": {
           "step_name": "Check_Ver_STEP",
-          "description": "",
+          "description": "功能檢查失敗",
           "err_data": []
         },
         "33": {
           "step_name": "OS_TEST_1_1_2_STEP",
-          "description": "",
-          "err_data": []
+          "description": "測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
         },
         "35": {
           "step_name": "Check_Screen_STEP_2",
-          "description": "",
-          "err_data": []
+          "description": "功能檢查失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "旗標值",
+              "map": {}
+            }
+          ]
         }
       }
     },
@@ -3297,7 +3701,7 @@
     {
       "version_date": "20260310_0821",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20260310_0821_0x7542.hex",
-      "folder_path": "D:/yuanyu/321/GL0S/A_board/M/A_BOREAD_TESTER_V40_46K80_20260310_0821_NO MOTOR",
+      "folder_path": "D:/yuanyu/321/GL0S/A_board/M/A_BOREAD_TESTER_V40_46K80_20260310_0821",
       "excel_sheet": "321-GL0S A",
       "case_name": "EL-321W-GL0S A板",
       "change_notes": "寄出檢具時的版本。\n暗電流過低，使用AI的建議，無將數據歸零，詳細看資料夾內的歷史紀錄。",
@@ -4093,7 +4497,7 @@
     {
       "version_date": "20260212_1304",
       "folder_name": "Main_BOARD_TESTER_20260212_1304_0x7b47.hex",
-      "folder_path": "D:/yuanyu/733/TMC3/9Q/M/Main_BOARD_TESTER_20260324_1419",
+      "folder_path": "D:/yuanyu/733/TMC3/9Q/M/Main_BOARD_TESTER_20260212_1304",
       "excel_sheet": "733-TMC3 ECU半成品&成品",
       "case_name": "733-TMC3 ECU半成品&成品",
       "change_notes": "1.將鎖定的版本設定成不可能存在的版本號，待軟體訂版後再進行重新設定。\n2.於MCU 及 SOC 的版本讀取，增加長度判斷，避免異常導致顯示其他NG。",
@@ -5435,7 +5839,7 @@
     {
       "version_date": "20260123_1017",
       "folder_name": "Main_BOARD_TESTER_20260123_1017_0x131.hex",
-      "folder_path": "D:/yuanyu/732/HAC1/9U_ECU/Main_BOARD_TESTER_20260123_1017_withdelay",
+      "folder_path": "D:/yuanyu/732/HAC1/9U_ECU/Main_BOARD_TESTER_20260123_1017",
       "excel_sheet": "732-HAC1 ECU成品",
       "case_name": "732-HAC1 ECU成品",
       "change_notes": "1.更新鎖定版本資訊\nconst rom unsigned char Part_No_Group[5][14] = {\"9U7320HA011-01\", \"9U7320HA012-01\", \"9U7320HA013-00\", \"9U7320HA001-01\", \"9U7320HA002-00\"};\nconst rom unsigned char Sample_No_buff[2][17] = {\"732HAC20024380011\", \"732HAC20024380004\"}; // 正反校序號\nconst rom unsigned char Standard_MCU_data[5][12] = {\"25- 8-18- 1\", \"25- 8-18- 1\", \"25- 8-18- 1\", \"25- 8-18- 1\", \"25- 8-18- 1\"};\nconst rom unsigned char Standard_SOC_data[5][21] = {\"732HAC1F4:26- 1-16- 1\", \"732HAC1F4:26- 1-16- 1\", \"732HAC1F5:26- 1-16- 1\", \"732HAC1F4:26- 1-16- 1\", \"732HAC1F5:26- 1-16- 1\"};\nconst rom unsigned char Standard_HIDE_SOC_data[5][21] = {\"732HAC1F4:26- 1-16- 1\", \"732HAC1F4:26- 1-16- 1\", \"732HAC1F5:26- 1-16- 1\", \"732HAC1F4:26- 1-16- 1\", \"732HAC1F5:26- 1-16- 1\"};\n2.新增隱藏版本的功能\n3.增加SW_UI (盲塞)測試\n4.增加ECU RESET 回出廠設定",
@@ -6172,7 +6576,7 @@
     {
       "version_date": "20251224_0222",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20251224_0222_0x0511.hex",
-      "folder_path": "D:/yuanyu/321/GL0S/A_board/M/A_BOREAD_TESTER_V40_46K80_20260309_0811",
+      "folder_path": "D:/yuanyu/321/GL0Q/A_Board/M/A_BOREAD_TESTER_V40_46K80_20251224_0222",
       "excel_sheet": "321-GL0Q A",
       "case_name": "EL-321W-GL0Q A板",
       "change_notes": "修正1.8v ng的LCM顯示BUG",
@@ -6191,43 +6595,31 @@
       ],
       "test_data": [
         {
-          "idx": 6,
+          "idx": 4,
           "name": "Voltage_DATA_1"
         },
         {
-          "idx": 7,
+          "idx": 5,
           "name": "Voltage_DATA_2"
         },
         {
-          "idx": 8,
-          "name": "fan_V_DATA"
-        },
-        {
-          "idx": 9,
-          "name": "fan_current_DATA"
-        },
-        {
-          "idx": 10,
-          "name": "FAN_REtry_DATA"
-        },
-        {
-          "idx": 11,
+          "idx": 6,
           "name": "SLEEP_Current_DATA"
         },
         {
-          "idx": 12,
+          "idx": 7,
           "name": "TESTER_NAME_DATA"
         },
         {
-          "idx": 13,
+          "idx": 8,
           "name": "TEST_STEP_DATA"
         },
         {
-          "idx": 14,
+          "idx": 9,
           "name": "ERR_DATA_1"
         },
         {
-          "idx": 15,
+          "idx": 10,
           "name": "ERR_DATA_2"
         }
       ],
@@ -6241,12 +6633,20 @@
         "7": "MOTOR_TEST_STEP_3",
         "8": "BL_TEST_STEP_1",
         "9": "BL_TEST_STEP_2",
-        "10": "ERR_PIN_Check_STEP",
+        "10": "LIGHT_Sensor_TEST_STEP_1",
+        "11": "LIGHT_Sensor_TEST_STEP_2",
         "12": "TFT_CHECK_STEP",
+        "13": "HUD_ON_OFF_KEY_STEP_1",
+        "14": "HUD_ON_OFF_KEY_STEP_2",
         "15": "Fan_TEST_Func_STEP",
+        "16": "IGN_TEST_STEP_1",
+        "17": "IGN_TEST_STEP_2",
+        "18": "IGN_TEST_STEP_3",
+        "19": "IGN_TEST_STEP_4",
         "20": "Voltage_CHECK_STEP",
         "21": "SLEEP_TEST_STEP_1",
         "22": "SLEEP_TEST_STEP_2",
+        "23": "MCU_OTA_TEST_STEP",
         "24": "PASS_STEP"
       },
       "ng_reasons": {
@@ -6425,6 +6825,46 @@
           "step_name": "PASS_STEP",
           "description": "",
           "err_data": []
+        },
+        "11": {
+          "step_name": "LIGHT_Sensor_TEST_STEP_2",
+          "description": "光感測器測試失敗",
+          "err_data": []
+        },
+        "13": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_1",
+          "description": "ON_OFF_KEY 測試",
+          "err_data": []
+        },
+        "14": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_2",
+          "description": "ON_OFF_KEY 測試",
+          "err_data": []
+        },
+        "16": {
+          "step_name": "IGN_TEST_STEP_1",
+          "description": "IGN 腳測試步驟1",
+          "err_data": []
+        },
+        "17": {
+          "step_name": "IGN_TEST_STEP_2",
+          "description": "IGN 腳測試步驟2",
+          "err_data": []
+        },
+        "18": {
+          "step_name": "IGN_TEST_STEP_3",
+          "description": "IGN 腳測試步驟3",
+          "err_data": []
+        },
+        "19": {
+          "step_name": "IGN_TEST_STEP_4",
+          "description": "IGN 腳測試步驟4",
+          "err_data": []
+        },
+        "23": {
+          "step_name": "MCU_OTA_TEST_STEP",
+          "description": "OTA 測試項目",
+          "err_data": []
         }
       }
     },
@@ -6579,7 +7019,7 @@
     {
       "version_date": "20251218_1536",
       "folder_name": "Main_BOARD_TESTER_20251218_1536_0x30a8.hex",
-      "folder_path": "D:/yuanyu/732/HAC1/9U_ECU/Main_BOARD_TESTER_20251219_1149",
+      "folder_path": "D:/yuanyu/732/HAC1/9U_ECU/Main_BOARD_TESTER_20251218_1536",
       "excel_sheet": "732-HAC1 ECU成品",
       "case_name": "732-TMC2 ECU成品",
       "change_notes": "1.更新鎖定版本資訊\nPart_No_Group[4][14] = {\"9U7320HA011-00\", \"9U7320HA012-00\", \"9U7320HA013-0A\", \"9U7320HA001-00\"};\nStandard_MCU_data[4][12] = {\"25- 8-15- 1\", \"25- 8-15- 1\", \"25- 8-15- 1\", \"25- 8-15- 1\"};\nStandard_SOC_data[4][21] = {\"732HAC1F4:25-11-26- 1\", \"732HAC1F4:25-11-26- 1\", \"732HAC1F:25- 9-11- 1\", \"732HAC1F4:25-11-26- 1\"};",
@@ -7755,7 +8195,7 @@
     {
       "version_date": "20251211_0850",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20251211_0850_0x119e.hex",
-      "folder_path": "D:/yuanyu/321/GL0S/A_board/M/A_BOREAD_TESTER_V40_46K80_20260309_0811",
+      "folder_path": "D:/yuanyu/321/GL0Q/A_Board/M/A_BOREAD_TESTER_V40_46K80_20251211_0850",
       "excel_sheet": "321-GL0Q A",
       "case_name": "EL-321W-GL0Q A板",
       "change_notes": "寄出檢具時的版本",
@@ -7774,43 +8214,31 @@
       ],
       "test_data": [
         {
-          "idx": 6,
+          "idx": 4,
           "name": "Voltage_DATA_1"
         },
         {
-          "idx": 7,
+          "idx": 5,
           "name": "Voltage_DATA_2"
         },
         {
-          "idx": 8,
-          "name": "fan_V_DATA"
-        },
-        {
-          "idx": 9,
-          "name": "fan_current_DATA"
-        },
-        {
-          "idx": 10,
-          "name": "FAN_REtry_DATA"
-        },
-        {
-          "idx": 11,
+          "idx": 6,
           "name": "SLEEP_Current_DATA"
         },
         {
-          "idx": 12,
+          "idx": 7,
           "name": "TESTER_NAME_DATA"
         },
         {
-          "idx": 13,
+          "idx": 8,
           "name": "TEST_STEP_DATA"
         },
         {
-          "idx": 14,
+          "idx": 9,
           "name": "ERR_DATA_1"
         },
         {
-          "idx": 15,
+          "idx": 10,
           "name": "ERR_DATA_2"
         }
       ],
@@ -7824,12 +8252,20 @@
         "7": "MOTOR_TEST_STEP_3",
         "8": "BL_TEST_STEP_1",
         "9": "BL_TEST_STEP_2",
-        "10": "ERR_PIN_Check_STEP",
+        "10": "LIGHT_Sensor_TEST_STEP_1",
+        "11": "LIGHT_Sensor_TEST_STEP_2",
         "12": "TFT_CHECK_STEP",
+        "13": "HUD_ON_OFF_KEY_STEP_1",
+        "14": "HUD_ON_OFF_KEY_STEP_2",
         "15": "Fan_TEST_Func_STEP",
+        "16": "IGN_TEST_STEP_1",
+        "17": "IGN_TEST_STEP_2",
+        "18": "IGN_TEST_STEP_3",
+        "19": "IGN_TEST_STEP_4",
         "20": "Voltage_CHECK_STEP",
         "21": "SLEEP_TEST_STEP_1",
         "22": "SLEEP_TEST_STEP_2",
+        "23": "MCU_OTA_TEST_STEP",
         "24": "PASS_STEP"
       },
       "ng_reasons": {
@@ -8008,13 +8444,53 @@
           "step_name": "PASS_STEP",
           "description": "",
           "err_data": []
+        },
+        "11": {
+          "step_name": "LIGHT_Sensor_TEST_STEP_2",
+          "description": "光感測器測試失敗",
+          "err_data": []
+        },
+        "13": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_1",
+          "description": "ON_OFF_KEY 測試",
+          "err_data": []
+        },
+        "14": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_2",
+          "description": "ON_OFF_KEY 測試",
+          "err_data": []
+        },
+        "16": {
+          "step_name": "IGN_TEST_STEP_1",
+          "description": "IGN 腳測試步驟1",
+          "err_data": []
+        },
+        "17": {
+          "step_name": "IGN_TEST_STEP_2",
+          "description": "IGN 腳測試步驟2",
+          "err_data": []
+        },
+        "18": {
+          "step_name": "IGN_TEST_STEP_3",
+          "description": "IGN 腳測試步驟3",
+          "err_data": []
+        },
+        "19": {
+          "step_name": "IGN_TEST_STEP_4",
+          "description": "IGN 腳測試步驟4",
+          "err_data": []
+        },
+        "23": {
+          "step_name": "MCU_OTA_TEST_STEP",
+          "description": "OTA 測試項目",
+          "err_data": []
         }
       }
     },
     {
       "version_date": "20251204_1640",
       "folder_name": "Main_BOARD_TESTER_20251204_1640_MES_0x5bf2.hex",
-      "folder_path": "D:/yuanyu/733/TMC2/9U/Main_BOARD_TESTER_20260205_1351_MES_DEBUG",
+      "folder_path": "D:/yuanyu/733/TMC2/9U/Main_BOARD_TESTER_20251204_1640_MES",
       "excel_sheet": "733-TMC2 ECU成品",
       "case_name": "733-TMC2 ECU成品",
       "change_notes": "1. 新增初始溫度及最終溫度的紀錄到mes",
@@ -9149,7 +9625,7 @@
     {
       "version_date": "20251127_0811",
       "folder_name": "Main_BOARD_TESTER_20251127_0811_MES_0x24a8.hex",
-      "folder_path": "D:/yuanyu/733/TMC3/9Q/M/Main_BOARD_TESTER_20260209_1401",
+      "folder_path": "D:/yuanyu/733/TMC2/ECU/Main_BOARD_TESTER/M/Main_BOARD_TESTER_20251127_0811_MES",
       "excel_sheet": "733-TMC2 ECU半成品",
       "case_name": "733-TMC2 ECU半成品",
       "change_notes": "1.733-tmc1b 於螢幕顯示版本的手法改變 (右上三下及車速 =0)，將其功能修改至SW4。\n2.修改讀版本時，車速強制為0。",
@@ -9179,26 +9655,38 @@
         },
         {
           "idx": 5,
-          "name": "Dynmic_current_DATA"
+          "name": "Voltage_DATA_1"
         },
         {
           "idx": 6,
-          "name": "SLEEP_Current_DATA"
+          "name": "Voltage_DATA_2"
+        },
+        {
+          "idx": 7,
+          "name": "Voltage_DATA_3"
+        },
+        {
+          "idx": 8,
+          "name": "Dynmic_current_DATA"
         },
         {
           "idx": 9,
-          "name": "TESTER_NAME_DATA"
+          "name": "SLEEP_Current_DATA"
         },
         {
           "idx": 10,
-          "name": "TEST_STEP_DATA"
+          "name": "TESTER_NAME_DATA"
         },
         {
           "idx": 11,
-          "name": "ERR_DATA_1"
+          "name": "TEST_STEP_DATA"
         },
         {
           "idx": 12,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 13,
           "name": "ERR_DATA_2"
         }
       ],
@@ -9228,12 +9716,7 @@
         "23": "SLEEP_MODE_1_STEP",
         "24": "SLEEP_MODE_2_STEP",
         "25": "SLEEP_MODE_3_STEP",
-        "26": "PASS_STEP",
-        "30": "Temp_STEP_1",
-        "31": "Temp_STEP_2",
-        "32": "Check_Ver_STEP",
-        "33": "OS_TEST_1_1_2_STEP",
-        "35": "Check_Screen_STEP_2"
+        "26": "PASS_STEP"
       },
       "ng_reasons": {
         "1": {
@@ -10368,7 +10851,7 @@
     {
       "version_date": "20251114_1722",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20251114_1722_0x7e92.hex",
-      "folder_path": "D:/yuanyu/321/GL05D/M/A_BOREAD_TESTER_V40_46K80_20260408_1437",
+      "folder_path": "D:/yuanyu/321/GL05D/M/A_BOREAD_TESTER_V40_46K80_20251114_1722",
       "excel_sheet": "321-GL05D",
       "case_name": "EL-321W-GL05D A板",
       "change_notes": "1.暫時取消3V3的判斷，僅做紀錄",
@@ -10542,7 +11025,7 @@
     {
       "version_date": "20251111_1509",
       "folder_name": "Main_BOARD_TESTER_20251111_1509 _VER_LOG_0xc27a.hex",
-      "folder_path": "D:/yuanyu/732/HAC1/9U_ECU/Main_BOARD_TESTER_20251111_1509 _VER_LOG_un_lock",
+      "folder_path": "D:/yuanyu/732/HAC1/9U_ECU/Main_BOARD_TESTER_20251111_1509 _VER_LOG",
       "excel_sheet": "732-HAC1 ECU成品",
       "case_name": "732-TMC2 ECU成品",
       "change_notes": "1.debug 版本用。\n2.使用mes的那個ur port 來輸出 ECU傳輸的版本資訊。",
@@ -10928,7 +11411,7 @@
     {
       "version_date": "20251111_0813",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20251111_0813_0xe3f5.hex",
-      "folder_path": "D:/yuanyu/321/321A-TA01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20251117_1542",
+      "folder_path": "D:/yuanyu/321/321A-TA01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20251111_0813",
       "excel_sheet": "321A-TA01 A",
       "case_name": "321A-TA01 A板",
       "change_notes": "1.修改光感測的測試顯示，方便debug用  (於LCM 下行顯示測試階段)",
@@ -11619,7 +12102,7 @@
     {
       "version_date": "20251104_1605",
       "folder_name": "TS_I2C_Slave_25K22_20251104_1605_0x10a0.hex",
-      "folder_path": "D:/yuanyu/735/TMC1/9U/S/TS_I2C_Slave_25K22_20260324_1146",
+      "folder_path": "D:/yuanyu/321/GL05G/A_Board/S/TS_I2C_Slave_25K22_20251104_1605",
       "excel_sheet": "321-GL05G",
       "case_name": "",
       "change_notes": "使用20250812的控制板，故S_MCU軟體修改變",
@@ -11870,7 +12353,7 @@
     {
       "version_date": "20251029_0816",
       "folder_name": "TY03_TESTER_V40_46K80_20251029_0816_exCanTEST_0x0633.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20260213_1305_exCanTEST",
+      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20251029_0816_exCanTEST",
       "excel_sheet": "OEM-TY03",
       "case_name": "OEM-TY03",
       "change_notes": "1.料號進版\n2. 新軟體的藍芽版本需再多發一指令",
@@ -11949,18 +12432,6 @@
         {
           "idx": 15,
           "name": "ERR_DATA_2"
-        },
-        {
-          "idx": 17,
-          "name": "ERR_DATA_3"
-        },
-        {
-          "idx": 18,
-          "name": "ERR_DATA_4"
-        },
-        {
-          "idx": 19,
-          "name": "ERR_DATA_5"
         }
       ],
       "test_steps": {
@@ -12328,7 +12799,7 @@
     {
       "version_date": "20251029_0814",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20251029_0814_0xe3f6.hex",
-      "folder_path": "D:/yuanyu/321/321A-TA01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20251110_1122",
+      "folder_path": "D:/yuanyu/321/321A-TA01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20251029_0814",
       "excel_sheet": "321A-TA01 A",
       "case_name": "321A-TA01 A板",
       "change_notes": "1.新增大電容版本檢具",
@@ -13279,7 +13750,7 @@
     {
       "version_date": "20250924_0844",
       "folder_name": "Main_BOARD_TESTER_20250924_0844_0xb8e0.hex",
-      "folder_path": "D:/yuanyu/732/HAC1/9U_ECU/Main_BOARD_TESTER_20251209_1130_版本修改到一半，但客戶未回覆，所以先暫停",
+      "folder_path": "D:/yuanyu/732/HAC1/9U_ECU/Main_BOARD_TESTER_20250924_0844",
       "excel_sheet": "732-HAC1 ECU成品",
       "case_name": "732-TMC2 ECU成品",
       "change_notes": "1.出貨時的版本。",
@@ -14285,7 +14756,7 @@
     {
       "version_date": "20250825_1052",
       "folder_name": "Main_BOARD_TESTER_20250825_1052_MES_0x045f.hex",
-      "folder_path": "D:/yuanyu/733/TMC2/9U/Main_BOARD_TESTER_20251202_0812_MES",
+      "folder_path": "D:/yuanyu/733/TMC2/9U/Main_BOARD_TESTER_20250825_1052_MES",
       "excel_sheet": "733-TMC2 ECU成品",
       "case_name": "733-TMC2 ECU成品",
       "change_notes": "1. 修改OS_TEST_1_1_STEP 的複判方法",
@@ -14843,7 +15314,7 @@
     {
       "version_date": "20250818_1304",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20250818_1304_0x1f28.hex",
-      "folder_path": "D:/yuanyu/321/321A-TA01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20251027_0411",
+      "folder_path": "D:/yuanyu/321/321A-TA01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20250818_1304",
       "excel_sheet": "321A-TA01 A",
       "case_name": "321A-TA01 A板",
       "change_notes": "1.因待測物修改LIGHT Sensor 的命令以及對應的亮度，故修改軟體。\n註:目前僅驗證9Q321ATA002-0B ; 9Q321ATA001-0E 需要再驗證。",
@@ -15247,7 +15718,7 @@
     {
       "version_date": "20250729_0837",
       "folder_name": "TY03_TESTER_V40_46K80_20250729_0837_exCanTEST_0x8237.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20250905_1438_exCanTEST",
+      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20250729_0837_exCanTEST",
       "excel_sheet": "OEM-TY03",
       "case_name": "OEM-TY03",
       "change_notes": "1.修改LED測試顏色NG時，上拋數據的呈現。\n2.修改第二台檢具的LIGHT SENSOR 上限參數修改 550 -> 600",
@@ -16152,7 +16623,7 @@
     {
       "version_date": "20250709_1400",
       "folder_name": "TS-CAN_BOARD_FA05A_26k80_20250709_1400_0x091c.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA05A/TS-CAN_BOARD_FA05A_26k80_20250731_1105",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA05A/TS-CAN_BOARD_FA05A_26k80_20250709_1400",
       "excel_sheet": "321-FA05A 外掛CAN板",
       "case_name": "321-FA05A 外掛CAN板",
       "change_notes": "因EL-321W-FA05A 的調整高度亮度的方法有改，故使用暗電流小板發送can bus信號到大can上，並利用按鍵進行操作。SW1 啟動或關閉調整模式\nSW2 和 SW3 選擇 高度、亮度、旋轉\nSW4 和 SW5 為調整高度或亮度或旋轉的數值",
@@ -17053,7 +17524,7 @@
     {
       "version_date": "20250625_1153",
       "folder_name": "Main_BOARD_TESTER_20250625_1153_MES_0x8be3.hex",
-      "folder_path": "D:/yuanyu/733/TMC2/9U/Main_BOARD_TESTER_20251202_0812_MES",
+      "folder_path": "D:/yuanyu/733/TMC2/9U/Main_BOARD_TESTER_20250625_1153_MES",
       "excel_sheet": "733-TMC2 ECU成品",
       "case_name": "733-TMC2 ECU成品",
       "change_notes": "1. 修改SW3 啟動後的旗標名稱為off_line_olnyPowerON_flag 減少混淆\n2. 車速測試改需大於10，NG重測次數重30-> 60",
@@ -17149,8 +17620,7 @@
         "25": "SLEEP_MODE_3_STEP",
         "26": "PASS_STEP",
         "30": "Temp_STEP",
-        "31": "Check_Ver_STEP",
-        "32": "OS_TEST_1_1_2_STEP"
+        "31": "Check_Ver_STEP"
       },
       "ng_reasons": {
         "1": {
@@ -18201,7 +18671,7 @@
     {
       "version_date": "20250609_0900",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20250609_0900_0x6a1d.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20250611_1703",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20250609_0900",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流",
       "change_notes": "1. 新增暗電流下限以及最早暗電流時間兩參數。\n須配合電腦軟體 2025/06/09_0907",
@@ -18391,7 +18861,7 @@
     {
       "version_date": "20250605_0953",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20250605_0953_0xb7a5.hex",
-      "folder_path": "D:/yuanyu/321/321A-TA01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20250630_1419",
+      "folder_path": "D:/yuanyu/321/321A-TA01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20250605_0953",
       "excel_sheet": "321A-TA01 A",
       "case_name": "321A-TA01 A板",
       "change_notes": "因IGN PIN的功能變更，所以將測試流程修改。",
@@ -18454,10 +18924,6 @@
         {
           "idx": 14,
           "name": "ERR_DATA_2"
-        },
-        {
-          "idx": 15,
-          "name": "MCU_OTA_TEST_DATA"
         }
       ],
       "test_steps": {
@@ -18483,8 +18949,7 @@
         "20": "Voltage_CHECK_STEP",
         "21": "SLEEP_TEST_STEP_1",
         "22": "SLEEP_TEST_STEP_2",
-        "23": "MCU_OTA_TEST_STEP",
-        "24": "PASS_STEP"
+        "23": "PASS_STEP"
       },
       "ng_reasons": {
         "1": {
@@ -18782,7 +19247,7 @@
     {
       "version_date": "20250529_1141",
       "folder_name": "TY03_TESTER_V40_46K80_20250529_1141_exCanTEST_0x82c4.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20250723_1047_exCanTEST",
+      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20250529_1141_exCanTEST",
       "excel_sheet": "OEM-TY03",
       "case_name": "OEM-TY03",
       "change_notes": "1.修改第一台檢具硬體，使水泥電阻120R -> 100R ，與統亞檢具相同。\n2.修改FL.RR….的閥值與統亞檢具相同 (複測的部分放寬+-5)\n3.修改第一台檢具的光感測器的閥值(放寬)",
@@ -20370,7 +20835,7 @@
     {
       "version_date": "20250502_1152",
       "folder_name": "TS-CAN_BOARD_new_fa02_26k80_20250502_1152_byFL_0xac49.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA05A/TS-CAN_BOARD_FA05A_26k80_20250731_1105",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA02/TS-CAN_BOARD_new_fa02_26k80_20250502_1152_byFL",
       "excel_sheet": "321-FA02 C255",
       "case_name": "EL-321W-FA02 簡易CAN板forC255",
       "change_notes": "1. 修改無須進入版本才可以調節高度\n2.休眠前的時序改變，避免惡意操作導致高度記錄錯誤。",
@@ -20396,7 +20861,7 @@
     {
       "version_date": "20250424_0818",
       "folder_name": "TY03_TESTER_V40_46K80_20250424_0818_exCanTEST_0x9938.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20250521_1134_exCanTEST",
+      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20250424_0818_exCanTEST",
       "excel_sheet": "OEM-TY03",
       "case_name": "OEM-TY03",
       "change_notes": "1.新增開機時先判斷待測物有沒有自己丟出CAN資料，藉此判斷待測物開機完畢。 (解決因燒錄問題造成需要二次開機的異常)",
@@ -20507,8 +20972,7 @@
         "32": "Fuel_test_STEP_4",
         "33": "into_ENG_mode_STEP_2",
         "34": "into_ENG_mode_STEP_3",
-        "35": "General_communication_test_STEP",
-        "36": "Light_Sensor_TEST_STEP_3"
+        "35": "General_communication_test_STEP"
       },
       "ng_reasons": {
         "30": {
@@ -22023,7 +22487,7 @@
     {
       "version_date": "20250326_1608",
       "folder_name": "TY03_TESTER_V40_46K80_20250326_1608_exCanTEST_0xff89.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/tool/TY03_TESTER_V40_46K80_20250326_1608_exCanTEST_Color_sensor_TEST",
+      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20250326_1608_exCanTEST",
       "excel_sheet": "OEM-TY03",
       "case_name": "OEM-TY03",
       "change_notes": "1.調整無LED的閥值 10 -> 30 ，減少誤判。\n2. 光感測器測試時，會將數據丟到LCM上。\n3. 工程模式進入失敗增加重測機制。",
@@ -22440,7 +22904,7 @@
     {
       "version_date": "20250325_1330",
       "folder_name": "TS-Volume-diagnosis_V4_20250325_1330_0xcdae.hex",
-      "folder_path": "D:/yuanyu/TS-Volume-diagnosis/V4/TS-Volume-diagnosis_V4_20250327_0830",
+      "folder_path": "D:/yuanyu/TS-Volume-diagnosis/V4/TS-Volume-diagnosis_V4_20250325_1330",
       "excel_sheet": "321-噪音測試站",
       "case_name": "321-噪音測試站",
       "change_notes": "修改檢具軟硬體，使其控制全部交由PC透過UR操作，檢具端不做任何判斷。",
@@ -22581,7 +23045,7 @@
     {
       "version_date": "20250310_0854",
       "folder_name": "Main_BOARD_TESTER_20250310_0854_0x4adf.hex",
-      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20251218_1138",
+      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20250310_0854",
       "excel_sheet": "731-TMC7 ECU半測",
       "case_name": "731-TMC7 ECU 半測",
       "change_notes": "1.修改CCD POWER 檢查的部分，增加覆判的機制以及將該數據顯示於LCM上。\n2. 修改LCM的副程式，減少堆疊。",
@@ -24845,7 +25309,7 @@
     {
       "version_date": "20250113_0830",
       "folder_name": "TY03_TESTER_V40_46K80_20250113_0830_exCanTEST_0xf24d.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/tool/TY03_TESTER_V40_46K80_20250326_1608_exCanTEST_Color_sensor_TEST",
+      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20250113_0830_exCanTEST",
       "excel_sheet": "OEM-TY03",
       "case_name": "OEM-TY03",
       "change_notes": "1.修改不良代碼 (ICT 異常 ->開路異常)\n2.部分測試項目補上TIME OUT機制\n3.提前版本詢問的機制，使工時縮短約3秒。",
@@ -24953,9 +25417,7 @@
         "23": "FR_test_STEP",
         "24": "RR_test_STEP",
         "31": "Light_Sensor_TEST_STEP_3",
-        "32": "Fuel_test_STEP_4",
-        "33": "into_ENG_mode_STEP_2",
-        "34": "into_ENG_mode_STEP_3"
+        "32": "Fuel_test_STEP_4"
       },
       "ng_reasons": {
         "30": {
@@ -25569,7 +26031,7 @@
     {
       "version_date": "20241227_1550",
       "folder_name": "Main_BOARD_TESTER_20241227_1550_MES_0xc308.hex",
-      "folder_path": "D:/yuanyu/733/TMC2/9U/Main_BOARD_TESTER_20250326_1454_MES",
+      "folder_path": "D:/yuanyu/733/TMC2/9U/Main_BOARD_TESTER_20241227_1550_MES",
       "excel_sheet": "733-TMC2 ECU成品",
       "case_name": "733-TMC2 ECU成品",
       "change_notes": "1. 修改車速的發送速度 (降慢一倍)\n2. 修改部分不良代碼\n3. 修改溫度NG的閥值  45->40",
@@ -25975,7 +26437,7 @@
     {
       "version_date": "20241227_1306",
       "folder_name": "TY03_TESTER_V40_46K80_20241227_1306_exCanTEST_0xe613.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/tool/TY03_TESTER_V40_46K80_20250326_1608_exCanTEST_Color_sensor_TEST",
+      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20241227_1306_exCanTEST",
       "excel_sheet": "OEM-TY03",
       "case_name": "OEM-TY03",
       "change_notes": "1.修改FL…之參數\n2.修改NG_TIME 的次數從100- > 1000",
@@ -26057,7 +26519,7 @@
         }
       ],
       "test_steps": {
-        "30": "open_all_led_STEP",
+        "30": "Wait_start_STEP",
         "1": "Float_Pin_TEST_STEP_1",
         "2": "Float_Pin_TEST_STEP_2",
         "3": "Float_Pin_TEST_STEP_3",
@@ -26081,11 +26543,7 @@
         "21": "FL_test_STEP",
         "22": "RL_test_STEP",
         "23": "FR_test_STEP",
-        "24": "RR_test_STEP",
-        "31": "Light_Sensor_TEST_STEP_3",
-        "32": "Fuel_test_STEP_4",
-        "33": "into_ENG_mode_STEP_2",
-        "34": "into_ENG_mode_STEP_3"
+        "24": "RR_test_STEP"
       },
       "ng_reasons": {
         "30": {
@@ -29403,7 +29861,7 @@
     {
       "version_date": "20241106_1018",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20241106_1018_0X5B31.hex",
-      "folder_path": "D:/yuanyu/321/FL02/A_BOARD/M/A_BOREAD_TESTER_V40_46K80_20241106_1018_unlock",
+      "folder_path": "D:/yuanyu/321/FL02/A_BOARD/M/A_BOREAD_TESTER_V40_46K80_20241106_1018",
       "excel_sheet": "321-FL02 A",
       "case_name": "EL-321W-FL02A板",
       "change_notes": "1.修改風扇的功率閥值以及增加需大於4.5V\n2.修改鎖定版本資訊",
@@ -30028,7 +30486,7 @@
     {
       "version_date": "20241022_0840",
       "folder_name": "Main_BOARD_TESTER_20241022_0840_MES_0xd62a.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/Main_BOARD_TESTER_20241127_0814_MES",
+      "folder_path": "D:/yuanyu/733/TMC2/ECU/Main_BOARD_TESTER/M/Main_BOARD_TESTER_20241022_0840_MES",
       "excel_sheet": "733-TMC2 ECU半成品",
       "case_name": "733-TMC2 ECU半成品",
       "change_notes": "1.因影像輸出pin9 的迴路上有一顆電容，有機會帶電，導致誤判。故使用燒錄短路in用的繼電器，外加一個22R對地，量測到後無問題後，在斷開並重新量測，避免真實短路。",
@@ -30036,13 +30494,13 @@
       "test_results": [
         "OS_TEST_result",
         "POWER_ON_Test_result",
-        "show_test_result",
         "COMM_test_result",
         "BACK_test_result",
         "BACK_OUT_result",
         "CAR_RIGHT_TEST_result",
         "CAR_LEFT_TEST_result",
         "SPEED_TEST_result",
+        "Voltage_TEST_result",
         "SLEEP_ENTER_result",
         "SLEEP_TEST_result"
       ],
@@ -30052,32 +30510,28 @@
           "name": "sys_on_current_DATA"
         },
         {
-          "idx": 3,
+          "idx": 4,
           "name": "CAR_BACK_OUT_V_DATA"
         },
         {
-          "idx": 4,
-          "name": "Dynmic_current_DATA"
-        },
-        {
           "idx": 5,
-          "name": "SLEEP_Current_DATA"
+          "name": "Voltage_DATA_1"
         },
         {
           "idx": 6,
-          "name": "TESTER_NAME_DATA"
+          "name": "Voltage_DATA_2"
         },
         {
           "idx": 7,
-          "name": "TEST_STEP_DATA"
+          "name": "Voltage_DATA_3"
         },
         {
           "idx": 8,
-          "name": "ERR_DATA_1"
+          "name": "Dynmic_current_DATA"
         },
         {
           "idx": 9,
-          "name": "ERR_DATA_2"
+          "name": "SLEEP_Current_DATA"
         },
         {
           "idx": 10,
@@ -30115,16 +30569,12 @@
         "16": "CAR_BACK_TEST_1_STEP",
         "17": "CAR_BACK_TEST_2_STEP",
         "18": "SPEED_TEST_STEP",
-        "19": "MCU_VER_STEP",
-        "20": "SOC_VER_STEP",
-        "21": "voltage_test_STEP",
-        "22": "Work_current_test_STEP",
-        "23": "SLEEP_MODE_1_STEP",
-        "24": "SLEEP_MODE_2_STEP",
-        "25": "SLEEP_MODE_3_STEP",
-        "26": "PASS_STEP",
-        "30": "Temp_STEP",
-        "31": "Check_Ver_STEP"
+        "19": "voltage_test_STEP",
+        "20": "Work_current_test_STEP",
+        "21": "SLEEP_MODE_1_STEP",
+        "22": "SLEEP_MODE_2_STEP",
+        "23": "SLEEP_MODE_3_STEP",
+        "24": "PASS_STEP"
       },
       "ng_reasons": {
         "1": {
@@ -30434,7 +30884,7 @@
     {
       "version_date": "20241022_0840",
       "folder_name": "Main_BOARD_TESTER_20241022_0840_MES_0xd62a.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/Main_BOARD_TESTER_20241127_0814_MES",
+      "folder_path": "D:/yuanyu/733/TMC2/ECU/Main_BOARD_TESTER/M/Main_BOARD_TESTER_20241022_0840_MES",
       "excel_sheet": "733-TMC2 ECU成品",
       "case_name": "733-TMC1 ECU成品",
       "change_notes": "1. 新增秒數顯示。\n2. 新增溫度管控 超過45度顯示 \"    Temp NG     \"，且蜂鳴器一秒變化。\n3. 版本結束後，跳到第一個畫面。",
@@ -30442,13 +30892,13 @@
       "test_results": [
         "OS_TEST_result",
         "POWER_ON_Test_result",
-        "show_test_result",
         "COMM_test_result",
         "BACK_test_result",
         "BACK_OUT_result",
         "CAR_RIGHT_TEST_result",
         "CAR_LEFT_TEST_result",
         "SPEED_TEST_result",
+        "Voltage_TEST_result",
         "SLEEP_ENTER_result",
         "SLEEP_TEST_result"
       ],
@@ -30458,32 +30908,28 @@
           "name": "sys_on_current_DATA"
         },
         {
-          "idx": 3,
+          "idx": 4,
           "name": "CAR_BACK_OUT_V_DATA"
         },
         {
-          "idx": 4,
-          "name": "Dynmic_current_DATA"
-        },
-        {
           "idx": 5,
-          "name": "SLEEP_Current_DATA"
+          "name": "Voltage_DATA_1"
         },
         {
           "idx": 6,
-          "name": "TESTER_NAME_DATA"
+          "name": "Voltage_DATA_2"
         },
         {
           "idx": 7,
-          "name": "TEST_STEP_DATA"
+          "name": "Voltage_DATA_3"
         },
         {
           "idx": 8,
-          "name": "ERR_DATA_1"
+          "name": "Dynmic_current_DATA"
         },
         {
           "idx": 9,
-          "name": "ERR_DATA_2"
+          "name": "SLEEP_Current_DATA"
         },
         {
           "idx": 10,
@@ -30521,16 +30967,12 @@
         "16": "CAR_BACK_TEST_1_STEP",
         "17": "CAR_BACK_TEST_2_STEP",
         "18": "SPEED_TEST_STEP",
-        "19": "MCU_VER_STEP",
-        "20": "SOC_VER_STEP",
-        "21": "voltage_test_STEP",
-        "22": "Work_current_test_STEP",
-        "23": "SLEEP_MODE_1_STEP",
-        "24": "SLEEP_MODE_2_STEP",
-        "25": "SLEEP_MODE_3_STEP",
-        "26": "PASS_STEP",
-        "30": "Temp_STEP",
-        "31": "Check_Ver_STEP"
+        "19": "voltage_test_STEP",
+        "20": "Work_current_test_STEP",
+        "21": "SLEEP_MODE_1_STEP",
+        "22": "SLEEP_MODE_2_STEP",
+        "23": "SLEEP_MODE_3_STEP",
+        "24": "PASS_STEP"
       },
       "ng_reasons": {
         "1": {
@@ -31167,96 +31609,14 @@
     {
       "version_date": "20241004_1100",
       "folder_name": "Main_BOARD_TESTER_20241004_1100_0xf4e4.hex",
-      "folder_path": "D:/yuanyu/733/TMC2/ECU/Main_BOARD_TESTER/M/Main_BOARD_TESTER_20241021_1552_MES",
+      "folder_path": "D:/yuanyu/733/TMC2/ECU/Main_BOARD_TESTER/M/Main_BOARD_TESTER_20241004_1100",
       "excel_sheet": "733-TMC2 ECU半成品",
       "case_name": "733-TMC2 ECU半成品",
       "change_notes": "1. 修改LCM副程式，避免太多堆疊，造成當機。",
       "release_date": "2024-10-08",
-      "test_results": [
-        "OS_TEST_result",
-        "POWER_ON_Test_result",
-        "COMM_test_result",
-        "BACK_test_result",
-        "BACK_OUT_result",
-        "CAR_RIGHT_TEST_result",
-        "CAR_LEFT_TEST_result",
-        "SPEED_TEST_result",
-        "Voltage_TEST_result",
-        "SLEEP_ENTER_result",
-        "SLEEP_TEST_result"
-      ],
-      "test_data": [
-        {
-          "idx": 2,
-          "name": "sys_on_current_DATA"
-        },
-        {
-          "idx": 4,
-          "name": "CAR_BACK_OUT_V_DATA"
-        },
-        {
-          "idx": 5,
-          "name": "Voltage_DATA_1"
-        },
-        {
-          "idx": 6,
-          "name": "Voltage_DATA_2"
-        },
-        {
-          "idx": 7,
-          "name": "Voltage_DATA_3"
-        },
-        {
-          "idx": 8,
-          "name": "Dynmic_current_DATA"
-        },
-        {
-          "idx": 9,
-          "name": "SLEEP_Current_DATA"
-        },
-        {
-          "idx": 10,
-          "name": "TESTER_NAME_DATA"
-        },
-        {
-          "idx": 11,
-          "name": "TEST_STEP_DATA"
-        },
-        {
-          "idx": 12,
-          "name": "ERR_DATA_1"
-        },
-        {
-          "idx": 13,
-          "name": "ERR_DATA_2"
-        }
-      ],
-      "test_steps": {
-        "1": "OS_TEST_1_1_STEP",
-        "2": "OS_TEST_1_2_STEP",
-        "3": "OS_TEST_1_3_STEP",
-        "4": "OS_TEST_1_4_STEP",
-        "5": "CHACK_Current_1_1_STEP",
-        "6": "CHACK_Current_2_1_STEP",
-        "7": "CHACK_Current_2_2_STEP",
-        "8": "CCD_POWER_CHECK_STEP",
-        "9": "OS_TEST_2_1_STEP",
-        "10": "OS_TEST_2_2_STEP",
-        "11": "Check_Screen_STEP",
-        "12": "UR_NG_STEP",
-        "13": "CAR_RIGHT_TEST_1_STEP",
-        "14": "CAR_RIGHT_TEST_2_STEP",
-        "15": "CAR_LEFT_TEST_STEP",
-        "16": "CAR_BACK_TEST_1_STEP",
-        "17": "CAR_BACK_TEST_2_STEP",
-        "18": "SPEED_TEST_STEP",
-        "19": "voltage_test_STEP",
-        "20": "Work_current_test_STEP",
-        "21": "SLEEP_MODE_1_STEP",
-        "22": "SLEEP_MODE_2_STEP",
-        "23": "SLEEP_MODE_3_STEP",
-        "24": "PASS_STEP"
-      },
+      "test_results": [],
+      "test_data": [],
+      "test_steps": {},
       "ng_reasons": {
         "1": {
           "step_name": "OS_TEST_1_1_STEP",
@@ -31628,7 +31988,7 @@
     {
       "version_date": "20240925_1552",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20240925_1552_0x5c6b.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20240925_1552_FOR_RD",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20240925_1552",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流",
       "change_notes": "1.修改開機電流的判斷 範圍從 40~ 500 mA 修改成40~1200mA (500為早期的DML2 標準)",
@@ -32087,7 +32447,7 @@
     {
       "version_date": "20240828_1332",
       "folder_name": "Main_BOARD_TESTER_20240828_1332_with_tmc8_0x6fb3.hex",
-      "folder_path": "D:/yuanyu/731/TMC3/Main_board_TEST/Main_BOARD_TESTER_20260106_1422_with_tmc8_th",
+      "folder_path": "D:/yuanyu/731/TMC3/Main_board_TEST/Main_BOARD_TESTER_20240828_1332_with_tmc8",
       "excel_sheet": "731-TMC3 & 8 ECU半測",
       "case_name": "731-TMC3 & 8 ECU半測",
       "change_notes": "修改部分： (泰國檢具)\n1. 車速 。",
@@ -32100,7 +32460,7 @@
     {
       "version_date": "20240828_1107",
       "folder_name": "Main_BOARD_TESTER_20240828_1107_0xe322.hex",
-      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20240829_1553",
+      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20240828_1107",
       "excel_sheet": "731-TMC7 ECU半測",
       "case_name": "731-TMC7 ECU 半測",
       "change_notes": "1.修改車速的方式，斷點式 -> 漸進式。\n2.關閉被壓測試。",
@@ -32178,7 +32538,7 @@
     {
       "version_date": "20240726_1117",
       "folder_name": "TS-HUD_Current_check_Tester_26k80_20240726_1117_0xcc15.hex",
-      "folder_path": "D:/yuanyu/321/TS-HUD_Current_check_Tester/TS-HUD_Current_check_Tester_26k80_20250410_0912_lin_test",
+      "folder_path": "D:/yuanyu/321/TS-HUD_Current_check_Tester/TS-HUD_Current_check_Tester_26k80_20240726_1117",
       "excel_sheet": "321-熱機電流監控",
       "case_name": "321-熱機電流監控",
       "change_notes": "1. 完成CAN 通訊的軟體\n2. 因屬大電流，故無校正電流，直接用通用的補償值進行測試。",
@@ -32637,7 +32997,7 @@
     {
       "version_date": "20240712_0900",
       "folder_name": "TS-Cylinder-pressing-time-jig_20240712_0900_0x8079.hex",
-      "folder_path": "D:/yuanyu/321/TOOLS/TS-Cylinder-pressing-time-jig/TS-Cylinder-pressing-time-jig_20250805_1024",
+      "folder_path": "D:/yuanyu/321/TOOLS/TS-Cylinder-pressing-time-jig/TS-Cylinder-pressing-time-jig_20240712_0900",
       "excel_sheet": "321-壓攏治具計時器",
       "case_name": "321-壓攏治具計時器",
       "change_notes": "1.修改開始測試後，lcm的讀秒 從0.1s 更新一次，變成 1s更新一次。 \n2. 當偵測到壓攏結束後，新增  Wait upload   字樣，方便除錯用。\n3. 新增只有工程模式會顯示偵測的ad數值，用來判斷目前的偵測狀態。",
@@ -33631,7 +33991,7 @@
     {
       "version_date": "20240704_1140",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20240704_1140_0Xbd1b.hex",
-      "folder_path": "D:/yuanyu/321/GL0EA/A_Board/M/A_BOREAD_TESTER_V40_46K80_20250613_1023",
+      "folder_path": "D:/yuanyu/321/GL0EA/A_Board/M/----A_BOREAD_TESTER_V40_46K80_20240704_1140",
       "excel_sheet": "321-GL0EA A",
       "case_name": "EL-321W-GL0EA A板",
       "change_notes": "1.修正取消馬達堵轉時偵測的判斷",
@@ -34612,270 +34972,15 @@
     {
       "version_date": "20240627_0814",
       "folder_name": "esp32test__TY02_TESTER_V40_46K80_20240627_0814_exCanTEST_unlock_0x08f5.hex",
-      "folder_path": "D:/yuanyu/OEM/TY02_BT_CTRL/TY02_TESTER_V40_46K80/esp32test__TY02_TESTER_V40_46K80_20240927_0814_exCanTEST_unlock",
+      "folder_path": "",
       "excel_sheet": "OEM-TY02",
       "case_name": "OEM-TY02",
       "change_notes": "1.新增半成品檢具第5台及第6台參數。",
       "release_date": "2024-09-30",
-      "test_results": [
-        "D3_TEST_result",
-        "POWER_TEST_result",
-        "CAN_BUS_TEST_result",
-        "BT_TEST_result",
-        "SLEEP_ENTER_result",
-        "SLEEP_TEST_result"
-      ],
-      "test_data": [
-        {
-          "idx": 1,
-          "name": "PIN2_forward_V_DATA"
-        },
-        {
-          "idx": 2,
-          "name": "PIN3_forward_V_DATA"
-        },
-        {
-          "idx": 3,
-          "name": "PIN3_reverse_bias_V_DATA"
-        },
-        {
-          "idx": 4,
-          "name": "Dynamic_current_1_DATA"
-        },
-        {
-          "idx": 5,
-          "name": "MCU_3V3_DATA"
-        },
-        {
-          "idx": 8,
-          "name": "SLEEP_Current_DATA"
-        },
-        {
-          "idx": 9,
-          "name": "TESTER_NAME_DATA"
-        },
-        {
-          "idx": 10,
-          "name": "TEST_STEP_DATA"
-        },
-        {
-          "idx": 11,
-          "name": "ERR_DATA_1"
-        },
-        {
-          "idx": 12,
-          "name": "ERR_DATA_2"
-        }
-      ],
-      "test_steps": {
-        "30": "Wait_start_STEP",
-        "0": "PIN3_TO_PIN2_TEST_STEP",
-        "1": "PIN2_TO_PIN3_TEST_STEP",
-        "2": "Dynamic_current_TEST_STEP",
-        "3": "Program_START_TEST_STEP",
-        "4": "WAIT_Program_TEST_STEP",
-        "5": "Program_END_TEST_STEP",
-        "6": "Can_ID_500_TEST_STEP",
-        "10": "SLEEP_Current_TEST_STEP_2",
-        "11": "SLEEP_Current_TEST_STEP_3",
-        "7": "ASK_BLE_VER_STEP",
-        "8": "ASK_MCU_VER_STEP",
-        "9": "SLEEP_Current_TEST_STEP_1",
-        "12": "Sleep_test_STEP",
-        "40": "esp_bt_scan_STEP",
-        "80": "PASS_TEST_STEP",
-        "90": "NG_MODE2_TEST_STEP",
-        "91": "NG_MODE_TEST_STEP",
-        "100": "End_TEST_STEP"
-      },
-      "ng_reasons": {
-        "30": {
-          "step_name": "Wait_start_STEP",
-          "description": "Wait_start_STEP 測試失敗",
-          "err_data": []
-        },
-        "1": {
-          "step_name": "PIN2_TO_PIN3_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "2": {
-          "step_name": "Dynamic_current_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "3": {
-          "step_name": "Program_START_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "4": {
-          "step_name": "WAIT_Program_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "5": {
-          "step_name": "Program_END_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "6": {
-          "step_name": "Can_ID_500_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "10": {
-          "step_name": "SLEEP_Current_TEST_STEP_2",
-          "description": "省電電流超出規格範圍",
-          "err_data": []
-        },
-        "11": {
-          "step_name": "SLEEP_Current_TEST_STEP_3",
-          "description": "省電電流超出規格範圍",
-          "err_data": []
-        },
-        "7": {
-          "step_name": "ASK_BLE_VER_STEP",
-          "description": "ASK_BLE_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "8": {
-          "step_name": "ASK_MCU_VER_STEP",
-          "description": "ASK_MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "9": {
-          "step_name": "SLEEP_Current_TEST_STEP_1",
-          "description": "省電電流超出規格範圍",
-          "err_data": []
-        },
-        "12": {
-          "step_name": "Sleep_test_STEP",
-          "description": "省電模式（Sleep）測試失敗",
-          "err_data": []
-        },
-        "80": {
-          "step_name": "PASS_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "90": {
-          "step_name": "NG_MODE2_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "91": {
-          "step_name": "NG_MODE_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "100": {
-          "step_name": "End_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "IO_TEST_STEP",
-          "description": "I/O 訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "14": {
-          "step_name": "Light_Sensor_TEST_STEP_1",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "15": {
-          "step_name": "Light_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "16": {
-          "step_name": "Fuel_test_STEP_1",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "17": {
-          "step_name": "Fuel_test_STEP_2",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "18": {
-          "step_name": "Fuel_test_STEP_3",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "19": {
-          "step_name": "Value_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "ver_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "FL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "RL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "FR_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "RR_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "40": {
-          "step_name": "esp_bt_scan_STEP",
-          "description": "esp_bt_scan_STEP 測試失敗",
-          "err_data": []
-        }
-      }
+      "test_results": [],
+      "test_data": [],
+      "test_steps": {},
+      "ng_reasons": {}
     },
     {
       "version_date": "20240624_1513",
@@ -36146,7 +36251,7 @@
     {
       "version_date": "20240614_1448",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20240614_1448_0x8bf5.hex",
-      "folder_path": "D:/yuanyu/321/GL0P/A_Board/M/A_BOREAD_TESTER_V40_46K80_20240709_0837",
+      "folder_path": "D:/yuanyu/321/GL0L/A_Board/M/A_BOREAD_TESTER_V40_46K80_20240614_1448",
       "excel_sheet": "321-GL0L A",
       "case_name": "EL-321W-GL0L A板",
       "change_notes": "1.修改馬達編碼器的判斷邏輯bug。(同GL09)\n2. 取消暗電流",
@@ -37926,7 +38031,7 @@
     {
       "version_date": "20240605_1355",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20240605_1355_0X85dc.hex",
-      "folder_path": "D:/yuanyu/321/GL0L/A_Board/M/A_BOREAD_TESTER_V40_46K80_20240614_1107",
+      "folder_path": "D:/yuanyu/321/GL0L/A_Board/M/A_BOREAD_TESTER_V40_46K80_20240605_1355",
       "excel_sheet": "321-GL0L A",
       "case_name": "EL-321W-GL0L A板",
       "change_notes": "修改馬達編碼器的判斷邏輯bug。(同GL09)",
@@ -39180,61 +39285,13 @@
     {
       "version_date": "20240516_0920",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20240516_0920_0x9cb1.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20240516_0858",
+      "folder_path": "",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流",
       "change_notes": "1新增於電流校正的模式下，按壓SW2 可將EERPOM清空，並且重開機。避免校正失敗要重新燒錄的問題。",
       "release_date": "2024-05-16",
-      "test_results": [
-        "POWER_ON_result",
-        "SLEEP_TEST_result"
-      ],
-      "test_data": [
-        {
-          "idx": 1,
-          "name": "Correction_value_DATA"
-        },
-        {
-          "idx": 2,
-          "name": "Analyte_power_on_count_DATA"
-        },
-        {
-          "idx": 3,
-          "name": "MAX_Current_DATA"
-        },
-        {
-          "idx": 4,
-          "name": "SLEEP_Current_DATA"
-        },
-        {
-          "idx": 5,
-          "name": "factory_setting_DATA"
-        },
-        {
-          "idx": 6,
-          "name": "End_state_DATA"
-        },
-        {
-          "idx": 7,
-          "name": "Auto_start_DATA"
-        },
-        {
-          "idx": 8,
-          "name": "TEST_STEP_DATA"
-        },
-        {
-          "idx": 9,
-          "name": "ERR_DATA_1"
-        },
-        {
-          "idx": 10,
-          "name": "ERR_DATA_2"
-        },
-        {
-          "idx": 11,
-          "name": "retry_DATA"
-        }
-      ],
+      "test_results": [],
+      "test_data": [],
       "test_steps": {},
       "ng_reasons": {}
     },
@@ -40656,7 +40713,7 @@
     {
       "version_date": "20240418_1635",
       "folder_name": "MotorStop_A_BOREAD_TESTER_V40_46K80_20240418_1635_0x78a0.hex",
-      "folder_path": "D:/yuanyu/321/GL05D/M/A_BOREAD_TESTER_V40_46K80_20250204_1440",
+      "folder_path": "D:/yuanyu/321/GL05/A_Board/M/MotorStop_A_BOREAD_TESTER_V40_46K80_20240418_1635",
       "excel_sheet": "321-GL05&0C A ",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "1. 更改檢具測試時無須按壓SW1",
@@ -40665,50 +40722,68 @@
         "Gnd_check_result",
         "Cant_Power_On_result",
         "MOTOR_TEST_result",
-        "LS_TEST_result",
         "MOTOR_Reverse_TEST_result",
         "BL_TEST_result",
         "TFT_CHECK_result",
-        "voltage_test_result",
         "SLEEP_ENTER_result",
-        "SLEEP_TEST_result"
+        "SLEEP_TEST_result",
+        "CAN_BUS_TEST_result",
+        "EEPROM_TEST_result"
       ],
       "test_data": [
         {
           "idx": 3,
-          "name": "Voltage_DATA_1"
-        },
-        {
-          "idx": 4,
           "name": "SLEEP_Current_DATA"
         },
         {
-          "idx": 5,
+          "idx": 4,
           "name": "TESTER_NAME_DATA"
         },
         {
-          "idx": 6,
+          "idx": 5,
           "name": "TEST_STEP_DATA"
         },
         {
+          "idx": 6,
+          "name": "GMSL_R_DATA_1"
+        },
+        {
           "idx": 7,
-          "name": "ERR_DATA_1"
+          "name": "GMSL_R_DATA_2"
         },
         {
           "idx": 8,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 9,
           "name": "ERR_DATA_2"
+        },
+        {
+          "idx": 11,
+          "name": "BL_H_V_DATA"
+        },
+        {
+          "idx": 12,
+          "name": "CAN_5V_DATA"
+        },
+        {
+          "idx": 13,
+          "name": "MCU_3V3_DATA"
         }
       ],
       "test_steps": {
         "1": "Floating_PIN_CHECK_FUNC_STEP",
-        "2": "current_check_test_STEP",
+        "2": "Double_Voltage_test_STEP",
         "3": "MOTOR_TEST_STEP_1",
         "4": "MOTOR_TEST_STEP_2",
-        "5": "BL_TEST_Func_STEP_1",
-        "6": "TFT_CHECK_STEP",
+        "5": "BL_TEST_Func_STEP",
+        "6": "TFT_CHECK_STEP_1",
         "7": "TFT_CHECK_STEP_2",
         "8": "TFT_CHECK_STEP_3",
-        "9": "Voltage_CHECK_STEP"
+        "9": "SLEEP_Current_TEST_STEP_1",
+        "10": "SLEEP_Current_TEST_STEP_2",
+        "11": "SLEEP_Current_TEST_STEP_3"
       },
       "ng_reasons": {}
     },
@@ -41031,7 +41106,7 @@
     {
       "version_date": "20240412_0923",
       "folder_name": "GL0E_TS-CAN_BOARD_CTRL_MES_26k80_20240412_0923_0X60f4.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/GL0E_TS-CAN_BOARD_CTRL_MES_26k80_20240417_1646",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/GL0E_TS-CAN_BOARD_CTRL_MES_26k80_20240412_0923",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流\nGL0E-GL0H 專用",
       "change_notes": "1.修改4/11的版本，偵測馬達電流的區間的範圍%數，從3%放寬到5%。(因不良的數據為80mA以上，假使震盪過大，也不會進入加嚴的下限90mA)",
@@ -41288,7 +41363,7 @@
     {
       "version_date": "20240328_1017",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20240328_1017_0xb309.hex",
-      "folder_path": "D:/yuanyu/321/GL0EA/A_Board/M/A_BOREAD_TESTER_V40_46K80_20240621_1318",
+      "folder_path": "D:/yuanyu/321/GL0EA/A_Board/M/A_BOREAD_TESTER_V40_46K80_20240328_1017",
       "excel_sheet": "321-GL0EA A",
       "case_name": "EL-321W-GL0EA A板",
       "change_notes": "1.修改馬達電流閥值130 ->110mA , 上限 150->250mA (異常時不會電流過大)\n2.修改馬達須滿足的次數及time out時間",
@@ -41350,7 +41425,7 @@
         "1": "short_ciruit_current_check_STEP",
         "2": "ACC_ON_current_check_STEP",
         "3": "ACC_ON_Current_err_STEP",
-        "41": "MOTOR_TEST_STEP_1",
+        "4": "MOTOR_TEST_STEP_1",
         "5": "LS_TEST_STEP_1",
         "6": "LS_TEST_STEP_2",
         "7": "MOTOR_TEST_STEP_2",
@@ -42977,7 +43052,7 @@
     {
       "version_date": "20240221_1322",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20240221_1322_0Xe11a.hex",
-      "folder_path": "D:/yuanyu/321/GL0L/A_Board/M/forRD_PowerOn_A_BOREAD_TESTER_V40_46K80_20240221_1322",
+      "folder_path": "D:/yuanyu/321/GL0L/A_Board/M/A_BOREAD_TESTER_V40_46K80_20240221_1322",
       "excel_sheet": "321-GL0L A",
       "case_name": "EL-321W-GL0L A板",
       "change_notes": "寄出檢具時的版本",
@@ -44467,7 +44542,7 @@
     {
       "version_date": "20240111_1128",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20240111_1128_0x5008.hex",
-      "folder_path": "D:/yuanyu/321/GWM1/A/M/A_BOREAD_TESTER_V40_46K80_20250901_0936",
+      "folder_path": "D:/yuanyu/321/GWM1/A/M/A_BOREAD_TESTER_V40_46K80_20240111_1128",
       "excel_sheet": "321-GWM1 A",
       "case_name": "321-GWM1 A板半成品檢具",
       "change_notes": "1.修改GWM4的VER1 的需比對長度，使其跟GWM2相同",
@@ -45219,7 +45294,7 @@
     {
       "version_date": "20231228_1054",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20231228_1054_0xf061.hex",
-      "folder_path": "D:/yuanyu/Hardware application Code/PIC18F46K80/A_BOREAD_TESTER_V40_46K80_20231228_1054",
+      "folder_path": "D:/yuanyu/321/TA01/A_BOARD/M/A_BOREAD_TESTER_V40_46K80_20231228_1054",
       "excel_sheet": "321C-TA01 A",
       "case_name": "EL-321C-TA01 A板",
       "change_notes": "修改TFT 測試畫面改成色塊圖。",
@@ -45583,7 +45658,7 @@
     {
       "version_date": "20231226_0900",
       "folder_name": "TS-Cylinder-pressing-time-_GL0M_jig_20231226_0900_0x854a.hex",
-      "folder_path": "D:/yuanyu/321/GL0M/TS-Cylinder-CTRL/TS-Cylinder-pressing-time-_GL0M_jig_20240717_0914",
+      "folder_path": "D:/yuanyu/321/GL0M/TS-Cylinder-CTRL/TS-Cylinder-pressing-time-_GL0M_jig_20231226_0900",
       "excel_sheet": "321-GL0M 壓攏",
       "case_name": "EL-321W-GL0M 防塵片壓攏",
       "change_notes": "1.汽缸來回測試壽命用。\n2.同時按著SW1和SW2後再送電，可進入工程模式。    \n3.於工程模式，旋轉SW2可以改變該位數的數字。    \n4.於工程模式，切動SW1可以改變下一位數。    \n5.於工程模式，需有變動過參數，再次按壓SW2變可儲存。    \n6.於運作中，按壓SW1便可暫停同時進行次數的儲存。",
@@ -45631,7 +45706,7 @@
     {
       "version_date": "20231219_1630",
       "folder_name": "TS-Cylinder-pressing-time-jig_20231219_1630_0x1350.hex",
-      "folder_path": "D:/yuanyu/321/TOOLS/TS-Cylinder-pressing-time-jig/TS-Cylinder-pressing-time-jig_20231219_1630 -___",
+      "folder_path": "D:/yuanyu/321/TOOLS/TS-Cylinder-pressing-time-jig/TS-Cylinder-pressing-time-jig_20231219_1630",
       "excel_sheet": "321-壓攏治具計時器",
       "case_name": "321-壓攏治具計時器",
       "change_notes": "增加NG的繼電器動作 ，以及蜂鳴器響，並且將NG自動RESET時間改成9秒。",
@@ -45679,7 +45754,7 @@
     {
       "version_date": "20231215_1607",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20231215_1607_0x1780.hex",
-      "folder_path": "D:/yuanyu/321/TA01/9U_TESTER/TS-CAN_BOARD_CTRL_MES_26k80_20231215_1607",
+      "folder_path": "D:/yuanyu/321/TA01/9U_TESTER/nomes_TS-CAN_BOARD_CTRL_MES_26k80_20231215_1607_allPic",
       "excel_sheet": "321C-TA01 功能測試站量測暗電流",
       "case_name": "321C-TA01 功能測試站量測暗電流",
       "change_notes": "1. 新增工程圖3 (色塊圖)\n2. 修改工程模式寫入檢具EEPROM的指令",
@@ -46275,7 +46350,7 @@
     {
       "version_date": "20231201_0804",
       "folder_name": "TS-Electric-screwdriver_V4_20231201_0804_0X577D.hex",
-      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20231228_1600",
+      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20231201_0804",
       "excel_sheet": "智能電批控制器(MES版本)",
       "case_name": "智能電批控制器 (雙通訊PORT)",
       "change_notes": "1.新增現在顆數 = 總顆數 (工件完成) 時，5秒後強制上傳(放棄沒收到的資料)，避免產線卡住。",
@@ -46875,7 +46950,7 @@
     {
       "version_date": "20231110_0825",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20231110_0825_0xf1ec.hex",
-      "folder_path": "D:/yuanyu/321/TA01/9U_TESTER/TS-CAN_BOARD_CTRL_MES_26k80_20231205_1500",
+      "folder_path": "D:/yuanyu/321/TA01/9U_TESTER/TS-CAN_BOARD_CTRL_MES_26k80_20231110_0825",
       "excel_sheet": "321C-TA01 功能測試站量測暗電流",
       "case_name": "321C-TA01 功能測試站量測暗電流",
       "change_notes": "1. 開機後5秒後才進行can bus的通訊，避免can bus ng。\n2. 修改讀版本的軟體，讀完則不再進入迴圈。\n3.放慢can傳輸的間隔時間 10 ->15",
@@ -46972,7 +47047,7 @@
     {
       "version_date": "20231109_1317",
       "folder_name": "TS-Volume-diagnosis_V3_20231109_1317_0xfbd5.hex",
-      "folder_path": "D:/yuanyu/TS-Volume-diagnosis/V4/TS-Volume-diagnosis_V4_20250327_0830",
+      "folder_path": "D:/yuanyu/TS-Volume-diagnosis/V3/TS-Volume-diagnosis_V3_20231109_1317",
       "excel_sheet": "321-噪音測試站",
       "case_name": "321-噪音測試站",
       "change_notes": "新增使用通訊，關閉電流偵測的功能 (因GL0L為判斷關機時的馬達聲音)",
@@ -48746,7 +48821,7 @@
     {
       "version_date": "20231002_1340",
       "folder_name": "TS-Electric-screwdriver_V4_20231002_1340_0x10ef.hex",
-      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20231004_1021",
+      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20231002_1340",
       "excel_sheet": "智能電批控制器(MES版本)",
       "case_name": "智能電批控制器 (雙通訊PORT)",
       "change_notes": "1. 修正mes getway 來的產品序號資料過長時不回應的問題。\n2.新增發生NG時，寫入EEPROM ，如未解除就重新開機，則LCM會顯示NG CODE: 7，並且繼續鎖機。\n3. 於開機瞬間，eeprom 的參數顯示，新增前次不良紀錄的資料，1表示前次未解處，0表示正常\n\n1. 上傳的數據有機率多5筆重複的資料，可是後整理數據再刪除。\n2. 當只有鎖附1顆時，無法使用。",
@@ -48836,7 +48911,7 @@
     {
       "version_date": "20230920_0811",
       "folder_name": "TS-Electric-screwdriver_V4_20230920_0811_0xd6a1.hex",
-      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20230920_1450",
+      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20230920_0811",
       "excel_sheet": "智能電批控制器(MES版本)",
       "case_name": "智能電批控制器 (雙通訊PORT)",
       "change_notes": "1. 修正讀到總數量為0時，不當作紀錄，避免回寫成0\n2. 修改一個循環完，有mes模式則直接鎖起子(原本是要起子放回才鎖起子)\n3. 修改一個循環完，無顯示\" Wait Bar code  \n\n尚未解決的bug: 於最後一顆，有機率上拋的資料是0000",
@@ -49189,7 +49264,7 @@
     {
       "version_date": "20230907_1653",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20230907_1653_0x65aa.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20230907_1653",
+      "folder_path": "D:/yuanyu/321/TA01/9U_TESTER/TS-CAN_BOARD_CTRL_MES_26k80_20230907_1653",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流",
       "change_notes": "1.修改因序號太長會造成卡住的問題。 (因CR01 和 TA01 的需求)",
@@ -49250,7 +49325,7 @@
     {
       "version_date": "20230907_0830",
       "folder_name": "TS-Electric-screwdriver_K1_20230907_0830_servant_0x751c.hex",
-      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_TH/Kilews/TS-Electric-screwdriver_K1_20230907_1305_servant",
+      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_TH/Kilews/TS-Electric-screwdriver_K1_20230907_0830_servant",
       "excel_sheet": "Kilews智能電批控制器(MES版本)",
       "case_name": "Kilews智能電批控制器(MES版本)",
       "change_notes": "1.修正mes通訊時異常的問題。",
@@ -49280,7 +49355,7 @@
     {
       "version_date": "20230901_1440",
       "folder_name": "TS-Electric-screwdriver_V4_20230901_1440_0x6d3f.hex",
-      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20230905_0820",
+      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20230901_1440",
       "excel_sheet": "智能電批控制器(MES版本)",
       "case_name": "智能電批控制器 (雙通訊PORT)",
       "change_notes": "1.修正mes getway當傳輸序號時造成的異常狀態。\n尚未解除的bug\n1. 當第一顆ng時，只有上傳不良代碼，數據尚未上傳\n2. 第一次開機時，智能電批的剩餘數量不等於總數量時，會自動啟動(但鎖機，一定會強制報成ng後，解鎖才會變正常。)",
@@ -49787,7 +49862,7 @@
     {
       "version_date": "20230807_1101",
       "folder_name": "TS-Burn_in_test_ON_OFF_57s_ON_3_OFF(12f1840)_20230807_1101_0x7866.hex",
-      "folder_path": "D:/yuanyu/321/Burn_in_test_ON_OFF/TS-Burn_in_test_ON_OFF_delay2s_on(12f1840)_20240129_1540",
+      "folder_path": "D:/yuanyu/321/Burn_in_test_ON_OFF/TS-Burn_in_test_ON_OFF_57s_ON_3_OFF(12f1840)_20230807_1101",
       "excel_sheet": "321-熱機台車onoff",
       "case_name": "WHUD 熱機台車 ON OFF",
       "change_notes": "因結束熱機測試時的位置都不同，故修改成最後5分鐘都為通電的狀態。",
@@ -49951,7 +50026,7 @@
     {
       "version_date": "20230717_0800",
       "folder_name": "esp32test__TY02_TESTER_V40_46K80_20230717_0800_exCanTEST_0x5a17.hex",
-      "folder_path": "D:/yuanyu/OEM/TY02_BT_CTRL/TY02_TESTER_V40_46K80/esp32test__TY02_TESTER_V40_46K80_20240617_1114_exCanTEST",
+      "folder_path": "D:/yuanyu/OEM/TY02_BT_CTRL/TY02_TESTER_V40_46K80/esp32test__TY02_TESTER_V40_46K80_20230717_0800_exCanTEST",
       "excel_sheet": "OEM-TY02",
       "case_name": "OEM-TY02",
       "change_notes": "1.新增ESP32 AT MODE 相關參數，使之可自動配對。\n2.暗電流的穩態偵測軟體修改。",
@@ -50374,7 +50449,7 @@
     {
       "version_date": "20230714_0835",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20230714_0835_0xd6bb.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20230719_0810_off_line",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20230714_0835",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流",
       "change_notes": "1.判斷暗電流時的抖動 2%  放寬到 10%\n2.暗電流判定超時的時候，增加判斷電流值，如在標準內則放行。",
@@ -50597,113 +50672,80 @@
     {
       "version_date": "20230707_0950",
       "folder_name": "TY02_TESTER_V40_46K80_20230707_0950_exCanTEST_0x4608.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/TESTER/TY03_TESTER_V40_46K80_20241217_0816_exCanTEST",
+      "folder_path": "D:/yuanyu/OEM/TY02_BT_CTRL/TY02_TESTER_V40_46K80/esp32test__TY02_TESTER_V40_46K80_20230707_0950_exCanTEST",
       "excel_sheet": "OEM-TY02",
       "case_name": "OEM-TY02",
       "change_notes": "1.新增第二台半測檢具和兩台成品檢具的參數\n2.修改藍芽配對名稱，以便區分。\n第一台半測 ZXT00A 、第二台半測 ZXT00B 、第一台成測 ZXT00C 、第二台成測 ZXT00D",
       "release_date": "2023-07-07",
       "test_results": [
-        "Float_Pin_TEST_result",
-        "TFT_TEST_result",
-        "LED_TEST_result",
-        "IO_DATA_TEST_result",
-        "Light_Sensor_TEST_result",
-        "Fuel_TEST_result",
-        "IO_value_TEST_result",
-        "VER_TEST_result"
+        "D3_TEST_result",
+        "POWER_TEST_result",
+        "CAN_BUS_TEST_result",
+        "BT_TEST_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
       ],
       "test_data": [
         {
-          "idx": 0,
-          "name": "Dynamic_current_DATA"
-        },
-        {
           "idx": 1,
-          "name": "Light_sensor_DATA_1"
+          "name": "PIN2_forward_V_DATA"
         },
         {
           "idx": 2,
-          "name": "Light_sensor_DATA_2"
+          "name": "PIN3_forward_V_DATA"
         },
         {
           "idx": 3,
-          "name": "Fuel_DATA_1"
+          "name": "PIN3_reverse_bias_V_DATA"
         },
         {
           "idx": 4,
-          "name": "Fuel_DATA_2"
+          "name": "Dynamic_current_1_DATA"
         },
         {
           "idx": 5,
-          "name": "Fuel_DATA_3"
-        },
-        {
-          "idx": 6,
-          "name": "Volt_DATA"
-        },
-        {
-          "idx": 7,
-          "name": "H_beam_DATA"
+          "name": "MCU_3V3_DATA"
         },
         {
           "idx": 8,
-          "name": "FL_DATA"
+          "name": "SLEEP_Current_DATA"
         },
         {
           "idx": 9,
-          "name": "RL_DATA"
-        },
-        {
-          "idx": 10,
-          "name": "FR_DATA"
-        },
-        {
-          "idx": 11,
-          "name": "RR_DATA"
-        },
-        {
-          "idx": 12,
           "name": "TESTER_NAME_DATA"
         },
         {
-          "idx": 13,
+          "idx": 10,
           "name": "TEST_STEP_DATA"
         },
         {
-          "idx": 14,
+          "idx": 11,
           "name": "ERR_DATA_1"
         },
         {
-          "idx": 15,
+          "idx": 12,
           "name": "ERR_DATA_2"
         }
       ],
       "test_steps": {
         "30": "Wait_start_STEP",
-        "1": "Float_Pin_TEST_STEP_1",
-        "2": "Float_Pin_TEST_STEP_2",
-        "3": "Float_Pin_TEST_STEP_3",
-        "4": "Float_Pin_TEST_STEP_4",
-        "5": "Float_Pin_TEST_STEP_5",
-        "6": "Float_Pin_TEST_STEP_6",
-        "7": "Float_Pin_TEST_STEP_7",
-        "8": "Float_Pin_TEST_STEP_8",
-        "9": "Current_check_STEP_1",
-        "10": "into_ENG_mode_STEP",
-        "11": "TFT_TEST_STEP",
-        "12": "LED_TEST_STEP",
-        "13": "IO_TEST_STEP",
-        "14": "Light_Sensor_TEST_STEP_1",
-        "15": "Light_Sensor_TEST_STEP_2",
-        "16": "Fuel_test_STEP_1",
-        "17": "Fuel_test_STEP_2",
-        "18": "Fuel_test_STEP_3",
-        "19": "Value_test_STEP",
-        "20": "ver_test_STEP",
-        "21": "FL_test_STEP",
-        "22": "RL_test_STEP",
-        "23": "FR_test_STEP",
-        "24": "RR_test_STEP"
+        "0": "PIN3_TO_PIN2_TEST_STEP",
+        "1": "PIN2_TO_PIN3_TEST_STEP",
+        "2": "Dynamic_current_TEST_STEP",
+        "3": "Program_START_TEST_STEP",
+        "4": "WAIT_Program_TEST_STEP",
+        "5": "Program_END_TEST_STEP",
+        "6": "Can_ID_500_TEST_STEP",
+        "10": "SLEEP_Current_TEST_STEP_2",
+        "11": "SLEEP_Current_TEST_STEP_3",
+        "7": "ASK_BLE_VER_STEP",
+        "8": "ASK_MCU_VER_STEP",
+        "9": "SLEEP_Current_TEST_STEP_1",
+        "12": "Sleep_test_STEP",
+        "80": "PASS_TEST_STEP",
+        "90": "NG_MODE2_TEST_STEP",
+        "91": "NG_MODE_TEST_STEP",
+        "100": "End_TEST_STEP"
       },
       "ng_reasons": {
         "30": {
@@ -50850,22 +50892,22 @@
         },
         "80": {
           "step_name": "PASS_TEST_STEP",
-          "description": "測試失敗",
+          "description": "PASS 階段",
           "err_data": []
         },
         "90": {
           "step_name": "NG_MODE2_TEST_STEP",
-          "description": "測試失敗",
+          "description": "紀錄測試失敗的階段",
           "err_data": []
         },
         "91": {
           "step_name": "NG_MODE_TEST_STEP",
-          "description": "測試失敗",
+          "description": "紀錄測試失敗的階段",
           "err_data": []
         },
         "100": {
           "step_name": "End_TEST_STEP",
-          "description": "測試失敗",
+          "description": "結束測試的階段",
           "err_data": []
         },
         "13": {
@@ -51110,7 +51152,7 @@
     {
       "version_date": "20230705_0900",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230705_0900_0x5bed.hex",
-      "folder_path": "D:/yuanyu/321/HT03/A_board/M/no use  test motor-------------A_BOREAD_TESTER_V40_46K80_20230713_1615",
+      "folder_path": "D:/yuanyu/321/HT03/A_board/M/A_BOREAD_TESTER_V40_46K80_20230705_0900",
       "excel_sheet": "321-HT03 A",
       "case_name": "EL-321W-HT03 A板",
       "change_notes": "1.增加取消堵轉的功能 (驗證OK)",
@@ -51416,7 +51458,7 @@
     {
       "version_date": "20230702_0900",
       "folder_name": "UR_TEST_25K22_20230702_0900_short_ALLKEY_0X1EB4.hex",
-      "folder_path": "D:/yuanyu/733/TMC1/9U/UR_TEST_25K22_20230718_0810_short_ALLKEY -EnModeTest",
+      "folder_path": "D:/yuanyu/733/TMC1/9U/UR_TEST_25K22_20230702_0900_short_ALLKEY",
       "excel_sheet": "733-TMC2 ECU成品",
       "case_name": "733-TMC1 ECU成品",
       "change_notes": "1.硬體使用D:\\Eng-tomcho\\Arduino 周邊電路\\Relay_ctrl_board\\Relay_ctrl_NANO_Board_20231212_0816\n2.同731ECU的短斷路測試，測完無問題後，在使用MOSFET (IRF4905)供應電源給ECU。\n3.UR通訊協定與731有差異，觸控要按下後再放開，才算觸發。\n4.程式內，觸控的座標資料使用結構的方式來編寫。\n5.車速改變動的，隨著TIMER進行變更 (有個IO決定加速或減速)。",
@@ -51558,7 +51600,7 @@
     {
       "version_date": "20230628_1110",
       "folder_name": "MotorStop_A_BOREAD_TESTER_V40_46K80_20230628_1110_0XA10C.hex",
-      "folder_path": "D:/yuanyu/321/GL0D/A_BOARD/M/MotorStop_A_BOREAD_TESTER_V40_46K80_20230628_1110",
+      "folder_path": "D:/yuanyu/321/GL05/A_Board/M/MotorStop_A_BOREAD_TESTER_V40_46K80_20230628_1110",
       "excel_sheet": "321-GL05&0C A ",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "1.修改BL穩定的判斷，原CODE 只有這次比過去大才判斷，補上這次比上次小的邏輯。\n2. 修正OTHER LINE 壽命的BUG",
@@ -51822,7 +51864,7 @@
     {
       "version_date": "20230616_1130",
       "folder_name": "Main_BOARD_TESTER_20230616_1130_with_tmc8_0xe968.hex",
-      "folder_path": "D:/yuanyu/733/TMC2/ECU/Main_BOARD_TESTER/M/Main_BOARD_TESTER_20240821_1122",
+      "folder_path": "D:/yuanyu/731/TMC3/Main_board_TEST/Main_BOARD_TESTER_20230616_1130_with_tmc8",
       "excel_sheet": "731-TMC3 & 8 ECU半測",
       "case_name": "731-TMC3 & 8 ECU半測",
       "change_notes": "修改部分：\n1. 關閉被壓測試。",
@@ -52002,7 +52044,7 @@
     {
       "version_date": "20230612_1030",
       "folder_name": "FOR HOT_POWERON -TS-CAN_BOARD_FL01_26k80_20230612_1030_current_0x5789.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FL01/FOR HOT_POWERON -TS-CAN_BOARD_FL01_26k80_20240126_1536_current",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FL01/FOR HOT_POWERON -TS-CAN_BOARD_FL01_26k80_20230612_1030_current",
       "excel_sheet": "321-FL01 簡易CAN板",
       "case_name": "EL-321W-FL 簡易CAN版軟體",
       "change_notes": "1. 移除亮度調節完後，ICON更改的模式 (避免局部畫面疑似閃爍的問題)",
@@ -52015,7 +52057,7 @@
     {
       "version_date": "20230609_0955",
       "folder_name": "TY02_TESTER_V40_46K80_20230609_0955_exCanTEST_0x7ada.hex",
-      "folder_path": "D:/yuanyu/OEM/TY02_BT_CTRL/TY02_TESTER_V40_46K80/TY02_TESTER_V40_46K80_20230706_0930_exCanTEST",
+      "folder_path": "D:/yuanyu/OEM/TY02_BT_CTRL/TY02_TESTER_V40_46K80/ask_ver_TY02_TESTER_V40_46K80_20230609_0955_exCanTEST",
       "excel_sheet": "OEM-TY02",
       "case_name": "OEM-TY02",
       "change_notes": "寄出檢具時的版本",
@@ -52926,7 +52968,7 @@
     {
       "version_date": "20230529_0930",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230529_0930_0x8987.hex",
-      "folder_path": "D:/yuanyu/321/GL0F_0G/A_BOARD/M/A_BOREAD_TESTER_V40_46K80_20240911_0914",
+      "folder_path": "D:/yuanyu/321/GL0F_0G/A_BOARD/M/A_BOREAD_TESTER_V40_46K80_20230529_0930",
       "excel_sheet": "321-GL0F & G A",
       "case_name": "EL-321W-GL0F & G A板",
       "change_notes": "寄出檢具時的版本",
@@ -53055,23 +53097,21 @@
     {
       "version_date": "20230529_0911",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230529_0911_0X42a5.hex",
-      "folder_path": "D:/yuanyu/321/TA01/A_BOARD/M/A_BOREAD_TESTER_V40_46K80_20231124_0817",
+      "folder_path": "D:/yuanyu/321/GWM5/A/M/A_BOREAD_TESTER_V40_46K80_20230529_0911",
       "excel_sheet": "321-GWM5 A",
       "case_name": "321-GWM5 A板半成品檢具",
       "change_notes": "修改鎖定版本的資訊。",
       "release_date": "2023-05-29",
       "test_results": [
         "short_circuit_current_result",
+        "Gnd_check_result",
         "Cant_Power_On_result",
         "MOTOR_TEST_result",
-        "LS_TEST_result",
         "MOTOR_Reverse_TEST_result",
         "BL_TEST_result",
-        "CAN_BUS_TEST_result",
         "TFT_CHECK_result",
-        "voltage_test_result",
-        "USB_TEST_result",
         "KEY_TEST_result",
+        "CAN_BUS_TEST_result",
         "EEPROM_TEST_result",
         "SLEEP_ENTER_result",
         "SLEEP_TEST_result"
@@ -53091,54 +53131,39 @@
         },
         {
           "idx": 6,
-          "name": "Voltage_DATA_4"
-        },
-        {
-          "idx": 7,
           "name": "SLEEP_Current_DATA"
         },
         {
-          "idx": 8,
+          "idx": 7,
           "name": "TESTER_NAME_DATA"
         },
         {
-          "idx": 9,
+          "idx": 8,
           "name": "TEST_STEP_DATA"
         },
         {
-          "idx": 10,
+          "idx": 9,
           "name": "ERR_DATA_1"
         },
         {
-          "idx": 11,
+          "idx": 10,
           "name": "ERR_DATA_2"
         }
       ],
       "test_steps": {
         "1": "short_ciruit_current_check_STEP",
-        "2": "ACC_ON_current_check_STEP",
-        "3": "ACC_ON_Current_err_STEP",
+        "2": "GND_CHECK_STEP",
+        "3": "current_check_STEP",
         "4": "MOTOR_TEST_STEP_1",
-        "5": "LS_TEST_STEP_1",
-        "6": "LS_TEST_STEP_2",
-        "7": "MOTOR_TEST_STEP_2",
-        "8": "BL_TEST_STEP_1",
-        "9": "BL_TEST_STEP_2",
-        "10": "Engineering_mode_STEP",
-        "11": "ASK_VER_TEST_STEP",
-        "15": "EN_PIC_STEP",
-        "16": "TFT_CHECK_STEP",
-        "17": "Voltage_CHECK_STEP",
-        "18": "USB_TEST_STEP",
-        "19": "KEY_TEST_STEP_1",
-        "20": "KEY_TEST_STEP_2",
-        "21": "KEY_TEST_STEP_3",
-        "22": "EEPROM_TEST_STEP_1",
-        "23": "EEPROM_TEST_STEP_2",
-        "24": "EEPROM_TEST_STEP_3",
-        "25": "SLEEP_TEST_STEP_1",
-        "26": "SLEEP_TEST_STEP_2",
-        "27": "PASS_STEP"
+        "5": "MOTOR_TEST_STEP_2",
+        "6": "BL_TEST_STEP_1",
+        "7": "BL_TEST_STEP_2",
+        "8": "TFT_CHECK_STEP",
+        "9": "Voltage_CHECK_STEP",
+        "10": "KEY_TEST_STEP",
+        "11": "EEPROM_TEST_STEP_1",
+        "12": "SLEEP_TEST_STEP_1",
+        "13": "SLEEP_TEST_STEP_2"
       },
       "ng_reasons": {
         "1": {
@@ -53684,7 +53709,7 @@
     {
       "version_date": "20230529_0815",
       "folder_name": "Main_BOARD_TESTER_20230529_0815_0xc934.hex",
-      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20251218_1138",
+      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20230529_0815",
       "excel_sheet": "731-TMC7 ECU半測",
       "case_name": "731-TMC7 ECU 半測",
       "change_notes": "1.新增 speed 測項延遲工時，以便免sleep之前，還未將左右方向功能給關閉。  0.1s -> 0.8s",
@@ -54249,155 +54274,15 @@
     {
       "version_date": "20230508_1630",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230508_1630_close_0X9057.hex",
-      "folder_path": "D:/yuanyu/321/HT03/A_board/M/A_BOREAD_TESTER_V40_46K80_20230508_1440_close",
+      "folder_path": "",
       "excel_sheet": "321-HT03 A",
       "case_name": "EL-321W-HT03 A板",
       "change_notes": "1.因待測物有心跳模式，故須關閉才有畫面。\n2.新增兩跳To-CON9的 QV1 位置跳線到CAN板的 SW39的中間點位及To-CON9的 QV2 位置跳線到CAN板的 H3按鍵。\n3.於BL測試項目新增此兩個按鍵的功能",
       "release_date": "2023-05-08",
-      "test_results": [
-        "Gnd_check_result",
-        "Cant_Power_On_result",
-        "MOTOR_TEST_result",
-        "MOTOR_Reverse_TEST_result",
-        "BL_TEST_result",
-        "TFT_CHECK_result",
-        "SLEEP_ENTER_result",
-        "SLEEP_TEST_result",
-        "CAN_BUS_TEST_result",
-        "EEPROM_TEST_result"
-      ],
-      "test_data": [
-        {
-          "idx": 3,
-          "name": "CAN_5V_DATA"
-        },
-        {
-          "idx": 4,
-          "name": "MCU_3V3_DATA"
-        },
-        {
-          "idx": 5,
-          "name": "GMSL_DATA_1"
-        },
-        {
-          "idx": 6,
-          "name": "GMSL_DATA_2"
-        },
-        {
-          "idx": 7,
-          "name": "SLEEP_Current_DATA"
-        },
-        {
-          "idx": 8,
-          "name": "TESTER_NAME_DATA"
-        },
-        {
-          "idx": 9,
-          "name": "TEST_STEP_DATA"
-        },
-        {
-          "idx": 10,
-          "name": "ERR_DATA_1"
-        },
-        {
-          "idx": 11,
-          "name": "ERR_DATA_2"
-        }
-      ],
-      "test_steps": {
-        "1": "Floating_PIN_CHECK_FUNC_STEP",
-        "2": "Current_test_STEP_1",
-        "3": "Current_test_STEP_2",
-        "20": "Double_Voltage_test_STEP",
-        "4": "MOTOR_TEST_STEP_1",
-        "5": "MOTOR_TEST_STEP_2",
-        "6": "BL_TEST_Func_STEP",
-        "7": "GMSL_R_TEST_STEP_1",
-        "8": "GMSL_R_TEST_STEP_2",
-        "9": "TFT_CHECK_STEP",
-        "10": "CAN_5V_TEST_STEP",
-        "11": "MCU_3V3_TEST_STEP",
-        "12": "SLEEP_Current_TEST_STEP_1",
-        "13": "SLEEP_Current_TEST_STEP_2",
-        "14": "SLEEP_Current_TEST_STEP_3"
-      },
-      "ng_reasons": {
-        "1": {
-          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
-          "description": "功能檢查失敗",
-          "err_data": []
-        },
-        "2": {
-          "step_name": "Current_test_STEP_1",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "3": {
-          "step_name": "Current_test_STEP_2",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "Double_Voltage_test_STEP",
-          "description": "電源電壓測試失敗",
-          "err_data": []
-        },
-        "4": {
-          "step_name": "MOTOR_TEST_STEP_1",
-          "description": "馬達功能測試（第一段）失敗",
-          "err_data": []
-        },
-        "5": {
-          "step_name": "MOTOR_TEST_STEP_2",
-          "description": "馬達功能測試（第二段）失敗",
-          "err_data": []
-        },
-        "6": {
-          "step_name": "BL_TEST_Func_STEP",
-          "description": "背光亮度測試失敗",
-          "err_data": []
-        },
-        "7": {
-          "step_name": "GMSL_R_TEST_STEP_1",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "8": {
-          "step_name": "GMSL_R_TEST_STEP_2",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "9": {
-          "step_name": "TFT_CHECK_STEP",
-          "description": "TFT 顯示器通訊檢查失敗（逾時）",
-          "err_data": []
-        },
-        "10": {
-          "step_name": "CAN_5V_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "11": {
-          "step_name": "MCU_3V3_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "12": {
-          "step_name": "SLEEP_Current_TEST_STEP_1",
-          "description": "省電電流超出規格範圍",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "SLEEP_Current_TEST_STEP_2",
-          "description": "省電電流超出規格範圍",
-          "err_data": []
-        },
-        "14": {
-          "step_name": "SLEEP_Current_TEST_STEP_3",
-          "description": "省電電流超出規格範圍",
-          "err_data": []
-        }
-      }
+      "test_results": [],
+      "test_data": [],
+      "test_steps": {},
+      "ng_reasons": {}
     },
     {
       "version_date": "20230508_0900",
@@ -54942,7 +54827,7 @@
     {
       "version_date": "20230414_1101",
       "folder_name": "Main_BOARD_TESTER_20230414_1101_for_RDdebug_0x0ec1.hex",
-      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20230414_1650_for_RDdebug",
+      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20230414_1101_for_RDdebug",
       "excel_sheet": "731-TMC7 ECU半測",
       "case_name": "731-TMC7 ECU 半測",
       "change_notes": "1.因TMCF 會有資料出問題的BUG,故修改流程測試一批。",
@@ -54955,7 +54840,7 @@
     {
       "version_date": "20230413_1100",
       "folder_name": "UR_TEST_25K22_20230413_1100_0x18f8.hex",
-      "folder_path": "D:/yuanyu/733/TMC1/9U/UR_TEST_25K22_20230701_0927_short_ALLKEY",
+      "folder_path": "D:/yuanyu/731/TMC8/9U/UR_TEST_25K22_20230413_1100_for_RD_NOio",
       "excel_sheet": "731-TMC9&F ECU成品",
       "case_name": "731-TMC9&F ECU成品",
       "change_notes": "雖然硬體有移除切換視角的功能，但軟體還保留。避免不要的懷疑，故將相關軟體移除。僅保留版本確認及左右方向燈開啟這兩項指令。",
@@ -55314,7 +55199,7 @@
     {
       "version_date": "20230316_1337",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20230316_1337_0x19b0.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20230410_1350",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20230316_1337",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流",
       "change_notes": "1.將恢復原廠設定的按鍵觸發  加長觸發時間。\n2.於開機後，又電源不足造成的NG，進行重開機。",
@@ -55375,7 +55260,7 @@
     {
       "version_date": "20230315_0937",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20230315_0937_0x1f61.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20230410_1350",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20230315_0937",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流",
       "change_notes": "1.將恢復原廠設定的按鍵觸發  加長觸發時間。",
@@ -55424,10 +55309,6 @@
         {
           "idx": 10,
           "name": "ERR_DATA_2"
-        },
-        {
-          "idx": 11,
-          "name": "retry_DATA"
         }
       ],
       "test_steps": {},
@@ -55659,7 +55540,7 @@
     {
       "version_date": "20230307_0920",
       "folder_name": "TS-Electric-screwdriver_V47_20230307_0920_0x62c6.hex",
-      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_TH/Kilews/TS-Electric-screwdriver_K1_20230829_1350_servant",
+      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20230307_0920",
       "excel_sheet": "智能電批控制器(MES版本)",
       "case_name": "智能電批控制器 (雙通訊PORT)",
       "change_notes": "1.每鎖完一個循環，都須將智能電批放回才會跳到下一個循環。\n(第一次無此功能)\n2. time out 的顯示 從0.1s -> 1s ，減少螢幕的更新速度(避免mes連動時當機)",
@@ -56139,7 +56020,7 @@
     {
       "version_date": "20230301_1655",
       "folder_name": "TS-Electric-screwdriver_V46_20230301_1655_0xe7c5.hex",
-      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20230306_0800",
+      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/V4/TS-Electric-screwdriver_V4_20230301_1655",
       "excel_sheet": "智能電批控制器(MES版本)",
       "case_name": "智能電批控制器 (雙通訊PORT)",
       "change_notes": "1.修改無mes連動時，異常不會鎖機的問題。",
@@ -56426,7 +56307,7 @@
     {
       "version_date": "20230217_1531",
       "folder_name": "TS-651_check_current_26k80_20230217_1531_0x37fd.hex",
-      "folder_path": "D:/yuanyu/651/TS-651_check_current_26k80_20230217_1531_for_NO_SD_Get_max",
+      "folder_path": "D:/yuanyu/651/TS-651_check_current_26k80_20230217_1531",
       "excel_sheet": "651電流偵測小板",
       "case_name": "651電流偵測小板",
       "change_notes": "1.上下限的閥值取得改使用類似X-Chart 的方法取得上下限。\n2.當第一次上下限取得失敗時，會再重新再取一次，10次都失敗則直接亮紅燈(約7.5分鐘)。 \n3.偵測電流震盪異常時間，參數從原本30 -> 45 ，增加判斷時間，減少誤判。\n4.預設的SD震盪電流從80mA -> 70mA。",
@@ -56497,7 +56378,7 @@
     {
       "version_date": "20230214_1608",
       "folder_name": "TS-651_check_current_26k80_20230214_1608_0xdb09.hex",
-      "folder_path": "D:/yuanyu/651/TS-651_check_current_26k80_20230216_1502",
+      "folder_path": "D:/yuanyu/651/TS-651_check_current_26k80_20230214_1608",
       "excel_sheet": "651電流偵測小板",
       "case_name": "651電流偵測小板",
       "change_notes": "1.修改上限初始值150mA -> 50 mA ; 下限初始值 200 mA ->300mA ，使得制定該待測物的上下閥值時，一定會被更新到。\n2.修改制定待測物的上下閥值時間點，從開機的15秒~25秒取樣，修改至開機後的90秒~115秒。 以減少金電容的影響。",
@@ -57180,7 +57061,7 @@
     {
       "version_date": "20230203_1030",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230203_1030_0xa334.hex",
-      "folder_path": "D:/yuanyu/321/HT03/A_board/M/A_BOREAD_TESTER_V40_46K80_20230307_1030",
+      "folder_path": "D:/yuanyu/321/HT02/A_board/M/A_BOREAD_TESTER_V40_46K80_20230203_1030",
       "excel_sheet": "321-HT02 A",
       "case_name": "EL-321W-HT02 A板",
       "change_notes": "1.優化背光測試的穩定性偵測。\n2.增加異常時紀錄ERR_DATA",
@@ -57200,54 +57081,49 @@
       "test_data": [
         {
           "idx": 3,
-          "name": "CAN_5V_DATA"
+          "name": "B12V_DATA"
         },
         {
           "idx": 4,
-          "name": "MCU_3V3_DATA"
+          "name": "CAN_5V_DATA"
         },
         {
           "idx": 5,
-          "name": "GMSL_DATA_1"
+          "name": "MCU_3V3_DATA"
         },
         {
           "idx": 6,
-          "name": "GMSL_DATA_2"
-        },
-        {
-          "idx": 7,
           "name": "SLEEP_Current_DATA"
         },
         {
-          "idx": 8,
+          "idx": 7,
           "name": "TESTER_NAME_DATA"
         },
         {
-          "idx": 9,
+          "idx": 8,
           "name": "TEST_STEP_DATA"
         },
         {
-          "idx": 10,
+          "idx": 9,
           "name": "ERR_DATA_1"
         },
         {
-          "idx": 11,
+          "idx": 10,
           "name": "ERR_DATA_2"
         }
       ],
       "test_steps": {
         "1": "Floating_PIN_CHECK_FUNC_STEP",
-        "2": "Current_test_STEP_1",
-        "3": "Current_test_STEP_2",
-        "20": "Double_Voltage_test_STEP",
-        "4": "MOTOR_TEST_STEP_1",
-        "5": "MOTOR_TEST_STEP_2",
-        "6": "BL_TEST_Func_STEP",
-        "7": "GMSL_R_TEST_STEP_1",
-        "8": "GMSL_R_TEST_STEP_2",
-        "9": "TFT_CHECK_STEP",
-        "10": "CAN_5V_TEST_STEP",
-        "11": "MCU_3V3_TEST_STEP",
+        "2": "Double_Voltage_test_STEP",
+        "3": "MOTOR_TEST_STEP_1",
+        "4": "MOTOR_TEST_STEP_2",
+        "5": "BL_TEST_Func_STEP",
+        "6": "TFT_CHECK_STEP_1",
+        "7": "TFT_CHECK_STEP_2",
+        "8": "TFT_CHECK_STEP_3",
+        "9": "CAN_5V_TEST_STEP",
+        "10": "MCU_3V3_TEST_STEP",
+        "11": "B12V_TEST_STEP",
         "12": "SLEEP_Current_TEST_STEP_1",
         "13": "SLEEP_Current_TEST_STEP_2",
         "14": "SLEEP_Current_TEST_STEP_3"
@@ -57472,80 +57348,77 @@
     {
       "version_date": "20230203_0834",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230203_0834_0xc5cb.hex",
-      "folder_path": "D:/yuanyu/OEM/TY02_BT_CTRL/TY02_TESTER_V40_46K80/TY02_TESTER_V40_46K80_20230608_0830_exCanTEST",
+      "folder_path": "D:/yuanyu/321/GL0A/A_Board/M/A_BOREAD_TESTER_V40_46K80_20230203_0834",
       "excel_sheet": "321-GL0A A ",
       "case_name": "EL-321W-GL0A A板",
       "change_notes": "1.因ICT有測試，故放寬GMSL的閥值。 1300~750 => 1575~475\n2.優化背光測試的穩定性偵測。\n3.增加異常時紀錄ERR_DATA",
       "release_date": "2023-02-03",
       "test_results": [
-        "D3_TEST_result",
-        "POWER_TEST_result",
-        "CAN_BUS_TEST_result",
-        "BT_TEST_result",
+        "Gnd_check_result",
+        "Cant_Power_On_result",
+        "MOTOR_TEST_result",
+        "MOTOR_Reverse_TEST_result",
+        "BL_TEST_result",
+        "TFT_CHECK_result",
         "SLEEP_ENTER_result",
-        "SLEEP_TEST_result"
+        "SLEEP_TEST_result",
+        "CAN_BUS_TEST_result",
+        "EEPROM_TEST_result"
       ],
       "test_data": [
         {
-          "idx": 1,
-          "name": "PIN2_forward_V_DATA"
-        },
-        {
-          "idx": 2,
-          "name": "PIN3_forward_V_DATA"
-        },
-        {
           "idx": 3,
-          "name": "PIN3_reverse_bias_V_DATA"
-        },
-        {
-          "idx": 4,
-          "name": "Dynamic_current_1_DATA"
-        },
-        {
-          "idx": 5,
-          "name": "MCU_3V3_DATA"
-        },
-        {
-          "idx": 8,
           "name": "SLEEP_Current_DATA"
         },
         {
-          "idx": 9,
+          "idx": 4,
           "name": "TESTER_NAME_DATA"
         },
         {
-          "idx": 10,
+          "idx": 5,
           "name": "TEST_STEP_DATA"
         },
         {
-          "idx": 11,
+          "idx": 6,
+          "name": "GMSL_R_DATA_1"
+        },
+        {
+          "idx": 7,
+          "name": "GMSL_R_DATA_2"
+        },
+        {
+          "idx": 8,
           "name": "ERR_DATA_1"
         },
         {
-          "idx": 12,
+          "idx": 9,
           "name": "ERR_DATA_2"
+        },
+        {
+          "idx": 11,
+          "name": "BL_H_V_DATA"
+        },
+        {
+          "idx": 12,
+          "name": "CAN_5V_DATA"
+        },
+        {
+          "idx": 13,
+          "name": "MCU_3V3_DATA"
         }
       ],
       "test_steps": {
-        "30": "Wait_start_STEP",
-        "0": "PIN3_TO_PIN2_TEST_STEP",
-        "1": "PIN2_TO_PIN3_TEST_STEP",
-        "2": "Dynamic_current_TEST_STEP",
-        "3": "Program_START_TEST_STEP",
-        "4": "WAIT_Program_TEST_STEP",
-        "5": "Program_END_TEST_STEP",
-        "6": "Can_ID_500_TEST_STEP",
-        "10": "SLEEP_Current_TEST_STEP_2",
-        "11": "SLEEP_Current_TEST_STEP_3",
-        "7": "ASK_BLE_VER_STEP",
-        "8": "ASK_MCU_VER_STEP",
+        "1": "Floating_PIN_CHECK_FUNC_STEP",
+        "2": "Double_Voltage_test_STEP",
+        "3": "MOTOR_TEST_STEP_1",
+        "4": "MOTOR_TEST_STEP_2",
+        "5": "BL_TEST_Func_STEP",
+        "6": "TFT_CHECK_STEP_1",
+        "7": "TFT_CHECK_STEP_2",
+        "8": "TFT_CHECK_STEP_3",
         "9": "SLEEP_Current_TEST_STEP_1",
-        "12": "Sleep_test_STEP",
-        "80": "PASS_TEST_STEP",
-        "90": "NG_MODE2_TEST_STEP",
-        "91": "NG_MODE_TEST_STEP",
-        "100": "End_TEST_STEP"
+        "10": "SLEEP_Current_TEST_STEP_2",
+        "11": "SLEEP_Current_TEST_STEP_3"
       },
       "ng_reasons": {}
     },
@@ -59054,7 +58927,7 @@
     {
       "version_date": "20230118_1505",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20230118_1505_0xf708.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20230209_1400",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20230118_1505",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流",
       "change_notes": "修改暗電流的良品範圍值從80uA放寬至98uA  (標準100uA以下)",
@@ -59087,10 +58960,6 @@
         {
           "idx": 6,
           "name": "End_state_DATA"
-        },
-        {
-          "idx": 7,
-          "name": "Auto_start_DATA"
         }
       ],
       "test_steps": {},
@@ -59871,7 +59740,7 @@
     {
       "version_date": "20230103_1044",
       "folder_name": "UR_TEST_25K22_20230103_1044_0x83df.hex",
-      "folder_path": "D:/yuanyu/733/TMC1/9U/UR_TEST_25K22_20230701_0927_short_ALLKEY",
+      "folder_path": "D:/yuanyu/731/TMC8/9U/UR_TEST_25K22_20230103_1044",
       "excel_sheet": "731-TMC9&F ECU成品",
       "case_name": "731-TMC9&F ECU成品",
       "change_notes": "新增TMCF 需要按壓右下角的按鍵後才會有左右方向燈的功能",
@@ -59884,7 +59753,7 @@
     {
       "version_date": "20221220_1600",
       "folder_name": "Main_BOARD_TESTER_20221220_1600_0xf64c.hex",
-      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20230206_0950",
+      "folder_path": "D:/yuanyu/731/TMC7/Main_board_TEST/Main_BOARD_TESTER_20221220_1600",
       "excel_sheet": "731-TMC7 ECU半測",
       "case_name": "731-TMC7 ECU 半測",
       "change_notes": "1.因TMCF需再按壓右下按鍵才可以啟動左右鏡頭的功能，測試完畢也需要將其關閉後才可進行暗電流測試。\n2.於工程模式，如切到需開啟左右功能的模式時，按壓SW2 可以強制觸發按壓左右開關的按鍵",
@@ -61238,7 +61107,7 @@
     {
       "version_date": "20221121_1605",
       "folder_name": "TS-Volume-diagnosis_V3_20221121_1605_0x7738.hex",
-      "folder_path": "D:/yuanyu/TS-Volume-diagnosis/V3/TS-Volume-diagnosis_V3_20230714_1309",
+      "folder_path": "D:/yuanyu/TS-Volume-diagnosis/V3/TS-Volume-diagnosis_V3_20221121_1605",
       "excel_sheet": "321-噪音測試站",
       "case_name": "321-噪音測試站",
       "change_notes": "修改B+的開關，增加彈跳的偵測(複判)",
@@ -61267,7 +61136,7 @@
     {
       "version_date": "20221111_0800",
       "folder_name": "TS-Burn_in_test_ON_OFF_57s_ON_3_OFF(12f1840)_20221111_0800_0x340f.hex",
-      "folder_path": "D:/yuanyu/321/Burn_in_test_ON_OFF/TS-Burn_in_test_ON_OFF_57s_ON_3_OFF(12f1840)_20230823_0906",
+      "folder_path": "D:/yuanyu/321/Burn_in_test_ON_OFF/TS-Burn_in_test_ON_OFF_57s_ON_3_OFF(12f1840)_20221111_0800",
       "excel_sheet": "321-熱機台車onoff",
       "case_name": "WHUD 熱機台車 ON OFF",
       "change_notes": "新增上電後延遲3秒才開始on /off 動作，避免插座安裝的瞬間，對mos管一直反覆驅動。",
@@ -61344,7 +61213,7 @@
     {
       "version_date": "20221109_1021",
       "folder_name": "CCD_VER_CHECK_46K80_20221109_1021_0x6463.hex",
-      "folder_path": "D:/yuanyu/721/TMCD/CCD_VER_CHECK/CCD_VER_CHECK_46K80_20230418_1650",
+      "folder_path": "D:/yuanyu/721/TMCD/CCD_VER_CHECK/CCD_VER_CHECK_46K80_20221109_1021",
       "excel_sheet": "721-TMCD 讀版本",
       "case_name": "721-TMCD 讀版本",
       "change_notes": "修改不良代碼參數",
@@ -61357,7 +61226,7 @@
     {
       "version_date": "20221031_0900",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20221031_0900_0x8c0a.hex",
-      "folder_path": "D:/yuanyu/321/FA03_VAVE/A BOARD/M/motor_stop -A_BOREAD_TESTER_V40_46K80_20221031_0900",
+      "folder_path": "D:/yuanyu/321/FA03_VAVE/A BOARD/M/fortest_motor_stop -A_BOREAD_TESTER_V40_46K80_20221031_0900",
       "excel_sheet": "321-FA03 VAVE A",
       "case_name": "EL-321W-FA03 VAVE A板",
       "change_notes": "1.BL的高電壓準位校正",
@@ -61447,7 +61316,7 @@
     {
       "version_date": "20221026_0930",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20221026_0930_0x3985.hex",
-      "folder_path": "D:/yuanyu/321/FL03/A_Board/M/ledtest_A_BOREAD_TESTER_V40_46K80_20221026_0930",
+      "folder_path": "D:/yuanyu/321/FL03/A_Board/M/A_BOREAD_TESTER_V40_46K80_20221026_0930",
       "excel_sheet": "321-FL03 A",
       "case_name": "EL-321W-FL03 A板",
       "change_notes": "1.修改鎖定的版本資訊",
@@ -61511,7 +61380,7 @@
     {
       "version_date": "20221025_1626",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20221025_1626_0xca21.hex",
-      "folder_path": "D:/yuanyu/TOOLS/TS-frequency-scanning/TS-frequency-scanning_byint_46K80_20221027_1540",
+      "folder_path": "D:/yuanyu/321/FA02_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_20221025_1626",
       "excel_sheet": "321-FA02 VAVE A",
       "case_name": "EL-321W-FA02 VAVE A板",
       "change_notes": "修改中東版的鎖定版本資訊",
@@ -61758,7 +61627,7 @@
     {
       "version_date": "20220930_0800",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220930_0800_0x85ea.hex",
-      "folder_path": "D:/yuanyu/321/FA03_VAVE/A BOARD/M/motor_stop -A_BOREAD_TESTER_V40_46K80_20221028_1700",
+      "folder_path": "D:/yuanyu/321/FA03_VAVE/A BOARD/M/motor_stop -A_BOREAD_TESTER_V40_46K80_20220930_0800",
       "excel_sheet": "321-FA03 VAVE A",
       "case_name": "EL-321W-FA03 VAVE A板",
       "change_notes": "1.為了縮短工時，將暗電流量測，改變成首件檢查才會測試。(於SIP步驟2，使用SW2啟動)。\n2.修改can 的副程式，從1個通道發送改成3個通道輪流發送，以減少CAN bus NG 。\n3.預先修改好取消堵轉的測試，未來只需修改下圖的參數便可執行。",
@@ -61816,7 +61685,7 @@
     {
       "version_date": "20220922_1650",
       "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20220922_1650_0x3e39.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/TS-CAN_BOARD_CTRL_MES_26k80_20221209_1552",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_MES_26K80/board_tester_TS-CAN_BOARD_CTRL_MES_26k80_20220922_1650",
       "excel_sheet": "321-功能測試站量測暗電流",
       "case_name": "321-功能測試站量測暗電流",
       "change_notes": "1.修正UR接收到亂碼，會造成資料錯亂的問題。\n2.新增PASS LED 和 NG LED 的訊號 \n(RC22 和 RC28 改 470R ，然後於 RC22的後端灌孔安裝綠LED+，RC28後的灌孔安裝紅LED+，兩顆LED的-端接GND)",
@@ -61841,14 +61710,6 @@
         {
           "idx": 4,
           "name": "SLEEP_Current_DATA"
-        },
-        {
-          "idx": 5,
-          "name": "factory_setting_DATA"
-        },
-        {
-          "idx": 6,
-          "name": "End_state_DATA"
         }
       ],
       "test_steps": {},
@@ -62382,7 +62243,7 @@
     {
       "version_date": "20220908_1340",
       "folder_name": "TS_I2C_Slave_25K22_20220908_1340_0xd53b.hex",
-      "folder_path": "D:/yuanyu/OEM/TY03/FL_Short_test/FL_Short_test_25K22_20250115_1122",
+      "folder_path": "D:/yuanyu/321/FL01/A_Board/S/TS_I2C_Slave_25K22_20220908_1340",
       "excel_sheet": "321-FL01 A",
       "case_name": "",
       "change_notes": "子MCU ：如生產1 PIN 接地的需改成此軟體，當5PIN 接地則須用2021/12/01的版本",
@@ -62678,7 +62539,7 @@
     {
       "version_date": "20220829_0945",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220829_0945_0x57b9.hex",
-      "folder_path": "D:/yuanyu/321/GWM1/A/M/A_BOREAD_TESTER_V40_46K80_20220902_1730",
+      "folder_path": "D:/yuanyu/321/GWM1/A/M/A_BOREAD_TESTER_V40_46K80_20220829_0945",
       "excel_sheet": "321-GWM1 A",
       "case_name": "321-GWM1 A板半成品檢具",
       "change_notes": "修改鎖定的版本以及LCM 顯示版本的VER3 字數",
@@ -62729,7 +62590,7 @@
     {
       "version_date": "20220826_0830",
       "folder_name": "TS-Burn_in_test_ON_OFF_57s_ON_3_OFF(12f1840)_20220826_0830_0xbbc6.hex",
-      "folder_path": "D:/yuanyu/321/Burn_in_test_ON_OFF/TS-Burn_in_test_ON_OFF_57s_ON_3_OFF(12f1840)_20230823_0906",
+      "folder_path": "D:/yuanyu/321/Burn_in_test_ON_OFF/TS-Burn_in_test_ON_OFF_3s_ON_3_OFF(12f1840)_20220826_0830",
       "excel_sheet": "321-熱機台車onoff",
       "case_name": "WHUD 熱機台車 ON OFF",
       "change_notes": "修改成 ON 57秒，OFF 3秒",
@@ -62787,7 +62648,7 @@
     {
       "version_date": "20220823_1618",
       "folder_name": "TS-GL04-LED_BOARD_TESTER_25K22_20220823_1618_0x6990.hex",
-      "folder_path": "D:/yuanyu/321/GL04/LED_BOARD/TS-GL04-LED_BOARD_TESTER_25K22_20230829_1600",
+      "folder_path": "D:/yuanyu/321/GL04/LED_BOARD/TS-GL04-LED_BOARD_TESTER_25K22_20220823_1618",
       "excel_sheet": "321-GL04 LED",
       "case_name": "EL-321W-GL04 LED 板",
       "change_notes": "因改成下壓式，故修改成頂針壽命10000次。",
@@ -63717,7 +63578,7 @@
     {
       "version_date": "20220614_0845",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220614_0845.hex",
-      "folder_path": "D:/yuanyu/321/GWM1/A/M/A_BOREAD_TESTER_V40_46K80_20220713_1630",
+      "folder_path": "D:/yuanyu/321/GWM1/A/M/A_BOREAD_TESTER_V40_46K80_20220614_0845",
       "excel_sheet": "321-GWM1 A",
       "case_name": "321-GWM1 A板半成品檢具",
       "change_notes": "修改部分：\n1. 將GND TEST 顯示字樣改成 OPEN SHORT TEST\n2.修改馬達測試時，有時會因為主機在休眠模式，需要觸發sw15來喚醒。",
@@ -63915,13 +63776,48 @@
     {
       "version_date": "20220602_1510",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220602_1510.hex",
-      "folder_path": "D:/yuanyu/816/MGD1/KEY_BOARD/NEW/KEY_BOREAD_TESTER_46K80_20220621_0800",
+      "folder_path": "D:/yuanyu/321/FA02_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_20220602_1510",
       "excel_sheet": "321-FA02 VAVE A",
       "case_name": "EL-321W-FA02 VAVE A板",
       "change_notes": "鎖定版本更新",
       "release_date": "2022-06-02",
-      "test_results": [],
-      "test_data": [],
+      "test_results": [
+        "Cant_Power_On_result",
+        "Double_Voltage_Test_result",
+        "MOTOR_TEST_result",
+        "MOTOR_Reverse_TEST_result",
+        "BL_TEST_result",
+        "TFT_CHECK_result",
+        "CAN_BUS_TEST_result",
+        "EEPROM_TEST_result",
+        "SW_RA_TEST_result",
+        "SW_RB_TEST_result",
+        "SW_RC_TEST_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 4,
+          "name": "BL_H_V_DATA"
+        },
+        {
+          "idx": 5,
+          "name": "CAN_5V_DATA"
+        },
+        {
+          "idx": 6,
+          "name": "MCU_3V3_DATA"
+        },
+        {
+          "idx": 7,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 8,
+          "name": "TESTER_NAME_DATA"
+        }
+      ],
       "test_steps": {},
       "ng_reasons": {}
     },
@@ -64299,7 +64195,7 @@
     {
       "version_date": "20220425_1118",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220425_1118.hex",
-      "folder_path": "D:/yuanyu/321/HT01/A_board/M/A_BOREAD_TESTER_V40_46K80_20220517_1720",
+      "folder_path": "D:/yuanyu/321/HT01/A_board/M/A_BOREAD_TESTER_V40_46K80_20220425_1118",
       "excel_sheet": "321-HT01 A",
       "case_name": "EL-321W-HT01 A板",
       "change_notes": "修改部分:\n1.量測暗電流時的穩定要在3%內，改成4% 。",
@@ -64860,7 +64756,7 @@
     {
       "version_date": "20220324_1350",
       "folder_name": "TS-PIC_Ctrl_HMI_25K22_20220324_1350",
-      "folder_path": "D:/yuanyu/104/TS-PIC_Ctrl_HMI_25K22_2/TS-PIC_Ctrl_HMI_25K22_20220324_1350",
+      "folder_path": "D:/yuanyu/104/TS-PIC_Ctrl_HMI_25K22/TS-PIC_Ctrl_HMI_25K22_20220324_1350",
       "excel_sheet": "104R-0002貼模機",
       "case_name": "EL-104R-0002貼模機",
       "change_notes": "1.修改邏輯，貼模完畢，汽缸不起來，直接切膜，切完按壓人機開關，直接回起點。",
@@ -64937,15 +64833,12 @@
     {
       "version_date": "20220322_1345",
       "folder_name": "TS-321-LED-BOARD_TESTER_25K22_20220322_1345.hex",
-      "folder_path": "D:/yuanyu/321/GWM1/LED/TS-321W-GWM1-LED-BOARD_TESTER_25K22_20220322_1837",
+      "folder_path": "",
       "excel_sheet": "321-GWM1 LED",
       "case_name": "EL-321W-GWM1 LED 板",
       "change_notes": "寄出的版本",
       "release_date": "",
-      "test_results": [
-        "Thermistor_result",
-        "LUX_result"
-      ],
+      "test_results": [],
       "test_data": [],
       "test_steps": {},
       "ng_reasons": {}
@@ -65746,64 +65639,13 @@
     {
       "version_date": "20220210_1819",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220210_1819.hex",
-      "folder_path": "D:/yuanyu/321/FL03/A_Board/M/A_BOREAD_TESTER_V40_46K80_20220210_1739",
+      "folder_path": "",
       "excel_sheet": "321-FL03 A",
       "case_name": "EL-321W-FL03 A板",
       "change_notes": "1. 修改背光的誤差值\n2. 修改喚醒時的電流筏值\n2.修改鎖定的版本資訊",
       "release_date": "2022-02-10",
-      "test_results": [
-        "Cant_Power_On_result",
-        "Double_Voltage_Test_result",
-        "MOTOR_TEST_result",
-        "MOTOR_Reverse_TEST_result",
-        "BL_TEST_result",
-        "TFT_CHECK_result",
-        "CAN_BUS_TEST_result",
-        "EEPROM_TEST_result",
-        "SW_RA_TEST_result",
-        "SW_RB_TEST_result",
-        "SW_RC_TEST_result",
-        "SLEEP_ENTER_result",
-        "SLEEP_TEST_result"
-      ],
-      "test_data": [
-        {
-          "idx": 2,
-          "name": "MCU_3V3_DATA"
-        },
-        {
-          "idx": 3,
-          "name": "LED_EN_DATA"
-        },
-        {
-          "idx": 4,
-          "name": "CAN_5V_DATA"
-        },
-        {
-          "idx": 5,
-          "name": "BL_current_DATA"
-        },
-        {
-          "idx": 6,
-          "name": "fan_current_DATA"
-        },
-        {
-          "idx": 7,
-          "name": "fan_V_DATA"
-        },
-        {
-          "idx": 8,
-          "name": "Limit_Current_DATA"
-        },
-        {
-          "idx": 9,
-          "name": "SLEEP_Current_DATA"
-        },
-        {
-          "idx": 10,
-          "name": "TESTER_NAME_DATA"
-        }
-      ],
+      "test_results": [],
+      "test_data": [],
       "test_steps": {},
       "ng_reasons": {}
     },
@@ -66538,7 +66380,7 @@
     {
       "version_date": "20220127_1830",
       "folder_name": "TS-Electric-screwdriver_20220127_1830.hex",
-      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/New_Release/TS-Electric-screwdriver/反轉測試--- -TS-Electric-screwdriver_20220127_1830",
+      "folder_path": "D:/yuanyu/TS-Electric-screwdriver/for_CN/New_Release/TS-Electric-screwdriver/GL04_LS_CHECK/TS-Electric-screwdriver_20220127_1830",
       "excel_sheet": "智能電批控制器-GL04",
       "case_name": "智能電批控制器-GL04",
       "change_notes": "使用智能電批控制器來監控此兩開關，如其中一個無觸發時，智能電批無法操作。且2分鐘無釋放開關，也會將智能電批鎖住，避免微動開關損毀無作用。",
@@ -66564,7 +66406,7 @@
     {
       "version_date": "20220122_0830",
       "folder_name": "for_Anomalous -TS-CAN_BOARD_FA02_26k80_(20211230_1603)_20220122_0830",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA02/for_Anomalous -TS-CAN_BOARD_FA02_26k80_(20211230_1603)_20220122_0830",
+      "folder_path": "D:/yuanyu/321/HT03/for_Anomalous -TS-CAN_BOARD_FA02_26k80_(20211230_1603)_20220122_0830",
       "excel_sheet": "321-FA02 簡易for客訴",
       "case_name": "EL-321W-FA02 簡易CAN板for客訴用",
       "change_notes": "以1/21的版本修改，將斷b+後的時間再延遲回來",
@@ -66655,7 +66497,7 @@
     {
       "version_date": "20220118_1331",
       "folder_name": "FOR POWERON -TS-CAN_BOARD_FL01_26k80_20220118_1331_current",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FL01/SLEEP TEST-FOR RD -TS-CAN_BOARD_FL01_26k80_20220118_1331_current/FOR POWERON -TS-CAN_BOARD_FL01_26k80_20220118_1331_current",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FL01/FOR RD -TS-CAN_BOARD_FL01_26k80_20220118_1331_current/FOR POWERON -TS-CAN_BOARD_FL01_26k80_20220118_1331_current",
       "excel_sheet": "321-FL01 簡易CAN板",
       "case_name": "",
       "change_notes": "",
@@ -66681,20 +66523,18 @@
     {
       "version_date": "20220118_0923",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220118_0923.hex",
-      "folder_path": "D:/yuanyu/321/GWM1/A/M/A_BOREAD_TESTER_V40_46K80_20220324_1140",
+      "folder_path": "D:/yuanyu/321/FA03_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_20220118_0923",
       "excel_sheet": "321-FA03 VAVE A",
       "case_name": "EL-321W-FA03 VAVE A板",
       "change_notes": "修改鎖定版本的",
       "release_date": "2022-01-18",
       "test_results": [
-        "short_circuit_current_result",
         "Gnd_check_result",
         "Cant_Power_On_result",
         "MOTOR_TEST_result",
         "MOTOR_Reverse_TEST_result",
         "BL_TEST_result",
         "TFT_CHECK_result",
-        "KEY_TEST_result",
         "CAN_BUS_TEST_result",
         "EEPROM_TEST_result",
         "SLEEP_ENTER_result",
@@ -66703,27 +66543,23 @@
       "test_data": [
         {
           "idx": 3,
-          "name": "SLEEP_Current_DATA"
-        },
-        {
-          "idx": 4,
-          "name": "TESTER_NAME_DATA"
-        },
-        {
-          "idx": 5,
-          "name": "CAN_BORAD_NAME_DATA"
-        },
-        {
-          "idx": 13,
           "name": "BL_H_V_DATA"
         },
         {
-          "idx": 14,
+          "idx": 4,
           "name": "CAN_5V_DATA"
         },
         {
-          "idx": 15,
+          "idx": 5,
           "name": "MCU_3V3_DATA"
+        },
+        {
+          "idx": 6,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 7,
+          "name": "TESTER_NAME_DATA"
         }
       ],
       "test_steps": {},
@@ -67211,7 +67047,7 @@
     {
       "version_date": "20220114_0830",
       "folder_name": "for_Anomalous -TS-CAN_BOARD_FA02_26k80_(20211230_1603)_20220114_0830.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA02/for_Anomalous -TS-CAN_BOARD_FA02_26k80_(20211230_1603)_20220128_1000",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA02/for_Anomalous -TS-CAN_BOARD_FA02_26k80_(20211230_1603)_20220114_0830",
       "excel_sheet": "321-FA02 簡易for客訴",
       "case_name": "EL-321W-FA02 簡易CAN板for客訴用",
       "change_notes": "因使用1/13的版本使用了10台去跑20小時無再現，所以討論先將每個循環的間隔時間從 (6.0~8.0秒) 修改回 (0.1 ~ 15.0 秒)。",
@@ -67448,48 +67284,13 @@
     {
       "version_date": "20220110_1609",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220110_1609.hex",
-      "folder_path": "D:/yuanyu/321/FA02_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_202201101609",
+      "folder_path": "",
       "excel_sheet": "321-FA02 VAVE A",
       "case_name": "EL-321W-FA02 VAVE A板",
       "change_notes": "鎖定版本更新",
       "release_date": "2021-01-10",
-      "test_results": [
-        "Cant_Power_On_result",
-        "Double_Voltage_Test_result",
-        "MOTOR_TEST_result",
-        "MOTOR_Reverse_TEST_result",
-        "BL_TEST_result",
-        "TFT_CHECK_result",
-        "CAN_BUS_TEST_result",
-        "EEPROM_TEST_result",
-        "SW_RA_TEST_result",
-        "SW_RB_TEST_result",
-        "SW_RC_TEST_result",
-        "SLEEP_ENTER_result",
-        "SLEEP_TEST_result"
-      ],
-      "test_data": [
-        {
-          "idx": 4,
-          "name": "BL_H_V_DATA"
-        },
-        {
-          "idx": 5,
-          "name": "CAN_5V_DATA"
-        },
-        {
-          "idx": 6,
-          "name": "MCU_3V3_DATA"
-        },
-        {
-          "idx": 7,
-          "name": "SLEEP_Current_DATA"
-        },
-        {
-          "idx": 8,
-          "name": "TESTER_NAME_DATA"
-        }
-      ],
+      "test_results": [],
+      "test_data": [],
       "test_steps": {},
       "ng_reasons": {}
     },
@@ -67531,7 +67332,7 @@
     {
       "version_date": "20211230_1603",
       "folder_name": "TS-CAN_BOARD_FA02_26k80_20211230_1603.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_CTRL_26K80/321W-FA03/for_Anomalous -TS-CAN_BOARD_FA02_26k80_20220314_1530",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA02/for_Anomalous -TS-CAN_BOARD_FA02_26k80_(20211230_1603)_20220104_0926",
       "excel_sheet": "321-FA02 環形線",
       "case_name": "EL-321W-FA02 環形線用CAN板",
       "change_notes": "修改部分:\n1.量測暗電流時的穩定要在1%內，改成2% (與半成品相同)",
@@ -67586,19 +67387,20 @@
     {
       "version_date": "20211213_0925",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20211213_0925.hex",
-      "folder_path": "D:/yuanyu/323/SMC1/A_Board_TEST/M/A_BOREAD_TESTER_V40_46K80_20220223_0950",
+      "folder_path": "D:/yuanyu/321/GL03/A_BOARD/RE_WORK/M/A_BOREAD_TESTER_V40_46K80_20211213_0925",
       "excel_sheet": "321-GL03 A",
       "case_name": "EL-321W-GL03 A板",
       "change_notes": "修改部分:  更新鎖定的版本",
       "release_date": "2021-12-13",
       "test_results": [
-        "OS_check_2_result",
-        "short_circuit_current_result",
+        "Gnd_check_result",
         "Cant_Power_On_result",
+        "Double_Voltage_Test_result",
         "MOTOR_TEST_result",
         "MOTOR_Reverse_TEST_result",
         "BL_TEST_result",
         "TFT_CHECK_result",
+        "LIGHT_Sensor_result",
         "CAN_BUS_TEST_result",
         "EEPROM_TEST_result",
         "SLEEP_ENTER_result",
@@ -67606,11 +67408,11 @@
       ],
       "test_data": [
         {
-          "idx": 20,
+          "idx": 14,
           "name": "SLEEP_Current_DATA"
         },
         {
-          "idx": 21,
+          "idx": 15,
           "name": "TESTER_NAME_DATA"
         }
       ],
@@ -67620,7 +67422,7 @@
     {
       "version_date": "20211213_0910",
       "folder_name": "TS-CAN_BOARD_FL01_26k80_20211213_0910.hex",
-      "folder_path": "D:/yuanyu/321/FL02/A_BOARD/CAN_/NO USE---TS-CAN_BOARD_FL01_26k80_20220815_1740",
+      "folder_path": "",
       "excel_sheet": "321-FL03 A",
       "case_name": "EL-321W-FL03 A板",
       "change_notes": "修改檢具CAN版軟體，修正可能開機背光不亮的問題。\n(因傳輸CAN ID 的Port 塞滿，導致某些指令無送出)",
@@ -67970,7 +67772,7 @@
     {
       "version_date": "20211123_1111",
       "folder_name": "TS-CAN_BOARD_FL01_26k80_20211123_1111_current",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FL01/TS-CAN_BOARD_FL01_26k80_20211123_1111_current",
+      "folder_path": "D:/yuanyu/321/FL01/A_Board/Can_board/TS-CAN_BOARD_FL01_26k80_20211123_1111_current",
       "excel_sheet": "321-FL01 簡易CAN板",
       "case_name": "EL-321W-FL 簡易CAN版軟體",
       "change_notes": "將CAN板版本開機直接顯示在LCM上，避免拿錯版本",
@@ -68266,7 +68068,7 @@
     {
       "version_date": "20210916_1330",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20210916_1330.hex",
-      "folder_path": "D:/yuanyu/321/GL04/A_BORAD/M/A_BOREAD_TESTER_V40_46K80_20220309_0930",
+      "folder_path": "D:/yuanyu/321/GL04/A_BORAD/M/A_BOREAD_TESTER_V40_46K80_20210916_1330",
       "excel_sheet": "321-GL04 A",
       "case_name": "EL-321W-GL04 A板",
       "change_notes": "1: 修正暗電流量測NG時沒有紀錄時間的BUG\n2: 關閉倍壓測試  (給ICT去測便可，增加檢具的穩定性)",
@@ -68461,7 +68263,7 @@
     {
       "version_date": "20210826_0930",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20210826_0930_unlock.hex",
-      "folder_path": "D:/yuanyu/321/FL01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20211224_1700_unlock",
+      "folder_path": "D:/yuanyu/321/FL01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20210826_0930_unlock",
       "excel_sheet": "321-FL01 A",
       "case_name": "EL-321W-FL01 A板",
       "change_notes": "修改部分為 馬達增加復測功能",
@@ -68688,7 +68490,7 @@
     {
       "version_date": "20210817_0830",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20210817_0830.hex",
-      "folder_path": "D:/yuanyu/321/GL04/A_BORAD/M/A_BOREAD_TESTER_V40_46K80_20210824_0830",
+      "folder_path": "D:/yuanyu/321/GL04/A_BORAD/M/A_BOREAD_TESTER_V40_46K80_20210817_0830",
       "excel_sheet": "321-GL04 A",
       "case_name": "EL-321W-GL04 A板",
       "change_notes": "修復EEPROM的異常，並新增第三項線材的壽命計算",
@@ -68821,7 +68623,7 @@
     {
       "version_date": "20210726_0830",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20210726_0830.hex",
-      "folder_path": "D:/yuanyu/321/FA03_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_20210928_0900",
+      "folder_path": "D:/yuanyu/321/FA03_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_20210726_0830",
       "excel_sheet": "321-FA03 VAVE A",
       "case_name": "EL-321W-FA03 VAVE A板",
       "change_notes": "寄出時鎖定版本的",
@@ -68911,7 +68713,7 @@
     {
       "version_date": "20210722_1450",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20210722_1450.hex",
-      "folder_path": "D:/yuanyu/321/GL03/A_BOARD/RE_WORK/M/A_BOREAD_TESTER_V40_46K80_20210729_1630",
+      "folder_path": "D:/yuanyu/321/GL03/A_BOARD/M/A_BOREAD_TESTER_V40_46K80_20210722_1450",
       "excel_sheet": "321-GL03 A",
       "case_name": "EL-321W-GL03 A板",
       "change_notes": "將馬達的程式修改回原本的模式 (5/24)\n背光敏感度放低一些。",
@@ -69174,7 +68976,7 @@
     {
       "version_date": "20210624_1130",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20210624_1130.hex",
-      "folder_path": "D:/yuanyu/321/FL03/A_Board/M/A_BOREAD_TESTER_V40_46K80_20210624_1130",
+      "folder_path": "D:/yuanyu/321/FL01/A_Board/M/A_BOREAD_TESTER_V40_46K80_20210624_1130",
       "excel_sheet": "321-FL01 A",
       "case_name": "EL-321W-FL01 A板",
       "change_notes": "檢具寄出時的版本\nconst rom unsigned char  LOCK_VER1[] = { \"N2RT-19G468-AA007\" };\nconst rom unsigned char  LOCK_VER2[] = { \"N2RT-14F094-AA003\" };\nconst rom unsigned char  LOCK_VER3[] = { \"N2RT-14F230-AA006\" };\nconst rom unsigned char  LOCK_VER4[] = { \"DSN2RT-19G468-AA002\" };",
@@ -69302,7 +69104,7 @@
     {
       "version_date": "20210611_1517",
       "folder_name": "TS_I2C_Slave_25K22_20210611_1517",
-      "folder_path": "D:/yuanyu/321/FL03/A_Board/S/TS_I2C_Slave_25K22_20210611_1517",
+      "folder_path": "D:/yuanyu/321/FL01/A_Board/S/TS_I2C_Slave_25K22_20210611_1517",
       "excel_sheet": "321-FL01 A",
       "case_name": "",
       "change_notes": "子MCU (全接地)",
@@ -69467,7 +69269,7 @@
     {
       "version_date": "20210520_1730",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20210520_1730.hex",
-      "folder_path": "D:/yuanyu/321/FL03/A_Board/M/A_BOREAD_TESTER_V40_46K80_20210617_1000",
+      "folder_path": "D:/yuanyu/321/FA02_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_20210520_1730",
       "excel_sheet": "321-FA02 VAVE A",
       "case_name": "EL-321W-FA02 VAVE A板",
       "change_notes": "1.修改鎖定的版本資訊\nconst rom unsigned char  LOCK_VER1[] = {\"MV01.01\"};\nconst rom unsigned char  LOCK_VER2[] = {\"3P321WFA022-0A\"};\nconst rom unsigned char  LOCK_VER3[] = {\"3830010-DD12\"};\nconst rom unsigned char  LOCK_VER4[]={\"M21052099\"};",
@@ -69489,39 +69291,23 @@
       ],
       "test_data": [
         {
-          "idx": 2,
-          "name": "MCU_3V3_DATA"
-        },
-        {
-          "idx": 3,
-          "name": "LED_EN_DATA"
-        },
-        {
           "idx": 4,
-          "name": "CAN_5V_DATA"
+          "name": "BL_H_V_DATA"
         },
         {
           "idx": 5,
-          "name": "BL_current_DATA"
+          "name": "CAN_5V_DATA"
         },
         {
           "idx": 6,
-          "name": "fan_current_DATA"
+          "name": "MCU_3V3_DATA"
         },
         {
           "idx": 7,
-          "name": "fan_V_DATA"
-        },
-        {
-          "idx": 8,
-          "name": "Limit_Current_DATA"
-        },
-        {
-          "idx": 9,
           "name": "SLEEP_Current_DATA"
         },
         {
-          "idx": 10,
+          "idx": 8,
           "name": "TESTER_NAME_DATA"
         }
       ],
@@ -69925,7 +69711,7 @@
     {
       "version_date": "20210308_1638",
       "folder_name": "TS-Volume-diagnosis_V3_20210308_1638.hex",
-      "folder_path": "D:/yuanyu/TS-Volume-diagnosis/V3/GL04 -TS-Volume-diagnosis_V3_20210308_1146",
+      "folder_path": "",
       "excel_sheet": "321-噪音測試站",
       "case_name": "321-噪音測試站",
       "change_notes": "最後紀錄",
@@ -70047,20 +69833,55 @@
     {
       "version_date": "20210127_1120",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20210127_1120.hex",
-      "folder_path": "D:/yuanyu/721/TMCD/CCD_VER_CHECK/CCD_VER_CHECK_46K80_20210219_1100",
+      "folder_path": "D:/yuanyu/321/FA02_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_20210127_1120",
       "excel_sheet": "321-FA02 VAVE A",
       "case_name": "EL-321W-FA02 VAVE A板",
       "change_notes": "SW_RA & SW_RB 的偵測不使用微動開關偵測，改使用電流偵測。",
       "release_date": "2021-01-27",
-      "test_results": [],
-      "test_data": [],
+      "test_results": [
+        "Cant_Power_On_result",
+        "Double_Voltage_Test_result",
+        "MOTOR_TEST_result",
+        "MOTOR_Reverse_TEST_result",
+        "BL_TEST_result",
+        "TFT_CHECK_result",
+        "CAN_BUS_TEST_result",
+        "EEPROM_TEST_result",
+        "SW_RA_TEST_result",
+        "SW_RB_TEST_result",
+        "SW_RC_TEST_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 4,
+          "name": "BL_H_V_DATA"
+        },
+        {
+          "idx": 5,
+          "name": "CAN_5V_DATA"
+        },
+        {
+          "idx": 6,
+          "name": "MCU_3V3_DATA"
+        },
+        {
+          "idx": 7,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 8,
+          "name": "TESTER_NAME_DATA"
+        }
+      ],
       "test_steps": {},
       "ng_reasons": {}
     },
     {
       "version_date": "20210122_0915",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20210122_0915.hex",
-      "folder_path": "D:/yuanyu/321/FA02_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_20210125_1420",
+      "folder_path": "D:/yuanyu/321/FA02_VAVE/A BOARD/M/A_BOREAD_TESTER_V40_46K80_20210122_0915",
       "excel_sheet": "321-FA02 VAVE A",
       "case_name": "EL-321W-FA02 VAVE A板",
       "change_notes": "1. 修改CAN 通訊的指令碼 (因RD修改指令，所以要跟著動)\n2. 修改鎖定版本的資訊\nLOCK_VER1[] = {\"MV0.0\"};\nLOCK_VER2[] = {\"3P321WFA002-C\"};\nLOCK_VER3[] = {\"3830010-DD\"};\nLOCK_VER4[]={\"M21012299\"};\n3. 因CCSC更改，移除 5V & 3.3V 的偵測，所以請協助把上下獨立的那兩隻頂針卸下。",
@@ -70108,7 +69929,7 @@
     {
       "version_date": "20210121_0835",
       "folder_name": "TS-FA02NEW_LED_BOARD_TESTER_25K22_20210121_0835.hex",
-      "folder_path": "D:/yuanyu/321/FA03_VAVE/LED_Board/TS-FA03NEW_LED_BOARD_TESTER_25K22_20210310_1156",
+      "folder_path": "D:/yuanyu/321/FA02_VAVE/LED Board/old/TS-FA02NEW_LED_BOARD_TESTER_25K22_20210121_0835",
       "excel_sheet": "321-FA02 VAVE LED",
       "case_name": "321W-FA02 VAVE LED板",
       "change_notes": "新增GND PIN 測試",
@@ -70302,35 +70123,13 @@
     {
       "version_date": "20201202_0844",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20201202_0844.hex",
-      "folder_path": "D:/yuanyu/321/GL02/A_BOARD/M/A_BOREAD_TESTER_V40_46K80_20201202_0751",
+      "folder_path": "",
       "excel_sheet": "321-GL02 A",
       "case_name": "321W-GL02",
       "change_notes": "版本锁定：",
       "release_date": "2020-12-02",
-      "test_results": [
-        "Gnd_check_result",
-        "Cant_Power_On_result",
-        "Double_Voltage_Test_result",
-        "MOTOR_TEST_result",
-        "MOTOR_Reverse_TEST_result",
-        "BL_TEST_result",
-        "TFT_CHECK_result",
-        "Sensor_result",
-        "CAN_BUS_TEST_result",
-        "EEPROM_TEST_result",
-        "SLEEP_ENTER_result",
-        "SLEEP_TEST_result"
-      ],
-      "test_data": [
-        {
-          "idx": 5,
-          "name": "SLEEP_Current_DATA"
-        },
-        {
-          "idx": 6,
-          "name": "TESTER_NAME_DATA"
-        }
-      ],
+      "test_results": [],
+      "test_data": [],
       "test_steps": {},
       "ng_reasons": {}
     },
@@ -70601,7 +70400,7 @@
     {
       "version_date": "20200729_0845",
       "folder_name": "TS-CAN_BOARD_FA02_26k80_20200729_0845.hex",
-      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA02/TS-CAN_BOARD_FA02_26k80_20200729_0845",
+      "folder_path": "D:/yuanyu/TS-CAN_BOARD_26K80/321/FA02/sleep -TS-CAN_BOARD_FA02_26k80_20200729_0845",
       "excel_sheet": "321-FA02 環形線",
       "case_name": "EL-321W-FA02 環形線用CAN板",
       "change_notes": "修改部分為:\n1. 暗電流校正修改成安裝240K歐姆的校正電阻後，同時按壓SW7和SW3開機進入工程模式，再按壓SW4便會自動校正，當畫面顯示OK便校正完成。\n2. 因LCM的I2C 的優先權小於UR的，造成兩資料同時處理時，LCM會出問題，造成當機 (暗電流量太久的問題)\n3. 因PIC IC 的自身CAN診斷造成硬體BUFFER鎖死，造成無法傳輸ACC ON指令。修改成使用兩組硬體BUFFER來各自傳輸。 (開機黑畫面)",
