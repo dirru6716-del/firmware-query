@@ -1,7 +1,388 @@
 {
-  "generated": "2026-04-27T11:16:46",
-  "version": "2026_0427_1107",
+  "generated": "2026-04-28T16:09:53",
+  "version": "2026_0428_1444",
   "firmware": [
+    {
+      "version_date": "20260428_1112",
+      "folder_name": "Main_BOARD_TESTER_20260428_1112_0xbce5.hex",
+      "folder_path": "D:/yuanyu/735/TMC1/9U/M/Main_BOARD_TESTER_20260428_1112",
+      "excel_sheet": "735-TMC1 ECU成品",
+      "case_name": "735-TMC1 ECU成品",
+      "change_notes": "1.出貨時軟體\n2.使用離線測試的時候，會有log從ur port 輸出。\n3.可搭配python 的軟體，進行滑鼠操作，點擊畫面位置 (因要轉發ur，所以會有延遲)\n4.SOC與MCU 軟體尚未定版，所以軟體預設一個不可能出現的資料，待要生產時再進行版本之確認以及鎖定。",
+      "release_date": "2026-04-28",
+      "test_results": [
+        "OS_TEST_result",
+        "POWER_ON_Test_result",
+        "show_test_result",
+        "COMM_test_result",
+        "BACK_test_result",
+        "BACK_OUT_result",
+        "CAR_RIGHT_TEST_result",
+        "CAR_LEFT_TEST_result",
+        "SPEED_TEST_result",
+        "Voltage_TEST_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 2,
+          "name": "sys_on_current_DATA"
+        },
+        {
+          "idx": 4,
+          "name": "CAR_BACK_OUT_V_DATA"
+        },
+        {
+          "idx": 5,
+          "name": "Dynmic_current_DATA"
+        },
+        {
+          "idx": 6,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 9,
+          "name": "TESTER_NAME_DATA"
+        },
+        {
+          "idx": 10,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 11,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 12,
+          "name": "ERR_DATA_2"
+        }
+      ],
+      "test_steps": {
+        "1": "Floating_PIN_CHECK_FUNC_STEP",
+        "2": "OS_TEST_1_2_STEP",
+        "3": "OS_TEST_1_3_STEP",
+        "4": "OS_TEST_1_4_STEP",
+        "5": "CHACK_Current_1_1_STEP",
+        "6": "CHACK_Current_2_1_STEP",
+        "7": "CHACK_Current_2_2_STEP",
+        "8": "CCD_POWER_CHECK_STEP",
+        "9": "OS_TEST_2_1_STEP",
+        "10": "OS_TEST_2_2_STEP",
+        "11": "Check_Screen_STEP",
+        "12": "UR_NG_STEP",
+        "13": "CAR_RIGHT_TEST_1_STEP",
+        "14": "CAR_RIGHT_TEST_2_STEP",
+        "15": "CAR_RIGHT_TEST_3_STEP",
+        "16": "CAR_LEFT_TEST_1_STEP",
+        "17": "CAR_LEFT_TEST_2_STEP",
+        "18": "CAR_LEFT_TEST_3_STEP",
+        "19": "CAR_BACK_TEST_1_STEP",
+        "20": "CAR_BACK_TEST_2_STEP",
+        "21": "voltage_test_STEP",
+        "22": "Work_current_test_STEP",
+        "23": "SLEEP_MODE_1_STEP",
+        "24": "SLEEP_MODE_2_STEP",
+        "25": "SLEEP_MODE_3_STEP",
+        "26": "PASS_STEP",
+        "30": "Temp_STEP_1",
+        "31": "Temp_STEP_2",
+        "32": "Check_Ver_STEP",
+        "33": "OS_TEST_1_1_2_STEP",
+        "35": "Check_Screen_STEP_2"
+      },
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "空腳腳位電壓超出規格範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "失敗腳位的 AD 量測電壓值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "失敗腳位索引",
+              "map": {}
+            }
+          ]
+        },
+        "2": {
+          "step_name": "OS_TEST_1_2_STEP",
+          "description": "OS 自動測試 1-2 電壓超出規格",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "OS_TEST_1_3_STEP",
+          "description": "OS 自動測試 1-3 失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "固定值 1（代表測試失敗）",
+              "map": {
+                "1": "測試失敗"
+              }
+            }
+          ]
+        },
+        "4": {
+          "step_name": "OS_TEST_1_4_STEP",
+          "description": "OS 自動測試 1-4 失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "固定值 1（代表測試失敗）",
+              "map": {
+                "1": "測試失敗"
+              }
+            }
+          ]
+        },
+        "5": {
+          "step_name": "CHACK_Current_1_1_STEP",
+          "description": "工作電流（第一段）超出規格範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "6": {
+          "step_name": "CHACK_Current_2_1_STEP",
+          "description": "工作電流（第二段第一項）超出規格範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "7": {
+          "step_name": "CHACK_Current_2_2_STEP",
+          "description": "工作電流（第二段第二項）超出規格範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "NG 發生時間戳（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "8": {
+          "step_name": "CCD_POWER_CHECK_STEP",
+          "description": "CCD 電源電壓 AD 值超出規格",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "OS_TEST_2_1_STEP",
+          "description": "OS 自動測試 2-1 電壓超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "10": {
+          "step_name": "OS_TEST_2_2_STEP",
+          "description": "OS 自動測試 2-2 電壓超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "11": {
+          "step_name": "Check_Screen_STEP",
+          "description": "畫面確認(人員判定NG)",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "通訊步驟旗標",
+              "map": {
+                "0": "未完成",
+                "1": "第一筆",
+                "2": "第二筆",
+                "3": "第三筆"
+              }
+            }
+          ]
+        },
+        "12": {
+          "step_name": "UR_NG_STEP",
+          "description": "通訊失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "通訊步驟旗標",
+              "map": {
+                "0": "未完成",
+                "1": "第一筆",
+                "2": "第二筆",
+                "3": "第三筆"
+              }
+            }
+          ]
+        },
+        "13": {
+          "step_name": "CAR_RIGHT_TEST_1_STEP",
+          "description": "右觸發失敗（自動測）",
+          "err_data": []
+        },
+        "14": {
+          "step_name": "CAR_RIGHT_TEST_2_STEP",
+          "description": "右觸發失敗（人員判定）",
+          "err_data": []
+        },
+        "15": {
+          "step_name": "CAR_RIGHT_TEST_3_STEP",
+          "description": "右賦歸失敗（人員判定）",
+          "err_data": []
+        },
+        "16": {
+          "step_name": "CAR_LEFT_TEST_1_STEP",
+          "description": "左觸發失敗（自動測）",
+          "err_data": []
+        },
+        "17": {
+          "step_name": "CAR_LEFT_TEST_2_STEP",
+          "description": "左觸發失敗（人員判定）",
+          "err_data": []
+        },
+        "18": {
+          "step_name": "CAR_LEFT_TEST_3_STEP",
+          "description": "左賦歸失敗（人員判定）",
+          "err_data": []
+        },
+        "19": {
+          "step_name": "CAR_BACK_TEST_1_STEP",
+          "description": "後觸發失敗（自動測）",
+          "err_data": []
+        },
+        "20": {
+          "step_name": "CAR_BACK_TEST_2_STEP",
+          "description": "後觸發失敗（人員判定）",
+          "err_data": []
+        },
+        "21": {
+          "step_name": "voltage_test_STEP",
+          "description": "電壓量測測試（本版韌體已停用）",
+          "err_data": []
+        },
+        "22": {
+          "step_name": "Work_current_test_STEP",
+          "description": "工作電流量測（僅記錄，無獨立 NG 判斷）",
+          "err_data": []
+        },
+        "23": {
+          "step_name": "SLEEP_MODE_1_STEP",
+          "description": "無法進入休眠模式電流超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "工作電流 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "休眠等待時間（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "SLEEP_MODE_2_STEP",
+          "description": "POWER KEEP 失效",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "工作電流 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "休眠等待時間（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "25": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "暗電流超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "暗電流 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "26": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
+        "30": {
+          "step_name": "Temp_STEP_1",
+          "description": "溫度感測器測試失敗（第一段）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "NG 發生時間戳（ms）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "溫度量測值（°C×10）",
+              "map": {}
+            }
+          ]
+        },
+        "31": {
+          "step_name": "Temp_STEP_2",
+          "description": "溫度感測器測試失敗（第二段）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "NG 發生時間戳（ms）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "溫度量測值（°C×10）",
+              "map": {}
+            }
+          ]
+        },
+        "32": {
+          "step_name": "Check_Ver_STEP",
+          "description": "版本確認失敗（版本不符或無回應）",
+          "err_data": []
+        },
+        "33": {
+          "step_name": "OS_TEST_1_1_2_STEP",
+          "description": "OS 自動測試 1-1-2 電壓超出規格",
+          "err_data": []
+        },
+        "35": {
+          "step_name": "Check_Screen_STEP_2",
+          "description": "螢幕通訊確認失敗（第二次確認）",
+          "err_data": []
+        }
+      }
+    },
     {
       "version_date": "20260423_0945",
       "folder_name": "Main_BOARD_TESTER_20260423_0945_0x6952.hex",
@@ -382,7 +763,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -831,7 +1212,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -1185,7 +1566,7 @@
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "25": {
@@ -1586,7 +1967,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -1839,6 +2220,11 @@
           "description": "光感測器測試失敗",
           "err_data": []
         },
+        "11": {
+          "step_name": "LIGHT_Sensor_TEST_STEP_2",
+          "description": "光感測器測試失敗",
+          "err_data": []
+        },
         "12": {
           "step_name": "TFT_CHECK_STEP",
           "description": "TFT 顯示器通訊檢查失敗（逾時）",
@@ -1855,8 +2241,38 @@
             }
           ]
         },
+        "13": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_1",
+          "description": "HUD_ON_OFF_KEY_STEP_1 測試失敗",
+          "err_data": []
+        },
+        "14": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_2",
+          "description": "HUD_ON_OFF_KEY_STEP_2 測試失敗",
+          "err_data": []
+        },
         "15": {
           "step_name": "Fan_TEST_Func_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "16": {
+          "step_name": "IGN_TEST_STEP_1",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "17": {
+          "step_name": "IGN_TEST_STEP_2",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "18": {
+          "step_name": "IGN_TEST_STEP_3",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "19": {
+          "step_name": "IGN_TEST_STEP_4",
           "description": "測試失敗",
           "err_data": []
         },
@@ -1898,49 +2314,14 @@
             }
           ]
         },
-        "24": {
-          "step_name": "PASS_STEP",
-          "description": "",
-          "err_data": []
-        },
-        "11": {
-          "step_name": "LIGHT_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "HUD_ON_OFF_KEY_STEP_1",
-          "description": "HUD_ON_OFF_KEY_STEP_1 測試失敗",
-          "err_data": []
-        },
-        "14": {
-          "step_name": "HUD_ON_OFF_KEY_STEP_2",
-          "description": "HUD_ON_OFF_KEY_STEP_2 測試失敗",
-          "err_data": []
-        },
-        "16": {
-          "step_name": "IGN_TEST_STEP_1",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "17": {
-          "step_name": "IGN_TEST_STEP_2",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "18": {
-          "step_name": "IGN_TEST_STEP_3",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "19": {
-          "step_name": "IGN_TEST_STEP_4",
-          "description": "測試失敗",
-          "err_data": []
-        },
         "23": {
           "step_name": "MCU_OTA_TEST_STEP",
           "description": "測試失敗",
+          "err_data": []
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "25": {
@@ -2252,7 +2633,7 @@
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "25": {
@@ -2528,7 +2909,7 @@
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "25": {
@@ -2803,7 +3184,7 @@
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -3108,16 +3489,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -3133,12 +3504,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -3154,7 +3525,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -3170,6 +3541,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -3183,72 +3570,8 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
-        },
-        "30": {
-          "step_name": "Temp_STEP_1",
-          "description": "Temp_STEP_1 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "電流量測值",
-              "map": {}
-            }
-          ]
-        },
-        "31": {
-          "step_name": "Temp_STEP_2",
-          "description": "Temp_STEP_2 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "電流量測值",
-              "map": {}
-            }
-          ]
-        },
-        "32": {
-          "step_name": "Check_Ver_STEP",
-          "description": "功能檢查失敗",
-          "err_data": []
-        },
-        "33": {
-          "step_name": "OS_TEST_1_1_2_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "時間量測值（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "35": {
-          "step_name": "Check_Screen_STEP_2",
-          "description": "功能檢查失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
         }
       }
     },
@@ -3371,15 +3694,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -3952,7 +4269,7 @@
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -4199,7 +4516,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -4874,7 +5191,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -5323,7 +5640,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -5692,16 +6009,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -5717,12 +6024,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -5738,7 +6045,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -5754,6 +6061,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -5767,72 +6090,8 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
-        },
-        "30": {
-          "step_name": "Temp_STEP_1",
-          "description": "Temp_STEP_1 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "電流量測值",
-              "map": {}
-            }
-          ]
-        },
-        "31": {
-          "step_name": "Temp_STEP_2",
-          "description": "Temp_STEP_2 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "電流量測值",
-              "map": {}
-            }
-          ]
-        },
-        "32": {
-          "step_name": "Check_Ver_STEP",
-          "description": "功能檢查失敗",
-          "err_data": []
-        },
-        "33": {
-          "step_name": "OS_TEST_1_1_2_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "時間量測值（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "35": {
-          "step_name": "Check_Screen_STEP_2",
-          "description": "功能檢查失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
         }
       }
     },
@@ -6215,7 +6474,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "27": {
@@ -6542,7 +6801,7 @@
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -6752,15 +7011,14 @@
           "err_data": []
         },
         "10": {
-          "step_name": "ERR_PIN_Check_STEP",
-          "description": "功能檢查失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "LIGHT_Sensor_TEST_STEP_1",
+          "description": "光感測器測試失敗",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "LIGHT_Sensor_TEST_STEP_2",
+          "description": "光感測器測試失敗",
+          "err_data": []
         },
         "12": {
           "step_name": "TFT_CHECK_STEP",
@@ -6778,8 +7036,38 @@
             }
           ]
         },
+        "13": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_1",
+          "description": "HUD_ON_OFF_KEY_STEP_1 測試失敗",
+          "err_data": []
+        },
+        "14": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_2",
+          "description": "HUD_ON_OFF_KEY_STEP_2 測試失敗",
+          "err_data": []
+        },
         "15": {
           "step_name": "Fan_TEST_Func_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "16": {
+          "step_name": "IGN_TEST_STEP_1",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "17": {
+          "step_name": "IGN_TEST_STEP_2",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "18": {
+          "step_name": "IGN_TEST_STEP_3",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "19": {
+          "step_name": "IGN_TEST_STEP_4",
           "description": "測試失敗",
           "err_data": []
         },
@@ -6821,49 +7109,14 @@
             }
           ]
         },
-        "24": {
-          "step_name": "PASS_STEP",
-          "description": "",
-          "err_data": []
-        },
-        "11": {
-          "step_name": "LIGHT_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "HUD_ON_OFF_KEY_STEP_1",
-          "description": "ON_OFF_KEY 測試",
-          "err_data": []
-        },
-        "14": {
-          "step_name": "HUD_ON_OFF_KEY_STEP_2",
-          "description": "ON_OFF_KEY 測試",
-          "err_data": []
-        },
-        "16": {
-          "step_name": "IGN_TEST_STEP_1",
-          "description": "IGN 腳測試步驟1",
-          "err_data": []
-        },
-        "17": {
-          "step_name": "IGN_TEST_STEP_2",
-          "description": "IGN 腳測試步驟2",
-          "err_data": []
-        },
-        "18": {
-          "step_name": "IGN_TEST_STEP_3",
-          "description": "IGN 腳測試步驟3",
-          "err_data": []
-        },
-        "19": {
-          "step_name": "IGN_TEST_STEP_4",
-          "description": "IGN 腳測試步驟4",
-          "err_data": []
-        },
         "23": {
           "step_name": "MCU_OTA_TEST_STEP",
-          "description": "OTA 測試項目",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -7392,7 +7645,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "27": {
@@ -7780,19 +8033,13 @@
           ]
         },
         "23": {
-          "step_name": "MCU_OTA_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "Slave MCU AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -8175,19 +8422,13 @@
           ]
         },
         "23": {
-          "step_name": "MCU_OTA_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "Slave MCU AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -8371,15 +8612,14 @@
           "err_data": []
         },
         "10": {
-          "step_name": "ERR_PIN_Check_STEP",
-          "description": "功能檢查失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "LIGHT_Sensor_TEST_STEP_1",
+          "description": "光感測器測試失敗",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "LIGHT_Sensor_TEST_STEP_2",
+          "description": "光感測器測試失敗",
+          "err_data": []
         },
         "12": {
           "step_name": "TFT_CHECK_STEP",
@@ -8397,8 +8637,38 @@
             }
           ]
         },
+        "13": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_1",
+          "description": "HUD_ON_OFF_KEY_STEP_1 測試失敗",
+          "err_data": []
+        },
+        "14": {
+          "step_name": "HUD_ON_OFF_KEY_STEP_2",
+          "description": "HUD_ON_OFF_KEY_STEP_2 測試失敗",
+          "err_data": []
+        },
         "15": {
           "step_name": "Fan_TEST_Func_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "16": {
+          "step_name": "IGN_TEST_STEP_1",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "17": {
+          "step_name": "IGN_TEST_STEP_2",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "18": {
+          "step_name": "IGN_TEST_STEP_3",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "19": {
+          "step_name": "IGN_TEST_STEP_4",
           "description": "測試失敗",
           "err_data": []
         },
@@ -8440,49 +8710,14 @@
             }
           ]
         },
-        "24": {
-          "step_name": "PASS_STEP",
-          "description": "",
-          "err_data": []
-        },
-        "11": {
-          "step_name": "LIGHT_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "HUD_ON_OFF_KEY_STEP_1",
-          "description": "ON_OFF_KEY 測試",
-          "err_data": []
-        },
-        "14": {
-          "step_name": "HUD_ON_OFF_KEY_STEP_2",
-          "description": "ON_OFF_KEY 測試",
-          "err_data": []
-        },
-        "16": {
-          "step_name": "IGN_TEST_STEP_1",
-          "description": "IGN 腳測試步驟1",
-          "err_data": []
-        },
-        "17": {
-          "step_name": "IGN_TEST_STEP_2",
-          "description": "IGN 腳測試步驟2",
-          "err_data": []
-        },
-        "18": {
-          "step_name": "IGN_TEST_STEP_3",
-          "description": "IGN 腳測試步驟3",
-          "err_data": []
-        },
-        "19": {
-          "step_name": "IGN_TEST_STEP_4",
-          "description": "IGN 腳測試步驟4",
-          "err_data": []
-        },
         "23": {
           "step_name": "MCU_OTA_TEST_STEP",
-          "description": "OTA 測試項目",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -8793,16 +9028,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -8818,12 +9043,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -8839,7 +9064,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -8855,6 +9080,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -8868,7 +9109,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -9216,16 +9457,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -9241,12 +9472,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -9262,7 +9493,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -9278,6 +9509,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -9291,7 +9538,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -9617,7 +9864,7 @@
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -9922,16 +10169,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -9947,12 +10184,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -9968,7 +10205,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -9984,6 +10221,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -9997,72 +10250,8 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
-        },
-        "30": {
-          "step_name": "Temp_STEP_1",
-          "description": "Temp_STEP_1 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "電流量測值",
-              "map": {}
-            }
-          ]
-        },
-        "31": {
-          "step_name": "Temp_STEP_2",
-          "description": "Temp_STEP_2 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "電流量測值",
-              "map": {}
-            }
-          ]
-        },
-        "32": {
-          "step_name": "Check_Ver_STEP",
-          "description": "功能檢查失敗",
-          "err_data": []
-        },
-        "33": {
-          "step_name": "OS_TEST_1_1_2_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "時間量測值（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "35": {
-          "step_name": "Check_Screen_STEP_2",
-          "description": "功能檢查失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
         }
       }
     },
@@ -10440,19 +10629,13 @@
           ]
         },
         "23": {
-          "step_name": "MCU_OTA_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "Slave MCU AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -10831,19 +11014,13 @@
           ]
         },
         "23": {
-          "step_name": "MCU_OTA_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "Slave MCU AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -11398,7 +11575,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "27": {
@@ -11782,19 +11959,13 @@
           ]
         },
         "23": {
-          "step_name": "MCU_OTA_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "Slave MCU AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -12041,7 +12212,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -12469,15 +12640,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -13170,19 +13335,13 @@
           ]
         },
         "23": {
-          "step_name": "MCU_OTA_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "Slave MCU AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -13563,7 +13722,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "27": {
@@ -14123,7 +14282,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "27": {
@@ -14426,15 +14585,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -15059,16 +15212,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -15084,12 +15227,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -15105,7 +15248,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -15121,6 +15264,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -15134,7 +15293,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -15685,19 +15844,13 @@
           ]
         },
         "23": {
-          "step_name": "MCU_OTA_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "Slave MCU AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -15834,15 +15987,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -16293,15 +16440,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -17007,19 +17148,13 @@
           ]
         },
         "23": {
-          "step_name": "MCU_OTA_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "Slave MCU AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
         },
         "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -17516,7 +17651,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -17826,16 +17961,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -17851,12 +17976,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -17872,7 +17997,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -17888,6 +18013,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -17901,7 +18042,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -17924,22 +18065,6 @@
           "step_name": "Check_Ver_STEP",
           "description": "功能檢查失敗",
           "err_data": []
-        },
-        "32": {
-          "step_name": "OS_TEST_1_1_2_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "時間量測值（ms）",
-              "map": {}
-            }
-          ]
         }
       }
     },
@@ -18220,7 +18345,7 @@
         },
         "80": {
           "step_name": "PASS_TEST_STEP",
-          "description": "測試失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "90": {
@@ -18235,102 +18360,6 @@
         },
         "100": {
           "step_name": "End_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "IO_TEST_STEP",
-          "description": "I/O 訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "14": {
-          "step_name": "Light_Sensor_TEST_STEP_1",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "15": {
-          "step_name": "Light_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "16": {
-          "step_name": "Fuel_test_STEP_1",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "17": {
-          "step_name": "Fuel_test_STEP_2",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "18": {
-          "step_name": "Fuel_test_STEP_3",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "19": {
-          "step_name": "Value_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "ver_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "FL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "RL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "FR_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "RR_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
@@ -18574,7 +18603,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -19227,19 +19256,8 @@
           ]
         },
         "23": {
-          "step_name": "MCU_OTA_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "Slave MCU AD 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "24": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -19363,15 +19381,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -20073,7 +20085,7 @@
         },
         "23": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -20320,7 +20332,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -20787,7 +20799,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -20976,15 +20988,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -21284,17 +21290,6 @@
               "map": {}
             }
           ]
-        },
-        "36": {
-          "step_name": "Light_Sensor_TEST_STEP_3",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 2,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
         }
       }
     },
@@ -21586,15 +21581,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -22601,15 +22590,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -23515,7 +23498,7 @@
         },
         "80": {
           "step_name": "PASS_TEST_STEP",
-          "description": "測試失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "90": {
@@ -23530,102 +23513,6 @@
         },
         "100": {
           "step_name": "End_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "IO_TEST_STEP",
-          "description": "I/O 訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "14": {
-          "step_name": "Light_Sensor_TEST_STEP_1",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "15": {
-          "step_name": "Light_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "16": {
-          "step_name": "Fuel_test_STEP_1",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "17": {
-          "step_name": "Fuel_test_STEP_2",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "18": {
-          "step_name": "Fuel_test_STEP_3",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "19": {
-          "step_name": "Value_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "ver_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "FL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "RL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "FR_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "RR_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
@@ -23783,7 +23670,7 @@
         },
         "80": {
           "step_name": "PASS_TEST_STEP",
-          "description": "測試失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "90": {
@@ -23798,102 +23685,6 @@
         },
         "100": {
           "step_name": "End_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "IO_TEST_STEP",
-          "description": "I/O 訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "14": {
-          "step_name": "Light_Sensor_TEST_STEP_1",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "15": {
-          "step_name": "Light_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "16": {
-          "step_name": "Fuel_test_STEP_1",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "17": {
-          "step_name": "Fuel_test_STEP_2",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "18": {
-          "step_name": "Fuel_test_STEP_3",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "19": {
-          "step_name": "Value_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "ver_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "FL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "RL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "FR_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "RR_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
@@ -25205,16 +24996,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -25230,12 +25011,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -25251,7 +25032,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -25267,6 +25048,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -25280,28 +25077,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
-          "err_data": []
-        },
-        "30": {
-          "step_name": "Temp_STEP",
-          "description": "Temp_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "Engineering_DATA 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "31": {
-          "step_name": "Check_Ver_STEP",
-          "description": "功能檢查失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -25421,15 +25197,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -25689,28 +25459,6 @@
         "32": {
           "step_name": "Fuel_test_STEP_4",
           "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "33": {
-          "step_name": "into_ENG_mode_STEP_2",
-          "description": "into_ENG_mode_STEP_2 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "34": {
-          "step_name": "into_ENG_mode_STEP_3",
-          "description": "into_ENG_mode_STEP_3 測試失敗",
           "err_data": [
             {
               "n": 1,
@@ -26333,16 +26081,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -26358,12 +26096,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -26379,7 +26117,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -26395,6 +26133,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -26408,7 +26162,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -26547,15 +26301,9 @@
       },
       "ng_reasons": {
         "30": {
-          "step_name": "open_all_led_STEP",
-          "description": "open_all_led_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
         },
         "1": {
           "step_name": "Float_Pin_TEST_STEP_1",
@@ -26800,50 +26548,6 @@
           "step_name": "RR_test_STEP",
           "description": "測試失敗",
           "err_data": []
-        },
-        "31": {
-          "step_name": "Light_Sensor_TEST_STEP_3",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 2,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "32": {
-          "step_name": "Fuel_test_STEP_4",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "33": {
-          "step_name": "into_ENG_mode_STEP_2",
-          "description": "into_ENG_mode_STEP_2 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "34": {
-          "step_name": "into_ENG_mode_STEP_3",
-          "description": "into_ENG_mode_STEP_3 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
         }
       }
     },
@@ -27165,16 +26869,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -27190,12 +26884,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -27211,7 +26905,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -27227,6 +26921,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -27240,7 +26950,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "30": {
@@ -29757,16 +29467,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -29782,12 +29482,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -29803,7 +29503,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -29819,6 +29519,22 @@
             }
           ]
         },
+        "23": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "SLEEP_MODE_3_STEP 測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
@@ -29832,28 +29548,7 @@
         },
         "26": {
           "step_name": "PASS_STEP",
-          "description": "",
-          "err_data": []
-        },
-        "30": {
-          "step_name": "Temp_STEP",
-          "description": "Temp_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "Engineering_DATA 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "31": {
-          "step_name": "Check_Ver_STEP",
-          "description": "功能檢查失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -30780,16 +30475,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -30805,12 +30490,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -30826,7 +30511,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -30842,7 +30527,7 @@
             }
           ]
         },
-        "25": {
+        "23": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
           "err_data": [
@@ -30853,30 +30538,9 @@
             }
           ]
         },
-        "26": {
+        "24": {
           "step_name": "PASS_STEP",
-          "description": "",
-          "err_data": []
-        },
-        "30": {
-          "step_name": "Temp_STEP",
-          "description": "Temp_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "Engineering_DATA 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "31": {
-          "step_name": "Check_Ver_STEP",
-          "description": "功能檢查失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -31178,16 +30842,6 @@
           "err_data": []
         },
         "19": {
-          "step_name": "MCU_VER_STEP",
-          "description": "MCU_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "SOC_VER_STEP",
-          "description": "SOC_VER_STEP 測試失敗",
-          "err_data": []
-        },
-        "21": {
           "step_name": "voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": [
@@ -31203,12 +30857,12 @@
             }
           ]
         },
-        "22": {
+        "20": {
           "step_name": "Work_current_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "23": {
+        "21": {
           "step_name": "SLEEP_MODE_1_STEP",
           "description": "SLEEP_MODE_1_STEP 測試失敗",
           "err_data": [
@@ -31224,7 +30878,7 @@
             }
           ]
         },
-        "24": {
+        "22": {
           "step_name": "SLEEP_MODE_2_STEP",
           "description": "SLEEP_MODE_2_STEP 測試失敗",
           "err_data": [
@@ -31240,7 +30894,7 @@
             }
           ]
         },
-        "25": {
+        "23": {
           "step_name": "SLEEP_MODE_3_STEP",
           "description": "SLEEP_MODE_3_STEP 測試失敗",
           "err_data": [
@@ -31251,30 +30905,9 @@
             }
           ]
         },
-        "26": {
+        "24": {
           "step_name": "PASS_STEP",
-          "description": "",
-          "err_data": []
-        },
-        "30": {
-          "step_name": "Temp_STEP",
-          "description": "Temp_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "Engineering_DATA 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "31": {
-          "step_name": "Check_Ver_STEP",
-          "description": "功能檢查失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -31617,279 +31250,7 @@
       "test_results": [],
       "test_data": [],
       "test_steps": {},
-      "ng_reasons": {
-        "1": {
-          "step_name": "OS_TEST_1_1_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "2": {
-          "step_name": "OS_TEST_1_2_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "3": {
-          "step_name": "OS_TEST_1_3_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "1 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "4": {
-          "step_name": "OS_TEST_1_4_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "5": {
-          "step_name": "CHACK_Current_1_1_STEP",
-          "description": "CHACK_Current_1_1_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "6": {
-          "step_name": "CHACK_Current_2_1_STEP",
-          "description": "CHACK_Current_2_1_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "7": {
-          "step_name": "CHACK_Current_2_2_STEP",
-          "description": "CHACK_Current_2_2_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "8": {
-          "step_name": "CCD_POWER_CHECK_STEP",
-          "description": "功能檢查失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "失敗的量測通道索引（0=1.8V, 1=3.3V, 2=5V, 3=1.1V）",
-              "map": {}
-            }
-          ]
-        },
-        "9": {
-          "step_name": "OS_TEST_2_1_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "10": {
-          "step_name": "OS_TEST_2_2_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "11": {
-          "step_name": "Check_Screen_STEP",
-          "description": "功能檢查失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "12": {
-          "step_name": "UR_NG_STEP",
-          "description": "UR_NG_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "13": {
-          "step_name": "CAR_RIGHT_TEST_1_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "時間量測值（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "14": {
-          "step_name": "CAR_RIGHT_TEST_2_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "時間量測值（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "15": {
-          "step_name": "CAR_LEFT_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "時間量測值（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "16": {
-          "step_name": "CAR_BACK_TEST_1_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "時間量測值（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "17": {
-          "step_name": "CAR_BACK_TEST_2_STEP",
-          "description": "測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "CAR_BACK_OUT_V 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "18": {
-          "step_name": "SPEED_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "19": {
-          "step_name": "voltage_test_STEP",
-          "description": "電源電壓測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "失敗的量測通道索引（0=1.8V, 1=3.3V, 2=5V, 3=1.1V）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "math_buff 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "20": {
-          "step_name": "Work_current_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "SLEEP_MODE_1_STEP",
-          "description": "SLEEP_MODE_1_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "電流 AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "22": {
-          "step_name": "SLEEP_MODE_2_STEP",
-          "description": "SLEEP_MODE_2_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "電流 AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
-        },
-        "23": {
-          "step_name": "SLEEP_MODE_3_STEP",
-          "description": "SLEEP_MODE_3_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "省電電流 AD 量測值（第三次）",
-              "map": {}
-            }
-          ]
-        },
-        "24": {
-          "step_name": "PASS_STEP",
-          "description": "",
-          "err_data": []
-        }
-      }
+      "ng_reasons": {}
     },
     {
       "version_date": "20240927_1537",
@@ -32314,71 +31675,6 @@
         "13": {
           "step_name": "SLEEP_TEST_STEP_2",
           "description": "省電模式（Sleep）電流測試（第二段）失敗",
-          "err_data": []
-        },
-        "15": {
-          "step_name": "EN_PIC_STEP",
-          "description": "EN PIC 致能啟動失敗",
-          "err_data": []
-        },
-        "16": {
-          "step_name": "TFT_CHECK_STEP",
-          "description": "TFT 顯示器通訊檢查失敗（逾時）",
-          "err_data": []
-        },
-        "17": {
-          "step_name": "Voltage_CHECK_STEP",
-          "description": "電源電壓量測超出容許範圍",
-          "err_data": []
-        },
-        "18": {
-          "step_name": "USB_TEST_STEP",
-          "description": "USB 通訊測試失敗",
-          "err_data": []
-        },
-        "19": {
-          "step_name": "KEY_TEST_STEP_1",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "KEY_TEST_STEP_2",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "KEY_TEST_STEP_3",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "EEPROM_TEST_STEP_1",
-          "description": "EEPROM 測試（第一段）失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "EEPROM_TEST_STEP_2",
-          "description": "EEPROM 測試（第二段）失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "EEPROM_TEST_STEP_3",
-          "description": "EEPROM 讀寫測試失敗",
-          "err_data": []
-        },
-        "25": {
-          "step_name": "SLEEP_TEST_STEP_1",
-          "description": "省電模式（Sleep）電流測試（第一段）失敗",
-          "err_data": []
-        },
-        "26": {
-          "step_name": "SLEEP_TEST_STEP_2",
-          "description": "省電模式（Sleep）電流測試（第二段）失敗",
-          "err_data": []
-        },
-        "27": {
-          "step_name": "PASS_STEP",
-          "description": "",
           "err_data": []
         }
       }
@@ -32916,7 +32212,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -33288,7 +32584,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -33599,7 +32895,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -33910,7 +33206,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -34221,7 +33517,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -34548,7 +33844,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -34875,7 +34171,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -35397,7 +34693,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -36127,7 +35423,7 @@
         },
         "80": {
           "step_name": "PASS_TEST_STEP",
-          "description": "測試失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "90": {
@@ -36142,102 +35438,6 @@
         },
         "100": {
           "step_name": "End_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "IO_TEST_STEP",
-          "description": "I/O 訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "14": {
-          "step_name": "Light_Sensor_TEST_STEP_1",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "15": {
-          "step_name": "Light_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "16": {
-          "step_name": "Fuel_test_STEP_1",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "17": {
-          "step_name": "Fuel_test_STEP_2",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "18": {
-          "step_name": "Fuel_test_STEP_3",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "19": {
-          "step_name": "Value_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "ver_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "FL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "RL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "FR_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "RR_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
@@ -36494,7 +35694,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -36818,7 +36018,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -37275,7 +36475,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -37712,7 +36912,7 @@
         },
         "27": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -37950,7 +37150,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -38274,7 +37474,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -38590,7 +37790,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -38945,7 +38145,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -39732,7 +38932,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -40308,7 +39508,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -40619,7 +39819,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -40714,7 +39914,7 @@
       "version_date": "20240418_1635",
       "folder_name": "MotorStop_A_BOREAD_TESTER_V40_46K80_20240418_1635_0x78a0.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/MotorStop_A_BOREAD_TESTER_V40_46K80_20240418_1635",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "1. 更改檢具測試時無須按壓SW1",
       "release_date": "2024-04-18",
@@ -40785,7 +39985,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20240415_1540",
@@ -41025,7 +40281,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -41593,7 +40849,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -41665,22 +40921,6 @@
             {
               "n": 2,
               "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "41": {
-          "step_name": "MOTOR_TEST_STEP_1",
-          "description": "馬達功能測試（第一段）失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "光感測量測值",
               "map": {}
             }
           ]
@@ -41925,7 +41165,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -42236,7 +41476,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -42621,7 +41861,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -42971,7 +42211,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -43295,7 +42535,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "15": {
@@ -43861,7 +43101,7 @@
         },
         "27": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -44147,7 +43387,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -44833,7 +44073,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -45081,7 +44321,7 @@
         },
         "14": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -45650,7 +44890,7 @@
         },
         "27": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -46342,7 +45582,7 @@
         },
         "27": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -46745,7 +45985,7 @@
         },
         "27": {
           "step_name": "PASS_STEP",
-          "description": "",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         }
       }
@@ -48691,7 +47931,7 @@
       "version_date": "20231016_0847",
       "folder_name": "MotorStop_A_BOREAD_TESTER_V40_46K80_20231016_0847_0X7298.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/MotorStop_A_BOREAD_TESTER_V40_46K80_20231016_0847",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "1. 於Can't Power On 時，新增重測的機會，當lcm顯示字串後，第二行會顯示 Wait SW1 ，此時檢具已經將待測物都斷電，可進行第二次重新安裝，待安裝好後，再次按壓SW1 便可重新測試，但如再耗電流過低則就判NG。",
       "release_date": "2023-10-16",
@@ -48762,7 +48002,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20231012_1508",
@@ -49889,7 +49185,7 @@
       "version_date": "20230731_1650",
       "folder_name": "MotorStop_A_BOREAD_TESTER_V40_46K80_20230731_1650_0x61f9.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/MotorStop_A_BOREAD_TESTER_V40_46K80_20230731_1650",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "1.追加第二台檢具 (GL04 & GL05 & GL08 共用，檢具編號為12)\n2. 修正馬達測試時，如背光亮起，則進行馬達重測。\n3. 修改判斷馬達重測的時間(增加)和重測時重開的時間(縮短)。\n4.第二台檢具因為有兩塊LIN板，故GMSL訊號無法量測，所以第二台檢具就無GMSL PIN腳檢查之測項。\n5.修正取消暗電流後，背光無被關閉的bug",
       "release_date": "2023-07-31",
@@ -49960,7 +49256,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20230719_0810",
@@ -50170,7 +49522,7 @@
         },
         "80": {
           "step_name": "PASS_TEST_STEP",
-          "description": "測試失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "90": {
@@ -50185,102 +49537,6 @@
         },
         "100": {
           "step_name": "End_TEST_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "IO_TEST_STEP",
-          "description": "I/O 訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "14": {
-          "step_name": "Light_Sensor_TEST_STEP_1",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "15": {
-          "step_name": "Light_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "16": {
-          "step_name": "Fuel_test_STEP_1",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "17": {
-          "step_name": "Fuel_test_STEP_2",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "18": {
-          "step_name": "Fuel_test_STEP_3",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "19": {
-          "step_name": "Value_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "ver_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "FL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "RL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "FR_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "RR_test_STEP",
           "description": "測試失敗",
           "err_data": []
         },
@@ -50754,255 +50010,82 @@
           "err_data": []
         },
         "1": {
-          "step_name": "Float_Pin_TEST_STEP_1",
-          "description": "空腳（Float Pin）電壓檢測失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "PIN2_TO_PIN3_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
         },
         "2": {
-          "step_name": "Float_Pin_TEST_STEP_2",
-          "description": "空腳（Float Pin）電壓檢測失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "Dynamic_current_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
         },
         "3": {
-          "step_name": "Float_Pin_TEST_STEP_3",
-          "description": "空腳（Float Pin）電壓檢測失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "Program_START_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
         },
         "4": {
-          "step_name": "Float_Pin_TEST_STEP_4",
-          "description": "空腳（Float Pin）電壓檢測失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "WAIT_Program_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
         },
         "5": {
-          "step_name": "Float_Pin_TEST_STEP_5",
-          "description": "空腳（Float Pin）電壓檢測失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "Program_END_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
         },
         "6": {
-          "step_name": "Float_Pin_TEST_STEP_6",
-          "description": "空腳（Float Pin）電壓檢測失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "Can_ID_500_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
         },
         "10": {
-          "step_name": "into_ENG_mode_STEP",
-          "description": "into_ENG_mode_STEP 測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
         },
         "11": {
-          "step_name": "TFT_TEST_STEP",
-          "description": "TFT 顯示器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "實際測試時間（ms）",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
         },
         "7": {
-          "step_name": "Float_Pin_TEST_STEP_7",
-          "description": "空腳（Float Pin）電壓檢測失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "ASK_BLE_VER_STEP",
+          "description": "ASK_BLE_VER_STEP 測試失敗",
+          "err_data": []
         },
         "8": {
-          "step_name": "Float_Pin_TEST_STEP_8",
-          "description": "空腳（Float Pin）電壓檢測失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "ASK_MCU_VER_STEP",
+          "description": "ASK_MCU_VER_STEP 測試失敗",
+          "err_data": []
         },
         "9": {
-          "step_name": "Current_check_STEP_1",
-          "description": "電流量測超出規格範圍",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "電流 AD 量測值",
-              "map": {}
-            }
-          ]
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
         },
         "12": {
-          "step_name": "LED_TEST_STEP",
-          "description": "LED 電流測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
+          "step_name": "Sleep_test_STEP",
+          "description": "省電模式（Sleep）測試失敗",
+          "err_data": []
         },
         "80": {
           "step_name": "PASS_TEST_STEP",
-          "description": "PASS 階段",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "90": {
           "step_name": "NG_MODE2_TEST_STEP",
-          "description": "紀錄測試失敗的階段",
+          "description": "測試失敗",
           "err_data": []
         },
         "91": {
           "step_name": "NG_MODE_TEST_STEP",
-          "description": "紀錄測試失敗的階段",
+          "description": "測試失敗",
           "err_data": []
         },
         "100": {
           "step_name": "End_TEST_STEP",
-          "description": "結束測試的階段",
-          "err_data": []
-        },
-        "13": {
-          "step_name": "IO_TEST_STEP",
-          "description": "I/O 訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "14": {
-          "step_name": "Light_Sensor_TEST_STEP_1",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "15": {
-          "step_name": "Light_Sensor_TEST_STEP_2",
-          "description": "光感測器測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "READ_Value_2 量測值",
-              "map": {}
-            }
-          ]
-        },
-        "16": {
-          "step_name": "Fuel_test_STEP_1",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "17": {
-          "step_name": "Fuel_test_STEP_2",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "18": {
-          "step_name": "Fuel_test_STEP_3",
-          "description": "油量訊號測試失敗",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "旗標值",
-              "map": {}
-            }
-          ]
-        },
-        "19": {
-          "step_name": "Value_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "ver_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "FL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "RL_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "FR_test_STEP",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "RR_test_STEP",
           "description": "測試失敗",
           "err_data": []
         }
@@ -51601,7 +50684,7 @@
       "version_date": "20230628_1110",
       "folder_name": "MotorStop_A_BOREAD_TESTER_V40_46K80_20230628_1110_0XA10C.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/MotorStop_A_BOREAD_TESTER_V40_46K80_20230628_1110",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "1.修改BL穩定的判斷，原CODE 只有這次比過去大才判斷，補上這次比上次小的邏輯。\n2. 修正OTHER LINE 壽命的BUG",
       "release_date": "2023-06-28",
@@ -51672,7 +50755,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20230626_0923",
@@ -51878,7 +51017,7 @@
       "version_date": "20230616_0813",
       "folder_name": "MotorStop_A_BOREAD_TESTER_V40_46K80_20230616_0813_0x827b.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/MotorStop_A_BOREAD_TESTER_V40_46K80_20230616_0813",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "1.暫時停止取消堵轉的功能 (因檢具尚未debug完成，但產線又需要生產。)",
       "release_date": "2023-06-16",
@@ -51949,13 +51088,69 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20230615_1400",
       "folder_name": "MotorStop_A_BOREAD_TESTER_V40_46K80_20230615_1400_0xf3a3.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/MotorStop_A_BOREAD_TESTER_V40_46K80_20230615_1400",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "1.修改成取消讀轉及暗電流\n2. 新增 other線材壽命  (GMSL線材用統計用)",
       "release_date": "2023-06-15",
@@ -52026,7 +51221,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20230615_0809",
@@ -52200,7 +51451,7 @@
         },
         "80": {
           "step_name": "PASS_TEST_STEP",
-          "description": "測試失敗",
+          "description": "通過標記步驟，無 NG 記錄",
           "err_data": []
         },
         "90": {
@@ -52892,7 +52143,7 @@
       "version_date": "20230529_1650",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230529_1650_0x9daa.hex",
       "folder_path": "D:/yuanyu/321/GL06/A_Board/M/A_BOREAD_TESTER_V40_46K80_20230529_1650",
-      "excel_sheet": "321-GL06 A ",
+      "excel_sheet": "321-GL06 A",
       "case_name": "EL-321W-GL06 A板",
       "change_notes": "1.取消暗電流。\n2.增加GMSL 線材壽命限制",
       "release_date": "2023-05-29",
@@ -52963,7 +52214,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20230529_0930",
@@ -53172,13 +52479,13 @@
           "err_data": []
         },
         "2": {
-          "step_name": "ACC_ON_current_check_STEP",
-          "description": "ACC ON 電流值超出規格範圍",
+          "step_name": "GND_CHECK_STEP",
+          "description": "接地（GND）短路測試失敗",
           "err_data": []
         },
         "3": {
-          "step_name": "ACC_ON_Current_err_STEP",
-          "description": "ACC ON 電流異常（過高或過低），測試中止",
+          "step_name": "current_check_STEP",
+          "description": "電流量測超出規格範圍",
           "err_data": []
         },
         "4": {
@@ -53187,38 +52494,38 @@
           "err_data": []
         },
         "5": {
-          "step_name": "LS_TEST_STEP_1",
-          "description": "光感測器測試（第一段）失敗",
-          "err_data": []
-        },
-        "6": {
-          "step_name": "LS_TEST_STEP_2",
-          "description": "光感測器測試（第二段）失敗",
-          "err_data": []
-        },
-        "7": {
           "step_name": "MOTOR_TEST_STEP_2",
           "description": "馬達功能測試（第二段）失敗",
           "err_data": []
         },
-        "8": {
+        "6": {
           "step_name": "BL_TEST_STEP_1",
           "description": "背光亮度測試（第一段）失敗",
           "err_data": []
         },
-        "9": {
+        "7": {
           "step_name": "BL_TEST_STEP_2",
           "description": "背光亮度測試（第二段）失敗",
           "err_data": []
         },
+        "8": {
+          "step_name": "TFT_CHECK_STEP",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "Voltage_CHECK_STEP",
+          "description": "電源電壓量測超出容許範圍",
+          "err_data": []
+        },
         "10": {
-          "step_name": "Engineering_mode_STEP",
-          "description": "工程模式旗標設定失敗",
+          "step_name": "KEY_TEST_STEP",
+          "description": "按鍵功能測試失敗",
           "err_data": []
         },
         "11": {
-          "step_name": "ASK_VER_TEST_STEP",
-          "description": "版本確認請求測試失敗",
+          "step_name": "EEPROM_TEST_STEP_1",
+          "description": "EEPROM 測試（第一段）失敗",
           "err_data": []
         },
         "12": {
@@ -53229,71 +52536,6 @@
         "13": {
           "step_name": "SLEEP_TEST_STEP_2",
           "description": "省電模式（Sleep）電流測試（第二段）失敗",
-          "err_data": []
-        },
-        "15": {
-          "step_name": "EN_PIC_STEP",
-          "description": "EN PIC 致能啟動失敗",
-          "err_data": []
-        },
-        "16": {
-          "step_name": "TFT_CHECK_STEP",
-          "description": "TFT 顯示器通訊檢查失敗（逾時）",
-          "err_data": []
-        },
-        "17": {
-          "step_name": "Voltage_CHECK_STEP",
-          "description": "電源電壓量測超出容許範圍",
-          "err_data": []
-        },
-        "18": {
-          "step_name": "USB_TEST_STEP",
-          "description": "USB 通訊測試失敗",
-          "err_data": []
-        },
-        "19": {
-          "step_name": "KEY_TEST_STEP_1",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "KEY_TEST_STEP_2",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "KEY_TEST_STEP_3",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "EEPROM_TEST_STEP_1",
-          "description": "EEPROM 測試（第一段）失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "EEPROM_TEST_STEP_2",
-          "description": "EEPROM 測試（第二段）失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "EEPROM_TEST_STEP_3",
-          "description": "EEPROM 讀寫測試失敗",
-          "err_data": []
-        },
-        "25": {
-          "step_name": "SLEEP_TEST_STEP_1",
-          "description": "省電模式（Sleep）電流測試（第一段）失敗",
-          "err_data": []
-        },
-        "26": {
-          "step_name": "SLEEP_TEST_STEP_2",
-          "description": "省電模式（Sleep）電流測試（第二段）失敗",
-          "err_data": []
-        },
-        "27": {
-          "step_name": "PASS_STEP",
-          "description": "",
           "err_data": []
         }
       }
@@ -53376,13 +52618,13 @@
           "err_data": []
         },
         "2": {
-          "step_name": "ACC_ON_current_check_STEP",
-          "description": "ACC ON 電流值超出規格範圍",
+          "step_name": "GND_CHECK_STEP",
+          "description": "接地（GND）短路測試失敗",
           "err_data": []
         },
         "3": {
-          "step_name": "ACC_ON_Current_err_STEP",
-          "description": "ACC ON 電流異常（過高或過低），測試中止",
+          "step_name": "current_check_STEP",
+          "description": "電流量測超出規格範圍",
           "err_data": []
         },
         "4": {
@@ -53391,38 +52633,38 @@
           "err_data": []
         },
         "5": {
-          "step_name": "LS_TEST_STEP_1",
-          "description": "光感測器測試（第一段）失敗",
-          "err_data": []
-        },
-        "6": {
-          "step_name": "LS_TEST_STEP_2",
-          "description": "光感測器測試（第二段）失敗",
-          "err_data": []
-        },
-        "7": {
           "step_name": "MOTOR_TEST_STEP_2",
           "description": "馬達功能測試（第二段）失敗",
           "err_data": []
         },
-        "8": {
+        "6": {
           "step_name": "BL_TEST_STEP_1",
           "description": "背光亮度測試（第一段）失敗",
           "err_data": []
         },
-        "9": {
+        "7": {
           "step_name": "BL_TEST_STEP_2",
           "description": "背光亮度測試（第二段）失敗",
           "err_data": []
         },
+        "8": {
+          "step_name": "TFT_CHECK_STEP",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "Voltage_CHECK_STEP",
+          "description": "電源電壓量測超出容許範圍",
+          "err_data": []
+        },
         "10": {
-          "step_name": "Engineering_mode_STEP",
-          "description": "工程模式旗標設定失敗",
+          "step_name": "KEY_TEST_STEP",
+          "description": "按鍵功能測試失敗",
           "err_data": []
         },
         "11": {
-          "step_name": "ASK_VER_TEST_STEP",
-          "description": "版本確認請求測試失敗",
+          "step_name": "EEPROM_TEST_STEP_1",
+          "description": "EEPROM 測試（第一段）失敗",
           "err_data": []
         },
         "12": {
@@ -53433,71 +52675,6 @@
         "13": {
           "step_name": "SLEEP_TEST_STEP_2",
           "description": "省電模式（Sleep）電流測試（第二段）失敗",
-          "err_data": []
-        },
-        "15": {
-          "step_name": "EN_PIC_STEP",
-          "description": "EN PIC 致能啟動失敗",
-          "err_data": []
-        },
-        "16": {
-          "step_name": "TFT_CHECK_STEP",
-          "description": "TFT 顯示器通訊檢查失敗（逾時）",
-          "err_data": []
-        },
-        "17": {
-          "step_name": "Voltage_CHECK_STEP",
-          "description": "電源電壓量測超出容許範圍",
-          "err_data": []
-        },
-        "18": {
-          "step_name": "USB_TEST_STEP",
-          "description": "USB 通訊測試失敗",
-          "err_data": []
-        },
-        "19": {
-          "step_name": "KEY_TEST_STEP_1",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "KEY_TEST_STEP_2",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "KEY_TEST_STEP_3",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "EEPROM_TEST_STEP_1",
-          "description": "EEPROM 測試（第一段）失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "EEPROM_TEST_STEP_2",
-          "description": "EEPROM 測試（第二段）失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "EEPROM_TEST_STEP_3",
-          "description": "EEPROM 讀寫測試失敗",
-          "err_data": []
-        },
-        "25": {
-          "step_name": "SLEEP_TEST_STEP_1",
-          "description": "省電模式（Sleep）電流測試（第一段）失敗",
-          "err_data": []
-        },
-        "26": {
-          "step_name": "SLEEP_TEST_STEP_2",
-          "description": "省電模式（Sleep）電流測試（第二段）失敗",
-          "err_data": []
-        },
-        "27": {
-          "step_name": "PASS_STEP",
-          "description": "",
           "err_data": []
         }
       }
@@ -53580,13 +52757,13 @@
           "err_data": []
         },
         "2": {
-          "step_name": "ACC_ON_current_check_STEP",
-          "description": "ACC ON 電流值超出規格範圍",
+          "step_name": "GND_CHECK_STEP",
+          "description": "接地（GND）短路測試失敗",
           "err_data": []
         },
         "3": {
-          "step_name": "ACC_ON_Current_err_STEP",
-          "description": "ACC ON 電流異常（過高或過低），測試中止",
+          "step_name": "current_check_STEP",
+          "description": "電流量測超出規格範圍",
           "err_data": []
         },
         "4": {
@@ -53595,38 +52772,38 @@
           "err_data": []
         },
         "5": {
-          "step_name": "LS_TEST_STEP_1",
-          "description": "光感測器測試（第一段）失敗",
-          "err_data": []
-        },
-        "6": {
-          "step_name": "LS_TEST_STEP_2",
-          "description": "光感測器測試（第二段）失敗",
-          "err_data": []
-        },
-        "7": {
           "step_name": "MOTOR_TEST_STEP_2",
           "description": "馬達功能測試（第二段）失敗",
           "err_data": []
         },
-        "8": {
+        "6": {
           "step_name": "BL_TEST_STEP_1",
           "description": "背光亮度測試（第一段）失敗",
           "err_data": []
         },
-        "9": {
+        "7": {
           "step_name": "BL_TEST_STEP_2",
           "description": "背光亮度測試（第二段）失敗",
           "err_data": []
         },
+        "8": {
+          "step_name": "TFT_CHECK_STEP",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "Voltage_CHECK_STEP",
+          "description": "電源電壓量測超出容許範圍",
+          "err_data": []
+        },
         "10": {
-          "step_name": "Engineering_mode_STEP",
-          "description": "工程模式旗標設定失敗",
+          "step_name": "KEY_TEST_STEP",
+          "description": "按鍵功能測試失敗",
           "err_data": []
         },
         "11": {
-          "step_name": "ASK_VER_TEST_STEP",
-          "description": "版本確認請求測試失敗",
+          "step_name": "EEPROM_TEST_STEP_1",
+          "description": "EEPROM 測試（第一段）失敗",
           "err_data": []
         },
         "12": {
@@ -53637,71 +52814,6 @@
         "13": {
           "step_name": "SLEEP_TEST_STEP_2",
           "description": "省電模式（Sleep）電流測試（第二段）失敗",
-          "err_data": []
-        },
-        "15": {
-          "step_name": "EN_PIC_STEP",
-          "description": "EN PIC 致能啟動失敗",
-          "err_data": []
-        },
-        "16": {
-          "step_name": "TFT_CHECK_STEP",
-          "description": "TFT 顯示器通訊檢查失敗（逾時）",
-          "err_data": []
-        },
-        "17": {
-          "step_name": "Voltage_CHECK_STEP",
-          "description": "電源電壓量測超出容許範圍",
-          "err_data": []
-        },
-        "18": {
-          "step_name": "USB_TEST_STEP",
-          "description": "USB 通訊測試失敗",
-          "err_data": []
-        },
-        "19": {
-          "step_name": "KEY_TEST_STEP_1",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "KEY_TEST_STEP_2",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "21": {
-          "step_name": "KEY_TEST_STEP_3",
-          "description": "按鍵功能測試失敗",
-          "err_data": []
-        },
-        "22": {
-          "step_name": "EEPROM_TEST_STEP_1",
-          "description": "EEPROM 測試（第一段）失敗",
-          "err_data": []
-        },
-        "23": {
-          "step_name": "EEPROM_TEST_STEP_2",
-          "description": "EEPROM 測試（第二段）失敗",
-          "err_data": []
-        },
-        "24": {
-          "step_name": "EEPROM_TEST_STEP_3",
-          "description": "EEPROM 讀寫測試失敗",
-          "err_data": []
-        },
-        "25": {
-          "step_name": "SLEEP_TEST_STEP_1",
-          "description": "省電模式（Sleep）電流測試（第一段）失敗",
-          "err_data": []
-        },
-        "26": {
-          "step_name": "SLEEP_TEST_STEP_2",
-          "description": "省電模式（Sleep）電流測試（第二段）失敗",
-          "err_data": []
-        },
-        "27": {
-          "step_name": "PASS_STEP",
-          "description": "",
           "err_data": []
         }
       }
@@ -53803,11 +52915,6 @@
         "3": {
           "step_name": "MOTOR_TEST_STEP_1",
           "description": "馬達功能測試（第一段）失敗",
-          "err_data": []
-        },
-        "20": {
-          "step_name": "Double_Voltage_test_STEP",
-          "description": "電源電壓測試失敗",
           "err_data": []
         },
         "4": {
@@ -57135,57 +56242,52 @@
           "err_data": []
         },
         "2": {
-          "step_name": "Current_test_STEP_1",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "3": {
-          "step_name": "Current_test_STEP_2",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "20": {
           "step_name": "Double_Voltage_test_STEP",
           "description": "電源電壓測試失敗",
           "err_data": []
         },
-        "4": {
+        "3": {
           "step_name": "MOTOR_TEST_STEP_1",
           "description": "馬達功能測試（第一段）失敗",
           "err_data": []
         },
-        "5": {
+        "4": {
           "step_name": "MOTOR_TEST_STEP_2",
           "description": "馬達功能測試（第二段）失敗",
           "err_data": []
         },
-        "6": {
+        "5": {
           "step_name": "BL_TEST_Func_STEP",
           "description": "背光亮度測試失敗",
           "err_data": []
         },
-        "7": {
-          "step_name": "GMSL_R_TEST_STEP_1",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "8": {
-          "step_name": "GMSL_R_TEST_STEP_2",
-          "description": "測試失敗",
-          "err_data": []
-        },
-        "9": {
-          "step_name": "TFT_CHECK_STEP",
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
           "description": "TFT 顯示器通訊檢查失敗（逾時）",
           "err_data": []
         },
-        "10": {
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
           "step_name": "CAN_5V_TEST_STEP",
           "description": "測試失敗",
           "err_data": []
         },
-        "11": {
+        "10": {
           "step_name": "MCU_3V3_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "B12V_TEST_STEP",
           "description": "測試失敗",
           "err_data": []
         },
@@ -57349,7 +56451,7 @@
       "version_date": "20230203_0834",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230203_0834_0xc5cb.hex",
       "folder_path": "D:/yuanyu/321/GL0A/A_Board/M/A_BOREAD_TESTER_V40_46K80_20230203_0834",
-      "excel_sheet": "321-GL0A A ",
+      "excel_sheet": "321-GL0A A",
       "case_name": "EL-321W-GL0A A板",
       "change_notes": "1.因ICT有測試，故放寬GMSL的閥值。 1300~750 => 1575~475\n2.優化背光測試的穩定性偵測。\n3.增加異常時紀錄ERR_DATA",
       "release_date": "2023-02-03",
@@ -57420,7 +56522,85 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "正轉編碼器量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "反轉編碼器量測值",
+              "map": {}
+            }
+          ]
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "正轉編碼器量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "反轉編碼器量測值",
+              "map": {}
+            }
+          ]
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20230203_0830",
@@ -57559,7 +56739,7 @@
       "version_date": "20230203_0807",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230203_0807_0xc48c.hex",
       "folder_path": "D:/yuanyu/321/GL06/A_Board/M/A_BOREAD_TESTER_V40_46K80_20230203_0807",
-      "excel_sheet": "321-GL06 A ",
+      "excel_sheet": "321-GL06 A",
       "case_name": "EL-321W-GL06 A板",
       "change_notes": "1.優化背光測試的穩定性偵測。\n2.增加異常時紀錄ERR_DATA",
       "release_date": "2023-02-03",
@@ -57630,7 +56810,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20230202_1447",
@@ -58851,7 +58087,7 @@
       "version_date": "20230131_1200",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20230131_1200_0xe962.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/A_BOREAD_TESTER_V40_46K80_20230131_1200",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "依據不良數據，微調GMSL 參數 50 ->35",
       "release_date": "2023-01-31",
@@ -58922,7 +58158,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20230118_1505",
@@ -59882,7 +59174,7 @@
       "version_date": "20221202_0900",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20221202_0900_0Xe9a8.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/A_BOREAD_TESTER_V40_46K80_20221202_0900",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "依據不良數據，微調參數 150 ->350",
       "release_date": "2022-12-02",
@@ -59953,7 +59245,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20221201_1757",
@@ -60775,7 +60123,7 @@
       "version_date": "20221201_1741",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20221201_1741_0xb77d.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/A_BOREAD_TESTER_V40_46K80_20221201_1741",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "新增上拋資料多了異常時的步驟和異常數據",
       "release_date": "2022-12-01",
@@ -60838,7 +60186,63 @@
         "10": "SLEEP_Current_TEST_STEP_2",
         "11": "SLEEP_Current_TEST_STEP_3"
       },
-      "ng_reasons": {}
+      "ng_reasons": {
+        "1": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Double_Voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "BL_TEST_Func_STEP",
+          "description": "背光亮度測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "TFT_CHECK_STEP_1",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "TFT_CHECK_STEP_2",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "TFT_CHECK_STEP_3",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        }
+      }
     },
     {
       "version_date": "20221201_1703",
@@ -60959,7 +60363,7 @@
       "version_date": "20221130_1500",
       "folder_name": "A_BOREAD_TESTER_V40_20221130_1500_0xf778.hex",
       "folder_path": "D:/yuanyu/321/GL01/NEW_A_BOREAD_TESTER/A_BOREAD_TESTER_V40_20221130_1500",
-      "excel_sheet": "321-GL01A ",
+      "excel_sheet": "321-GL01A",
       "case_name": "321W-GL01",
       "change_notes": "新增鎖定版本功能\nconst rom unsigned char  LOCK_VER1[] = {\"210429A\"};\nconst rom unsigned char  LOCK_VER2[] = {\"3P321WGA0010\"};\nconst rom unsigned char  LOCK_VER3[] = {\"6600070966\"};\nconst rom unsigned char  LOCK_VER4[] = {\"20112601\"};",
       "release_date": "2022-11-30",
@@ -61024,7 +60428,7 @@
       "version_date": "20221128_1622",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20221128_1622_0x79fd",
       "folder_path": "",
-      "excel_sheet": "321-GL06 A ",
+      "excel_sheet": "321-GL06 A",
       "case_name": "EL-321W-GL06 A板",
       "change_notes": "新增測試GMSL 的兩個對地電阻檢查",
       "release_date": "2022-11-28",
@@ -61037,7 +60441,7 @@
       "version_date": "20221128_1613",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20221128_1613_0x772f.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/A_BOREAD_TESTER_V40_46K80_20221128_1613",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "新增測試GMSL 的兩個對地電阻檢查",
       "release_date": "2022-11-28",
@@ -61570,7 +60974,7 @@
       "version_date": "20221012_1640",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20221012_1640_0x25fd.hex",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/A_BOREAD_TESTER_V40_46K80_20221012_1640",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 & GL0C A板",
       "change_notes": "修改暗電流\n穩態偵測(2% -> 2.5%)\n符合次數 (20次->10次)",
       "release_date": "2022-10-12",
@@ -61719,7 +61123,7 @@
       "version_date": "20220921_1506",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220921_1506_0x7a3e.hex",
       "folder_path": "D:/yuanyu/321/GL0A/A_Board/M/A_BOREAD_TESTER_V40_46K80_20220921_1506",
-      "excel_sheet": "321-GL0A A ",
+      "excel_sheet": "321-GL0A A",
       "case_name": "EL-321W-GL0A A板",
       "change_notes": "於TFT測項，新增GMSL 的兩個對地電阻檢查",
       "release_date": "2022-09-21",
@@ -63260,7 +62664,7 @@
       "version_date": "20220722_0900",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220722_0900",
       "folder_path": "D:/yuanyu/321/GL05/A_Board/M/A_BOREAD_TESTER_V40_46K80_20220722_0900",
-      "excel_sheet": "321-GL05&0C A ",
+      "excel_sheet": "321-GL05&0C A",
       "case_name": "EL-321W-GL05 A板",
       "change_notes": "寄出檢具時的版本",
       "release_date": "2022-07-22",
@@ -63463,7 +62867,7 @@
       "version_date": "20220622_1750",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220622_1750",
       "folder_path": "D:/yuanyu/321/GL0A/A_Board/M/A_BOREAD_TESTER_V40_46K80_20220622_1750",
-      "excel_sheet": "321-GL06 A ",
+      "excel_sheet": "321-GL06 A",
       "case_name": "EL-321W-GL06 A板",
       "change_notes": "寄出檢具時的版本",
       "release_date": "2022-07-19",
@@ -63508,7 +62912,7 @@
       "version_date": "20220622_1750",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20220622_1750",
       "folder_path": "D:/yuanyu/321/GL0A/A_Board/M/A_BOREAD_TESTER_V40_46K80_20220622_1750",
-      "excel_sheet": "321-GL0A A ",
+      "excel_sheet": "321-GL0A A",
       "case_name": "EL-321W-GL0A A板",
       "change_notes": "寄出檢具時的版本",
       "release_date": "2022-06-23",
