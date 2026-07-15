@@ -196,7 +196,7 @@
   <div id="notFound" class="not-found hidden"></div>
 
 <script>
-const PAGE_VERSION = "2026_0427_0900";
+const PAGE_VERSION = "2026_0518_1324";
 document.getElementById('pageVersion').textContent = ' v' + PAGE_VERSION;
 
 // ─── 資料庫 ─────────────────────────────────────────────────────────────────
@@ -251,22 +251,23 @@ function query() {
   //}
 
   // ── 版本日期正規化：統一轉為 YYYYMMDD_HHMM ──────────────────
-  // 支援 YYYYMMDD_HHMM 或 YYYY_MMDD_HHMM（部分韌體年份後多一底線）
+  // 支援 YYYYMMDD_HHMM、YYYY_MMDD_HHMM、及 9 位數日期（如 202600518_0818）
   function normalizeVersionDate(raw) {
-    const digits = raw.replace(/_/g, '');   // 去掉所有底線，只留 12 位數字
+    const digits = raw.replace(/_/g, '');
     if (digits.length === 12) {
-      return digits.slice(0, 8) + '_' + digits.slice(8);  // 統一格式
+      return digits.slice(0, 8) + '_' + digits.slice(8);
     }
-    return raw;
+    return raw;  // 13 位等非標準格式原樣保留，與 scanner.py 兩側一致
   }
 
-  const VER_RE = /(\d{4}_?\d{4}_\d{4})/;
+  // 支援 8 位（標準）、9 位（部分韌體）、4+4+4（年份後加底線）
+  const VER_RE = /(\d{9}_\d{4}|\d{8}_\d{4}|\d{4}_\d{4}_\d{4})/;
   let versionDate = '';
   let verIdx = -1;
-  for (let i = 3; i < fields.length; i++) {
+  for (let i = 0; i < fields.length; i++) {
     const m = fields[i].trim().match(VER_RE);
     if (m) {
-      versionDate = normalizeVersionDate(m[1]);  // 正規化後儲存
+      versionDate = normalizeVersionDate(m[1]);
       verIdx = i;
       break;
     }
@@ -277,15 +278,51 @@ function query() {
     return;
   }
 
-  // ── 自動偵測 TEST_result 起始位置 ────────────────────────────
-  // TEST_result 欄位只含 P 或 F（單字元）；若 [3] 不是 P/F，代表有額外欄位
+  // ── 動態偵測 TEST_result 起始位置 ────────────────────────────
+  // 從 field[0] 開始往後掃，第一個單字元 P 或 F 即為起始
   const PF_RE = /^[PF]$/i;
-  const resultStart = PF_RE.test(fields[3].trim()) ? 3 : 4;
-  const results  = fields.slice(resultStart, resultStart + 8).map(f => f.trim());
+  let resultStart = 0;
+  while (resultStart < fields.length && !PF_RE.test(fields[resultStart].trim())) {
+    resultStart++;
+  }
 
-  // TEST_DATA 緊接在 TEST_result 後面（共 17 欄）
-  const dataStart = resultStart + 8;
-  const dataVals  = fields.slice(dataStart, dataStart + 17).map(f => parseInt(f.trim(), 10));
+  // 動態計算 P/F 欄位數
+  let pfCount = 0;
+  while (resultStart + pfCount < fields.length &&
+         PF_RE.test(fields[resultStart + pfCount].trim())) {
+    pfCount++;
+  }
+  const results = fields.slice(resultStart, resultStart + pfCount).map(f => f.trim());
+
+  // ── 用韌體定義的四個常數做校驗與精確解析 ────────────────────
+  const resultCount  = fw.result_count  ?? null;
+  const timeCount    = fw.time_count    ?? 0;
+  const dataCount    = fw.data_count    ?? null;
+  const messageCount = fw.message_count ?? null;
+
+  // 校驗 P/F 數
+  if (resultCount !== null && pfCount !== resultCount) {
+    status.textContent =
+      `P/F 欄位數不符（韌體定義 ${resultCount}，資料偵測到 ${pfCount}）`;
+    return;
+  }
+
+  // 跳過 STEP_TIME，精確讀取 TEST_DATA
+  const dataStart = resultStart + pfCount + timeCount;
+  const readCount = dataCount
+    ?? ((fw.test_data || []).reduce((m, d) => Math.max(m, d.idx), 0) + 1);
+  const dataVals = fields.slice(dataStart, dataStart + readCount)
+                         .map(f => parseInt(f.trim(), 10));
+
+  // 校驗總欄位數（有 message_count 才做）
+  if (messageCount !== null) {
+    const expectedMin = dataStart + readCount + messageCount;
+    if (fields.length < expectedMin) {
+      status.textContent =
+        `欄位總數不足（預期至少 ${expectedMin}，實際 ${fields.length}）`;
+      return;
+    }
+  }
 
   // 找對應韌體版本
   const fw = (firmwareDB.firmware || []).find(f => f.version_date === versionDate);
