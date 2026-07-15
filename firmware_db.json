@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-15T08:47:18",
-  "version": "2026_0715_0814",
+  "generated": "2026-07-15T13:16:33",
+  "version": "2026_0715_1102",
   "firmware": [
     {
       "version_date": "FL 20230330_1020",
@@ -165,66 +165,97 @@
           ]
         },
         "5": {
-          "step_name": "CHACK_Current_1_1_STEP",
-          "description": "工作電流（第一段）超出規格範圍",
+          "step_name": "OS_TEST_1_5_STEP",
+          "description": "OS 自動測試 1-5 失敗（AD[2] 超出 2650~2850（目標 2783），重試達上限後 NG）",
           "err_data": [
             {
               "n": 1,
-              "meaning": "電流/電壓 AD 量測值",
+              "meaning": "AD_FALG8（程式傳出恆為 0）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "固定值 8",
               "map": {}
             }
           ]
         },
         "6": {
-          "step_name": "CHACK_Current_2_1_STEP",
-          "description": "工作電流（第二段第一項）超出規格範圍",
+          "step_name": "OS_TEST_1_6_STEP",
+          "description": "OS 自動測試 1-6 失敗（AD[3] 超出 2900~3000（目標 2952），重試後 NG）",
           "err_data": [
             {
               "n": 1,
-              "meaning": "電流/電壓 AD 量測值",
+              "meaning": "AD_FALG9（恆 0）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "固定值 8",
               "map": {}
             }
           ]
         },
         "7": {
-          "step_name": "CHACK_Current_2_2_STEP",
-          "description": "工作電流（第二段第二項）超出規格範圍",
+          "step_name": "OS_TEST_1_7_STEP",
+          "description": "OS 自動測試 1-7 失敗（AD[2] ≥ 100，應 < 100）",
           "err_data": [
             {
               "n": 1,
-              "meaning": "電流/電壓 AD 量測值",
+              "meaning": "AD_FALG8（恆 0）",
               "map": {}
             },
             {
               "n": 2,
-              "meaning": "NG 發生時間戳（ms）",
+              "meaning": "固定值 8",
               "map": {}
             }
           ]
         },
         "8": {
-          "step_name": "CCD_POWER_CHECK_STEP",
-          "description": "CCD 電源電壓 AD 值超出規格",
-          "err_data": []
-        },
-        "9": {
-          "step_name": "OS_TEST_2_1_STEP",
-          "description": "OS 自動測試 2-1 電壓超出規格",
+          "step_name": "OS_TEST_1_8_STEP",
+          "description": "OS 自動測試 1-8 失敗（AD[3] ≥ 100，應 < 100）",
           "err_data": [
             {
               "n": 1,
-              "meaning": "電流/電壓 AD 量測值",
+              "meaning": "AD_FALG9（恆 0）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "固定值 8",
+              "map": {}
+            }
+          ]
+        },
+        "9": {
+          "step_name": "OS_TEST_1_9_STEP",
+          "description": "OS 自動測試 1-9 失敗（AD[2] ≥ 100，應 < 100）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD_FALG8（恆 0）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "固定值 8",
               "map": {}
             }
           ]
         },
         "10": {
-          "step_name": "OS_TEST_2_2_STEP",
-          "description": "OS 自動測試 2-2 電壓超出規格",
+          "step_name": "OS_TEST_1_10_STEP",
+          "description": "OS 自動測試 1-10 失敗（AD[3] ≥ 100，應 < 100）",
           "err_data": [
             {
               "n": 1,
-              "meaning": "電流/電壓 AD 量測值",
+              "meaning": "AD_FALG9（恆 0）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "固定值 8",
               "map": {}
             }
           ]
@@ -302,46 +333,30 @@
           "err_data": []
         },
         "21": {
-          "step_name": "voltage_test_STEP",
-          "description": "電壓量測測試（本版韌體已停用）",
-          "err_data": []
+          "step_name": "CAR_BACK_TEST_3_STEP",
+          "description": "後觸發測試 3 失敗（自動測，觸發訊號逾時）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "逾時計數 EE_receiver_time",
+              "map": {}
+            }
+          ]
         },
         "22": {
-          "step_name": "Work_current_test_STEP",
-          "description": "工作電流量測（僅記錄，無獨立 NG 判斷）",
+          "step_name": "SPEED_TEST_STEP",
+          "description": "速度測試失敗（未收到速度訊號，逾時 NG）",
           "err_data": []
         },
         "23": {
-          "step_name": "SLEEP_MODE_1_STEP",
-          "description": "無法進入休眠模式電流超出規格",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "工作電流 AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "休眠等待時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "MCU_VER_STEP",
+          "description": "【保留步驟】程式未引用此代碼；MCU 版本比對 NG 實際記於版本比對流程",
+          "err_data": []
         },
         "24": {
-          "step_name": "SLEEP_MODE_2_STEP",
-          "description": "POWER KEEP 失效",
-          "err_data": [
-            {
-              "n": 1,
-              "meaning": "工作電流 AD 量測值",
-              "map": {}
-            },
-            {
-              "n": 2,
-              "meaning": "休眠等待時間（ms）",
-              "map": {}
-            }
-          ]
+          "step_name": "SOC_VER_STEP",
+          "description": "【保留步驟】程式未引用此代碼；SOC 版本比對 NG 實際記於版本比對流程",
+          "err_data": []
         },
         "25": {
           "step_name": "SLEEP_MODE_3_STEP",
@@ -405,6 +420,17 @@
           "step_name": "Check_Screen_STEP_2",
           "description": "螢幕通訊確認失敗（第二次確認）",
           "err_data": []
+        },
+        "34": {
+          "step_name": "L_R_ask_ver_step",
+          "description": "詢問左右駕版本無回應（向 ECU 要版本，重試 10 次後 NG）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "重試次數 retry_time",
+              "map": {}
+            }
+          ]
         }
       },
       "result_count": 12,
@@ -1803,6 +1829,11 @@
         "40": "Check_view_STEP"
       },
       "ng_reasons": {
+        "27": {
+          "step_name": "Forced_NG_STEP",
+          "description": "強制 NG 步驟（工程用，強制記錄不良）",
+          "err_data": []
+        },
         "1": {
           "step_name": "OS_TEST_1_1_STEP",
           "description": "OS 自動測試 1-1 電壓超出規格",
@@ -2094,11 +2125,6 @@
         "26": {
           "step_name": "PASS_STEP",
           "description": "通過標記步驟，無 NG 記錄",
-          "err_data": []
-        },
-        "27": {
-          "step_name": "Forced_NG_STEP",
-          "description": "強制 NG 步驟（工程用，強制記錄不良）",
           "err_data": []
         }
       },
@@ -17772,6 +17798,11 @@
         "27": "Forced_NG_STEP"
       },
       "ng_reasons": {
+        "27": {
+          "step_name": "Forced_NG_STEP",
+          "description": "強制 NG 步驟（工程用，強制記錄不良）",
+          "err_data": []
+        },
         "1": {
           "step_name": "OS_TEST_1_1_STEP",
           "description": "OS 自動測試 1-1 電壓超出規格",
@@ -18063,11 +18094,6 @@
         "26": {
           "step_name": "PASS_STEP",
           "description": "通過標記步驟，無 NG 記錄",
-          "err_data": []
-        },
-        "27": {
-          "step_name": "Forced_NG_STEP",
-          "description": "強制 NG 步驟（工程用，強制記錄不良）",
           "err_data": []
         }
       },
