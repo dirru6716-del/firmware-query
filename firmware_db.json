@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15T13:38:28",
+  "generated": "2026-07-15T14:56:49",
   "version": "2026_0715_1330",
   "firmware": [
     {
@@ -18,6 +18,225 @@
       "time_count": 0,
       "data_count": null,
       "message_count": null
+    },
+    {
+      "version_date": "20260715_1400",
+      "folder_name": "A_BOREAD_TESTER_V40_46K80_20260715_1400_0Xbc9b.hex",
+      "folder_path": "D:/yuanyu/321/GL11_GL12/M/A_BOREAD_TESTER_V40_46K80_20260715_1400",
+      "excel_sheet": "321-GL12 A",
+      "case_name": "EL-321W-GL12 A板",
+      "change_notes": "背光亮的定義從220以上，下修到200以上",
+      "release_date": "2026-07-15",
+      "test_results": [
+        "short_circuit_current_result",
+        "Cant_Power_On_result",
+        "MOTOR_TEST_result",
+        "LS_TEST_result",
+        "MOTOR_Reverse_TEST_result",
+        "BL_TEST_result",
+        "TFT_CHECK_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 6,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 7,
+          "name": "TESTER_NAME_DATA"
+        },
+        {
+          "idx": 8,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 9,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 10,
+          "name": "ERR_DATA_2"
+        }
+      ],
+      "test_steps": {
+        "1": "short_ciruit_current_check_STEP",
+        "2": "Floating_PIN_CHECK_FUNC_STEP",
+        "3": "ACC_ON_current_check_STEP",
+        "4": "ACC_ON_Current_err_STEP",
+        "5": "MOTOR_TEST_STEP_1",
+        "6": "MOTOR_TEST_STEP_2",
+        "7": "LS_TEST_STEP_1",
+        "8": "MOTOR_TEST_STEP_3",
+        "9": "BL_TEST_STEP_1",
+        "10": "BL_TEST_STEP_2",
+        "11": "TFT_CHECK_STEP",
+        "12": "SLEEP_TEST_STEP_1",
+        "13": "SLEEP_TEST_STEP_2",
+        "14": "PASS_STEP"
+      },
+      "ng_reasons": {
+        "1": {
+          "step_name": "short_ciruit_current_check_STEP",
+          "description": "上電後電流連續 5 次 AD ≥ 8000（約 800mA）判定短路",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流AD值(current_flag)",
+              "map": {}
+            }
+          ]
+        },
+        "2": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "浮接腳位檢查失敗（某腳位 AD 值重試達上限仍異常）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "該腳位AD量測值(Slave_MCU_AD_DATA[x])",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "腳位索引 x（0/1/2）",
+              "map": {}
+            }
+          ]
+        },
+        "3": {
+          "step_name": "ACC_ON_current_check_STEP",
+          "description": "ACC ON 後電流連續 25 次超出正常範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流AD值(current_flag)",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "連續NG次數(達25觸發)",
+              "map": {}
+            }
+          ]
+        },
+        "4": {
+          "step_name": "ACC_ON_Current_err_STEP",
+          "description": "【保留步驟】本程式無使用（Define.h 有定義、Func.C 未引用）",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達正轉超時（設定時間內編碼器位置變化未達 5，馬達未動作）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "起始編碼器位置值(Encoder_Temporary_flag[0])",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "當下編碼器位置值(Encoder_Temporary_flag[1])",
+              "map": {}
+            }
+          ]
+        },
+        "6": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達反轉超時（設定時間內編碼器位置變化未達 5）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "起始編碼器位置值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "當下編碼器位置值",
+              "map": {}
+            }
+          ]
+        },
+        "7": {
+          "step_name": "LS_TEST_STEP_1",
+          "description": "僅紀錄步驟用，無獨立 NG 觸發（光感測試進入標記）",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "MOTOR_TEST_STEP_3",
+          "description": "馬達反轉階段編碼器異常（超時或位置超出範圍）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "起始編碼器位置值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "當下編碼器位置值",
+              "map": {}
+            }
+          ]
+        },
+        "9": {
+          "step_name": "BL_TEST_STEP_1",
+          "description": "背光在設定時間內未亮起（亮度AD值未超過門檻 200）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "亮度AD值(lux_judge_data[0])",
+              "map": {}
+            }
+          ]
+        },
+        "10": {
+          "step_name": "BL_TEST_STEP_2",
+          "description": "背光亮起紀錄步驟（亮度AD值 > 200 時記錄；本版未啟用亮度穩定度 NG 判定）",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "TFT_CHECK_STEP",
+          "description": "等待 TFT 目視確認超時（Real_Time 達 SET_TIME=3000 前未按確認鍵）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "當下計時器值(Real_Time)",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "設定超時上限(SET_TIME=3000)",
+              "map": {}
+            }
+          ]
+        },
+        "12": {
+          "step_name": "SLEEP_TEST_STEP_1",
+          "description": "睡眠電流過大或 40s 超時無法進入睡眠",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "睡眠電流AD值(Current_AD_FLAG[0])",
+              "map": {}
+            }
+          ]
+        },
+        "13": {
+          "step_name": "SLEEP_TEST_STEP_2",
+          "description": "暗電流量測：80s 超時或暗電流AD ≥ 1000（正常需 ≤ 200，約 20uA）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "暗電流AD值(Current_AD_FLAG[2])",
+              "map": {}
+            }
+          ]
+        }
+      },
+      "result_count": 9,
+      "time_count": 1,
+      "data_count": 11,
+      "message_count": 1
     },
     {
       "version_date": "20260714_1412",
