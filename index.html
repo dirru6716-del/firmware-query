@@ -196,7 +196,7 @@
   <div id="notFound" class="not-found hidden"></div>
 
 <script>
-const PAGE_VERSION = "2026_0518_1324";
+const PAGE_VERSION = "2026_0715_1527";
 document.getElementById('pageVersion').textContent = ' v' + PAGE_VERSION;
 
 // ─── 資料庫 ─────────────────────────────────────────────────────────────────
@@ -278,6 +278,18 @@ function query() {
     return;
   }
 
+  // 找對應韌體版本（必須在使用 fw.xxx 之前先宣告）
+  const fw = (firmwareDB.firmware || []).find(f => f.version_date === versionDate);
+
+  if (!fw) {
+    const el = document.getElementById('notFound');
+    el.innerHTML =
+      `找不到版本 <strong>${versionDate}</strong> 的資料（偵測到版本日期位於欄位 [${verIdx}]）。<br>` +
+      `請重新執行 <code>scanner.py</code>（或雙擊 <code>update_and_push.bat</code>）並更新資料庫。`;
+    el.classList.remove('hidden');
+    return;
+  }
+
   // ── 動態偵測 TEST_result 起始位置 ────────────────────────────
   // 從 field[0] 開始往後掃，第一個單字元 P 或 F 即為起始
   const PF_RE = /^[PF]$/i;
@@ -322,18 +334,6 @@ function query() {
         `欄位總數不足（預期至少 ${expectedMin}，實際 ${fields.length}）`;
       return;
     }
-  }
-
-  // 找對應韌體版本
-  const fw = (firmwareDB.firmware || []).find(f => f.version_date === versionDate);
-
-  if (!fw) {
-    const el = document.getElementById('notFound');
-    el.innerHTML =
-      `找不到版本 <strong>${versionDate}</strong> 的資料（偵測到版本日期位於欄位 [${verIdx}]）。<br>` +
-      `請重新執行 <code>scanner.py</code>（或雙擊 <code>update_and_push.bat</code>）並更新資料庫。`;
-    el.classList.remove('hidden');
-    return;
   }
 
   // ── 版本資訊 ────────────────────────────────────────────────
