@@ -1,7 +1,15 @@
-__version__ = "2026_0715_0814"
+__version__ = "2026_0715_1330"
 """
 scanner.py - 韌體資料庫自動掃描與更新工具
 整合 update_records_20260319.py 全部功能
+
+執行模式：
+- 無參數：彈出對話框手動選檔（沿用；需要時仍會全碟索引）。
+- --excel <路徑> / --latest / --main：不跳視窗指定來源。--main 用單一主檔就地更新（先備份到 備份/）。
+- --no-input：無互動，以 exit code 回報（成功 0 / 失敗 1）。
+- **scan-free**：--main / --tasks 模式預設不走訪 D:\\yuanyu，只依交辦清單 pending_tasks.txt
+  補新項目路徑（F 欄由 Claude 就地填好、主檔持久保存），成功後清空交辦。
+- --reindex：唯一會全碟走訪（build_path_index + fallback_scan）的維護模式，供偶爾補全 F 欄。
 """
 
 import os
@@ -22,6 +30,8 @@ from tkinter import filedialog
 import openpyxl
 from openpyxl.cell.cell import MergedCell
 from openpyxl.styles import Font
+
+import pipeline_common as pc
 
 # ─── 設定區 ──────────────────────────────────────────────────────────────────
 SEARCH_ROOT_DIR   = r"D:\yuanyu"          # 建立路徑索引的根目錄
@@ -652,6 +662,52 @@ def make_backup(excel_path: str) -> str | None:
         return None
 
 
+def sheet_needs_paths(ws) -> bool:
+    """該分頁是否有版本列的 F 欄尚未填路徑（有則需全碟索引，否則可跳過）。"""
+    for row in range(2, ws.max_row + 1):
+        c_cell = ws.cell(row=row, column=3)
+        if isinstance(c_cell, MergedCell) or not c_cell.value:
+            continue
+        if not VERSION_RE.search(str(c_cell.value)):
+            continue
+        f_real = get_real_cell(ws, ws.cell(row=row, column=6))
+        cur = str(f_real.value or "").strip()
+        if not cur or cur.lower() == "none":
+            return True
+    return False
+
+
+def fill_paths_from_tasks(wb, tasks, excludes) -> int:
+    """
+    scan-free：依交辦清單 (分頁, 資料夾路徑) 補該分頁中「C 欄＝資料夾名、F 欄空」的列。
+    完全不走訪 D:\\yuanyu。回傳補入筆數（正常情況 Claude 已在 F 填好 → 回 0）。
+    """
+    filled = 0
+    sheet_map = {s.strip(): s for s in wb.sheetnames}   # 容忍分頁名前後空白
+    for sheet, folder in tasks:
+        if not folder:
+            continue
+        real = sheet_map.get(sheet.strip())
+        if not real or pc.is_excluded(real, excludes):
+            continue
+        ws = wb[real]
+        target_name = os.path.basename(folder.rstrip("\\/"))
+        for row in range(2, ws.max_row + 1):
+            c_cell = ws.cell(row=row, column=3)
+            if isinstance(c_cell, MergedCell) or not c_cell.value:
+                continue
+            c_val = str(c_cell.value).strip()
+            if c_val != target_name and target_name not in c_val:
+                continue
+            f_real = get_real_cell(ws, ws.cell(row=row, column=6))
+            cur = str(f_real.value or "").strip()
+            if cur and cur.lower() != "none":
+                continue
+            f_real.value = folder
+            filled += 1
+    return filled
+
+
 def main(args):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     no_input = args.no_input
@@ -670,52 +726,93 @@ def main(args):
     print(f"  網路磁碟機: {NETWORK_HEX_ROOT}")
     print("=" * 60)
 
+    excludes = pc.load_excludes(script_dir)
+
     # ── 選擇 Excel ────────────────────────────────────────────
+    in_place = False
     if args.excel:
         excel_path = args.excel
         if not os.path.exists(excel_path):
             abort(f"指定的 Excel 不存在: {excel_path}")
         logger.info(f"使用指定檔案: {os.path.basename(excel_path)}")
+    elif args.main:
+        excel_path = pc.resolve_main_excel(script_dir)
+        if excel_path:
+            logger.info(f"使用主檔: {os.path.basename(excel_path)}")
+        in_place = True
     elif args.latest:
         excel_path = find_latest_excel(script_dir)
     else:
         excel_path = select_excel()
 
     if not excel_path:
-        abort("未選擇檔案，程式中止。")
+        abort("未選到 Excel（主檔/最新檔不存在或未選擇），程式中止。")
 
-    # ── 建立副本（原檔完全不動）──────────────────────────────
-    backup_path = make_backup(excel_path)
-    if not backup_path:
-        abort("備份失敗，程式中止。")
+    # ── 建立備份 + 決定工作檔 ─────────────────────────────────
+    if in_place:
+        # 單一主檔模式：先備份到 備份/，再就地更新主檔
+        if not pc.backup_excel(excel_path):
+            abort("備份主檔失敗，程式中止。")
+        work_path = excel_path
+    else:
+        # 手動 / 指定檔 / --latest：另存 _副本，原檔不動
+        work_path = make_backup(excel_path)
+        if not work_path:
+            abort("備份失敗，程式中止。")
 
-    # ── 第一階段：建立路徑索引 ────────────────────────────────
-    folder_idx, file_idx = build_path_index(SEARCH_ROOT_DIR)
+    # ── 第一階段：填 Excel F 欄 ───────────────────────────────
+    #   --reindex        → 全碟索引重建（維護模式，走訪 D:\yuanyu）
+    #   --main/--tasks   → scan-free：只依交辦補新項目，完全不走訪 D:\yuanyu
+    #   手動（對話框等）  → 沿用原本 all-or-nothing（需要時才全碟索引）
+    tasks       = pc.load_tasks(script_dir, args.tasks)
+    task_driven = bool(args.main or args.tasks)
 
-    # ── 第一階段（續）：填 Excel F 欄 ────────────────────────
     wb = None
     try:
-        is_xlsm = backup_path.lower().endswith(".xlsm")
-        wb = openpyxl.load_workbook(backup_path, keep_vba=is_xlsm)
+        is_xlsm = work_path.lower().endswith(".xlsm")
+        wb = openpyxl.load_workbook(work_path, keep_vba=is_xlsm)
 
-        total_updated = 0
-        for sheet_name in wb.sheetnames:
-            if sheet_name in EXCLUDE_SHEET_NAMES or sheet_name == "Index":
-                continue
-            ws = wb[sheet_name]
-            n  = fill_excel_paths(ws, folder_idx, file_idx, sheet_name)
-            total_updated += n
+        proc_sheets = [
+            s for s in wb.sheetnames
+            if s not in EXCLUDE_SHEET_NAMES and s != "Index"
+            and not pc.is_excluded(s, excludes)
+        ]
 
-        logger.info(f"路徑填寫完成，共更新 {total_updated} 筆")
+        if args.reindex:
+            logger.info("--reindex：全碟索引重建（維護模式）")
+            folder_idx, file_idx = build_path_index(SEARCH_ROOT_DIR)
+            total_updated = 0
+            for sheet_name in proc_sheets:
+                total_updated += fill_excel_paths(
+                    wb[sheet_name], folder_idx, file_idx, sheet_name)
+            logger.info(f"路徑填寫完成，共更新 {total_updated} 筆")
+        elif task_driven:
+            filled = fill_paths_from_tasks(wb, tasks, excludes)
+            logger.info(f"scan-free：未走訪 D:\\yuanyu，依交辦補入 {filled} 筆路徑")
+        else:
+            if any(sheet_needs_paths(wb[s]) for s in proc_sheets):
+                folder_idx, file_idx = build_path_index(SEARCH_ROOT_DIR)
+                total_updated = 0
+                for sheet_name in proc_sheets:
+                    total_updated += fill_excel_paths(
+                        wb[sheet_name], folder_idx, file_idx, sheet_name)
+                logger.info(f"路徑填寫完成，共更新 {total_updated} 筆")
+            else:
+                logger.info("F 欄皆已填妥，略過全碟索引掃描")
+
         rebuild_index_sheet(wb)
 
         # ── 第二階段：讀取 Excel 韌體條目 ─────────────────────
         entries  = read_excel_entries(wb)
+        entries  = [e for e in entries
+                    if not pc.is_excluded(e["excel_sheet"], excludes)]
         ng_raw   = read_ng_reasons(wb)
 
-        wb.save(backup_path)
-        logger.info(f"副本已儲存: {os.path.basename(backup_path)}")
+        wb.save(work_path)
+        logger.info(f"已儲存: {os.path.basename(work_path)}")
 
+    except SystemExit:
+        raise
     except Exception as e:
         logger.error(f"處理 Excel 時發生錯誤: {e}")
         import traceback
@@ -750,9 +847,13 @@ def main(args):
 
         entry["ng_reasons"] = build_ng_reasons_for_entry(entry, ng_raw)
 
-    # ── 第五階段：Fallback 掃描 ───────────────────────────────
-    known_versions = {e["version_date"] for e in entries}
-    extra_entries  = fallback_scan(known_versions)
+    # ── 第五階段：Fallback 掃描（scan-free 下略過，不走 D:\yuanyu\OEM）──
+    if task_driven and not args.reindex:
+        logger.info("scan-free：略過 fallback_scan（不探索 D:\\yuanyu\\OEM）")
+        extra_entries = []
+    else:
+        known_versions = {e["version_date"] for e in entries}
+        extra_entries  = fallback_scan(known_versions)
 
     for entry in extra_entries:
         folder = entry["folder_path"].replace("/", "\\")
@@ -790,6 +891,10 @@ def main(args):
     copy_excel_to_network(excel_path)
     copy_json_to_network(json_path)
 
+    # ── 成功完成：歸檔並清空交辦清單 ─────────────────────────
+    if args.main or args.tasks:
+        pc.archive_and_clear_tasks(script_dir, args.tasks)
+
     # ── 提示未填寫的 NG_Reasons ───────────────────────────────
     empty_ng = [
         r for r in ng_raw if not r["desc"]
@@ -805,7 +910,7 @@ def main(args):
 
     print("\n" + "=" * 60)
     print("  所有作業完成！")
-    print(f"  副本: {os.path.basename(backup_path)}")
+    print(f"  檔案: {os.path.basename(work_path)}")
     print(f"  JSON: {OUTPUT_JSON}")
     print("=" * 60)
     if no_input:
@@ -816,8 +921,14 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="韌體資料庫掃描工具")
     parser.add_argument("--excel", help="直接指定 Excel 路徑，不跳視窗")
+    parser.add_argument("--main", action="store_true",
+                        help="使用單一主檔 Software Change Log.xlsx（就地更新，先備份到 備份/）")
     parser.add_argument("--latest", action="store_true",
                         help="自動選用本資料夾中最新的 Software Change Log_*.xlsx")
+    parser.add_argument("--tasks", metavar="FILE",
+                        help="指定交辦清單檔（預設 pending_tasks.txt）；成功後歸檔清空")
+    parser.add_argument("--reindex", action="store_true",
+                        help="維護模式：全碟走訪 D:\\yuanyu 重建索引並補收 fallback（唯一會全掃的模式）")
     parser.add_argument("--no-input", action="store_true",
                         help="無互動模式，不執行任何 input()，以 exit code 回報成敗")
     main(parser.parse_args())

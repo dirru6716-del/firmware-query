@@ -6,8 +6,11 @@
 # 本機工具程式
 scanner.py
 ng_prepare.py
+pipeline_common.py
 update_records_20260319.py
 update_and_push.bat
+update_and_push_scheduled.bat
+update_scheduled.log
 測試資料查詢工具_規劃.md
 
 # Python 暫存
@@ -19,6 +22,12 @@ __pycache__/
 # 備份副本（時間戳記命名）
 *_副本_*.xlsx
 *_NG準備副本_*.xlsx
+
+# 自動化流程本機檔（含 Excel 備份，絕不上傳）
+備份/
+pending_tasks.txt
+exclude_sheets.txt
+pending_tasks_done.txt
 
 # 編輯器
 .vscode/

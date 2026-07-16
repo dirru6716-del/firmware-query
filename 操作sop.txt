@@ -1,14 +1,38 @@
-操作sop
-1. 執行 ng_prepare.py
-   → 選擇 Software Change Log Excel
-   → 產出 _AI 副本（NG_Reasons 已插入新步驟範本列）
+操作SOP（2026-07 自動化版）
 
-2. 用 skill 開啟副本，填寫 NG 項目
-   （不良描述、ERR意義、ERR對照等欄位）
-   填完後將副本內容存回原始 Excel（或另存為原檔名覆蓋）
+前提：全流程只維護單一主檔 Software Change Log.xlsx（不再另存副本）。
+      每次寫入前程式會自動備份到 備份/ 子資料夾。
 
-3. 執行 update_and_push.bat
-   → 選擇已填好的原始 Excel
-   → 掃描路徑、複製 hex、產出 firmware_db.json、push 到 GitHub
+0. 使用者做好新 hex → 把「hex 路徑 + 修改內容」給 Claude(Cowork)。
+
+1. Claude 填主檔（就地更新）
+   → 依 CLAUDE.md「軟體資訊填寫規則」填入對應分頁（A~F 欄，F 路徑一定要填）
+   → 同步在 pending_tasks.txt append 一行：分頁名<TAB>韌體資料夾路徑
+
+2. NG 準備（可排程、無視窗）
+   → python ng_prepare.py --main --no-input
+   → 只處理 pending_tasks.txt 內分頁；F 欄已填就不會全碟掃描
+   → 對「新步驟」在 NG_Reasons 插入空白列
+   → Claude 讀 Func.C 分析，把不良描述/ERR 意義/對照填好
+   → 給使用者摘要，人工確認（NG 會公開給產線，必經把關）
+
+3. 產出並發布
+   → 雙擊 update_and_push.bat（= python scanner.py --main --no-input + git push）
+   → 重建 firmware_db.json、複製 hex/Excel 到網路磁碟機、push 到 GitHub
+   → 成功後自動清空 pending_tasks.txt
+   （排程用無視窗版：update_and_push_scheduled.bat，無 pause、寫 log）
 
 4. 完成，GitHub Pages 約 1~2 分鐘後更新
+   https://dirru6716-del.github.io/firmware-query/
+
+── 維護用 ──────────────────────────────────────────────
+* scan-free 說明：scanner.py --main / --tasks 預設「不走訪 D:\yuanyu」，
+    只用交辦清單 + 主檔已存的 F 欄路徑（Claude 填 Excel 時 F 欄一定要填）。
+    正常自動化執行完全不會再全碟掃描（解決每次重掃 2 萬多目錄的問題）。
+* 全碟重建 F 欄（少用/維護，例如大量補舊資料）：
+    python scanner.py --reindex --no-input   （唯一會走訪 D:\yuanyu 的模式）
+* NG_Reasons 去重：
+    python ng_prepare.py --dedup-report     （只檢視）
+    python ng_prepare.py --dedup-apply      （收斂；先自動備份，不刪人工內容）
+* 排除不再維護的分頁：exclude_sheets.txt 每行一個分頁名或關鍵字
+* 手動模式（不帶參數）：python ng_prepare.py / python scanner.py 仍會跳原本視窗
