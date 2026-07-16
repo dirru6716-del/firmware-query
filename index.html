@@ -196,7 +196,7 @@
   <div id="notFound" class="not-found hidden"></div>
 
 <script>
-const PAGE_VERSION = "2026_0715_1527";
+const PAGE_VERSION = "2026_0716_0820";
 document.getElementById('pageVersion').textContent = ' v' + PAGE_VERSION;
 
 // ─── 資料庫 ─────────────────────────────────────────────────────────────────
@@ -237,9 +237,19 @@ function query() {
     return;
   }
 
-  const header  = fields[0].trim();
-  const serial  = fields[1].trim();
-  const overall = fields[2].trim();
+  // ── 支援兩種格式：MES 正式（DATA 開頭）/ MES 模擬器（無 DATA 檔頭）──
+  const hasHeader = fields[0].trim().toUpperCase() === 'DATA';
+  let serial, overall;
+  if (hasHeader) {
+    // MES 正式：DATA[0], 序號[1], OK/NG[2], 不良代碼[3], ...
+    serial  = fields[1].trim();
+    overall = fields[2].trim();
+  } else {
+    // MES 模擬器：無檔頭，不良代碼跑到 [0]；序號不顯示
+    serial  = '-';
+    const badCode = fields[0].trim();
+    overall = /^0+$/.test(badCode) ? 'OK' : 'NG';   // 全零(0000)=pass，其他=NG
+  }
 
   // ── 自動偵測版本日期：掃描所有欄位，不寫死索引 ──────────────
   //const VER_RE = /(\d{8}_\d{4})/;
