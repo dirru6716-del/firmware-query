@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15T15:09:42",
+  "generated": "2026-07-16T16:03:45",
   "version": "2026_0715_1330",
   "firmware": [
     {
@@ -20,13 +20,13 @@
       "message_count": null
     },
     {
-      "version_date": "20260715_1400",
-      "folder_name": "A_BOREAD_TESTER_V40_46K80_20260715_1400_0Xbc9b.hex",
-      "folder_path": "D:/yuanyu/321/GL11_GL12/M/A_BOREAD_TESTER_V40_46K80_20260715_1400",
-      "excel_sheet": "321-GL12 A",
-      "case_name": "EL-321W-GL12 A板",
-      "change_notes": "背光亮的定義從220以上，下修到200以上",
-      "release_date": "2026-07-15",
+      "version_date": "20260716_1100",
+      "folder_name": "A_BOREAD_TESTER_V40_46K80_20260716_1100_0x38a9.hex",
+      "folder_path": "D:/yuanyu/321/GL0KC/A_Board/M/A_BOREAD_TESTER_V40_46K80_20260716_1100",
+      "excel_sheet": "321W-GL0KC A",
+      "case_name": "EL-321W-GL0KC A板",
+      "change_notes": "初版建立",
+      "release_date": "2026-07-16",
       "test_results": [
         "short_circuit_current_result",
         "Cant_Power_On_result",
@@ -106,7 +106,7 @@
         },
         "3": {
           "step_name": "ACC_ON_current_check_STEP",
-          "description": "ACC ON 後電流連續 25 次超出正常範圍",
+          "description": "ACC ON 後電流連續 25 次超出正常範圍（80~1000；本版下限由 100 改 80）",
           "err_data": [
             {
               "n": 1,
@@ -237,6 +237,23 @@
       "time_count": 1,
       "data_count": 11,
       "message_count": 1
+    },
+    {
+      "version_date": "20260715_1400",
+      "folder_name": "A_BOREAD_TESTER_V40_46K80_20260715_1400_0Xbc9b.hex",
+      "folder_path": "D:/yuanyu/321/GL11_GL12/M/A_BOREAD_TESTER_V40_46K80_20260715_1400",
+      "excel_sheet": "321-GL12 A",
+      "case_name": "EL-321W-GL12 A板",
+      "change_notes": "背光亮的定義從220以上，下修到200以上",
+      "release_date": "2026-07-15",
+      "test_results": [],
+      "test_data": [],
+      "test_steps": {},
+      "ng_reasons": {},
+      "result_count": null,
+      "time_count": 0,
+      "data_count": null,
+      "message_count": null
     },
     {
       "version_date": "20260715_0911",
