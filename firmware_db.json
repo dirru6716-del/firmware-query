@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-20T16:02:54",
+  "generated": "2026-07-21T16:03:35",
   "version": "2026_0715_1330",
   "firmware": [
     {
@@ -18,6 +18,572 @@
       "time_count": 0,
       "data_count": null,
       "message_count": null
+    },
+    {
+      "version_date": "20260721_1349",
+      "folder_name": "A_BOREAD_TESTER_V40_46K80_20260721_1349_0x7b5d.hex",
+      "folder_path": "D:/yuanyu/321/GL06C/A_board/M/A_BOREAD_TESTER_V40_46K80_20260721_1349",
+      "excel_sheet": "321-GL06C A",
+      "case_name": "EL-321W-GL06C A板",
+      "change_notes": "修改背光低於1900會無法測試通過的問題。",
+      "release_date": "2026-07-21",
+      "test_results": [
+        "short_circuit_current_result",
+        "Cant_Power_On_result",
+        "MOTOR_TEST_result",
+        "LS_TEST_result",
+        "MOTOR_Reverse_TEST_result",
+        "BL_TEST_result",
+        "TFT_CHECK_result",
+        "voltage_test_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 6,
+          "name": "Voltage_DATA_1"
+        },
+        {
+          "idx": 7,
+          "name": "Voltage_DATA_2"
+        },
+        {
+          "idx": 8,
+          "name": "fan_V_DATA"
+        },
+        {
+          "idx": 9,
+          "name": "fan_current_DATA"
+        },
+        {
+          "idx": 10,
+          "name": "FAN_REtry_DATA"
+        },
+        {
+          "idx": 11,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 12,
+          "name": "TESTER_NAME_DATA"
+        },
+        {
+          "idx": 13,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 14,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 15,
+          "name": "ERR_DATA_2"
+        }
+      ],
+      "test_steps": {
+        "1": "short_ciruit_current_check_STEP",
+        "2": "ACC_ON_current_check_STEP",
+        "3": "ACC_ON_Current_err_STEP",
+        "4": "MOTOR_TEST_STEP_1",
+        "5": "MOTOR_TEST_STEP_2",
+        "6": "MOTOR_TEST_STEP_3",
+        "7": "MOTOR_TEST_STEP_4",
+        "8": "BL_TEST_STEP_1",
+        "9": "BL_TEST_STEP_2",
+        "10": "ERR_PIN_Check_STEP",
+        "12": "TFT_CHECK_STEP",
+        "15": "Fan_TEST_Func_STEP",
+        "20": "Voltage_CHECK_STEP",
+        "21": "SLEEP_TEST_STEP_1",
+        "22": "SLEEP_TEST_STEP_2",
+        "24": "PASS_STEP",
+        "25": "Floating_PIN_CHECK_FUNC_STEP"
+      },
+      "ng_reasons": {
+        "1": {
+          "step_name": "short_ciruit_current_check_STEP",
+          "description": "上電後電流連續 5 次 AD ≥ 8000（約 800mA）判定短路",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流AD值(current_flag)",
+              "map": {}
+            }
+          ]
+        },
+        "2": {
+          "step_name": "ACC_ON_current_check_STEP",
+          "description": "ACC ON 後電流連續 25 次超出正常範圍（100~1000）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流AD值(current_flag)",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "連續NG次數(達25觸發)",
+              "map": {}
+            }
+          ]
+        },
+        "3": {
+          "step_name": "ACC_ON_Current_err_STEP",
+          "description": "【保留步驟】本程式未引用此代碼（Define.h 有定義、Func.C 未使用）",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達測試第1段失敗（編碼器位置變化未達 5，馬達未動作或逾時）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "起始編碼器位置值(Encoder_Temporary_flag[0])",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "當下編碼器位置值(Encoder_Temporary_flag[1])",
+              "map": {}
+            }
+          ]
+        },
+        "5": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達測試第2段失敗（編碼器位置變化未達標或逾時）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "起始編碼器位置值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "當下編碼器位置值",
+              "map": {}
+            }
+          ]
+        },
+        "6": {
+          "step_name": "MOTOR_TEST_STEP_3",
+          "description": "馬達測試第3段失敗（編碼器位置異常或逾時）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "起始編碼器位置值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "當下編碼器位置值",
+              "map": {}
+            }
+          ]
+        },
+        "7": {
+          "step_name": "MOTOR_TEST_STEP_4",
+          "description": "馬達測試第4段失敗（編碼器位置異常或逾時）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "起始編碼器位置值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "當下編碼器位置值",
+              "map": {}
+            }
+          ]
+        },
+        "8": {
+          "step_name": "BL_TEST_STEP_1",
+          "description": "背光在設定時間內未亮起（亮度AD值未超過門檻 250）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "亮度AD值(lux_judge_data[0])",
+              "map": {}
+            }
+          ]
+        },
+        "9": {
+          "step_name": "BL_TEST_STEP_2",
+          "description": "背光亮起紀錄步驟（亮度AD值 > 250 時記錄，無獨立 NG 觸發）",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "ERR_PIN_Check_STEP",
+          "description": "ERR 腳位被觸發（ERR_PIN_CTRL == 1）判定功能異常",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "當下計時器值(Real_Time)",
+              "map": {}
+            }
+          ]
+        },
+        "12": {
+          "step_name": "TFT_CHECK_STEP",
+          "description": "等待 TFT 目視確認超時（Real_Time 達 SET_TIME=3000 前未按確認鍵）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "當下計時器值(Real_Time)",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "設定超時上限(SET_TIME=3000)",
+              "map": {}
+            }
+          ]
+        },
+        "15": {
+          "step_name": "Fan_TEST_Func_STEP",
+          "description": "【保留步驟】本版未啟用（Func.C 中相關程式已註解）",
+          "err_data": []
+        },
+        "20": {
+          "step_name": "Voltage_CHECK_STEP",
+          "description": "電壓檢查失敗（某通道 AD 值超出該通道上下限）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "通道索引 x",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "該通道AD量測值(Slave_MCU_AD_DATA[x])",
+              "map": {}
+            }
+          ]
+        },
+        "21": {
+          "step_name": "SLEEP_TEST_STEP_1",
+          "description": "40 秒內無法進入睡眠（睡眠電流未達標準）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "睡眠電流AD值(Current_AD_FLAG[0])",
+              "map": {}
+            }
+          ]
+        },
+        "22": {
+          "step_name": "SLEEP_TEST_STEP_2",
+          "description": "暗電流量測失敗（80 秒超時或暗電流超出規格；正常需 ≤ 200，約 20uA）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "暗電流AD值(Current_AD_FLAG[2])",
+              "map": {}
+            }
+          ]
+        },
+        "25": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "浮接腳位檢查失敗（某腳位 AD 值異常）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "該腳位AD量測值(Slave_MCU_AD_DATA[x])",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "腳位索引 x",
+              "map": {}
+            }
+          ]
+        }
+      },
+      "result_count": 10,
+      "time_count": 1,
+      "data_count": 16,
+      "message_count": 1
+    },
+    {
+      "version_date": "20260720_1026",
+      "folder_name": "A_BOREAD_TESTER_V40_46K80_20260720_1026_0x6900.hex",
+      "folder_path": "D:/yuanyu/321/GL0S/A_board/M/A_BOREAD_TESTER_V40_46K80_20260720_1026",
+      "excel_sheet": "321-GL0S A",
+      "case_name": "EL-321W-GL0S A板",
+      "change_notes": "1.修改馬達反轉時的NG判斷邏輯，包含溢位和timeout時間的延長。",
+      "release_date": "2026-07-20",
+      "test_results": [
+        "short_circuit_current_result",
+        "Cant_Power_On_result",
+        "MOTOR_TEST_result",
+        "LS_TEST_result",
+        "MOTOR_Reverse_TEST_result",
+        "BL_TEST_result",
+        "TFT_CHECK_result",
+        "voltage_test_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 6,
+          "name": "Voltage_DATA_1"
+        },
+        {
+          "idx": 7,
+          "name": "Voltage_DATA_2"
+        },
+        {
+          "idx": 8,
+          "name": "fan_V_DATA"
+        },
+        {
+          "idx": 9,
+          "name": "fan_current_DATA"
+        },
+        {
+          "idx": 10,
+          "name": "FAN_REtry_DATA"
+        },
+        {
+          "idx": 11,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 12,
+          "name": "TESTER_NAME_DATA"
+        },
+        {
+          "idx": 13,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 14,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 15,
+          "name": "ERR_DATA_2"
+        }
+      ],
+      "test_steps": {
+        "1": "short_ciruit_current_check_STEP",
+        "2": "ACC_ON_current_check_STEP",
+        "3": "ACC_ON_Current_err_STEP",
+        "4": "MOTOR_TEST_STEP_1",
+        "5": "MOTOR_TEST_STEP_2",
+        "6": "LS_TEST_STEP_1",
+        "7": "MOTOR_TEST_STEP_3",
+        "8": "BL_TEST_STEP_1",
+        "9": "BL_TEST_STEP_2",
+        "10": "ERR_PIN_Check_STEP",
+        "12": "TFT_CHECK_STEP",
+        "15": "Fan_TEST_Func_STEP",
+        "20": "Voltage_CHECK_STEP",
+        "21": "SLEEP_TEST_STEP_1",
+        "22": "SLEEP_TEST_STEP_2",
+        "24": "PASS_STEP",
+        "25": "Floating_PIN_CHECK_FUNC_STEP"
+      },
+      "ng_reasons": {
+        "1": {
+          "step_name": "short_ciruit_current_check_STEP",
+          "description": "短路電流測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流量測值（×0.1 mA）",
+              "map": {}
+            }
+          ]
+        },
+        "2": {
+          "step_name": "ACC_ON_current_check_STEP",
+          "description": "ACC ON 電流值超出規格範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流量測值（×0.1 mA）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "NG 累計次數",
+              "map": {}
+            }
+          ]
+        },
+        "3": {
+          "step_name": "ACC_ON_Current_err_STEP",
+          "description": "ACC ON 電流異常（過高或過低），測試中止",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達功能測試（第一段）失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "正轉編碼器量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "反轉編碼器量測值",
+              "map": {}
+            }
+          ]
+        },
+        "5": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達功能測試（第二段）失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "正轉編碼器量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "反轉編碼器量測值",
+              "map": {}
+            }
+          ]
+        },
+        "6": {
+          "step_name": "LS_TEST_STEP_1",
+          "description": "光感測器測試（第一段）失敗",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "MOTOR_TEST_STEP_3",
+          "description": "馬達功能測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "正轉編碼器量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "反轉編碼器量測值",
+              "map": {}
+            }
+          ]
+        },
+        "8": {
+          "step_name": "BL_TEST_STEP_1",
+          "description": "背光亮度測試（第一段）失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "光感測器 Lux 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "9": {
+          "step_name": "BL_TEST_STEP_2",
+          "description": "背光亮度測試（第二段）失敗",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "ERR_PIN_Check_STEP",
+          "description": "功能檢查失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "12": {
+          "step_name": "TFT_CHECK_STEP",
+          "description": "TFT 顯示器通訊檢查失敗（逾時）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "測試時間上限（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "15": {
+          "step_name": "Fan_TEST_Func_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "20": {
+          "step_name": "Voltage_CHECK_STEP",
+          "description": "電源電壓量測超出容許範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "失敗的量測通道索引（0=1.8V, 1=3.3V, 2=5V, 3=1.1V）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "對應通道的 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "21": {
+          "step_name": "SLEEP_TEST_STEP_1",
+          "description": "省電模式（Sleep）電流測試（第一段）失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第一次）",
+              "map": {}
+            }
+          ]
+        },
+        "22": {
+          "step_name": "SLEEP_TEST_STEP_2",
+          "description": "省電模式（Sleep）電流測試（第二段）失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "省電電流 AD 量測值（第三次）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
+        "25": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "功能檢查失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "對應通道的 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "失敗的量測通道索引（0=1.8V, 1=3.3V, 2=5V, 3=1.1V）",
+              "map": {}
+            }
+          ]
+        }
+      },
+      "result_count": 10,
+      "time_count": 1,
+      "data_count": 16,
+      "message_count": 1
     },
     {
       "version_date": "20260716_1100",
@@ -1094,6 +1660,454 @@
       "message_count": 3
     },
     {
+      "version_date": "20260714_1152",
+      "folder_name": "Main_BOARD_TESTER_20260714_1146_withdelay_0x75c0.hex",
+      "folder_path": "D:/yuanyu/732/HAC1/9U_ECU/Main_BOARD_TESTER_20260714_1146_withdelay",
+      "excel_sheet": "732-HAC1 ECU成品",
+      "case_name": "732-HAC1 ECU成品",
+      "change_notes": "1.新增 AVM 指令重送機制（等待逾時後重送一次指令）。\n2.功能 NG 不良代碼由 035F 改為 036F。\n※版本不一致注意：資料夾/hex 檔名為 20260714_1146，但韌體實際送出的版本字串為 2026_0714_1152（見 Source_file/MAIN.C 的 ver_data）。產線測試資料與網頁查詢皆以 20260714_1152 為準。",
+      "release_date": "2026-07-14",
+      "test_results": [
+        "OS_TEST_result",
+        "POWER_ON_Test_result",
+        "show_test_result",
+        "COMM_test_result",
+        "BACK_test_result",
+        "BACK_OUT_result",
+        "CAR_RIGHT_TEST_result",
+        "CAR_LEFT_TEST_result",
+        "SPEED_TEST_result",
+        "Voltage_TEST_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 2,
+          "name": "sys_on_current_DATA"
+        },
+        {
+          "idx": 4,
+          "name": "CAR_BACK_OUT_V_DATA"
+        },
+        {
+          "idx": 5,
+          "name": "Voltage_DATA_1"
+        },
+        {
+          "idx": 6,
+          "name": "Voltage_DATA_2"
+        },
+        {
+          "idx": 7,
+          "name": "Voltage_DATA_3"
+        },
+        {
+          "idx": 8,
+          "name": "Dynmic_current_DATA"
+        },
+        {
+          "idx": 9,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 10,
+          "name": "TESTER_NAME_DATA"
+        },
+        {
+          "idx": 11,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 12,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 13,
+          "name": "ERR_DATA_2"
+        }
+      ],
+      "test_steps": {
+        "1": "OS_TEST_1_1_STEP",
+        "2": "OS_TEST_1_2_STEP",
+        "3": "OS_TEST_1_3_STEP",
+        "4": "OS_TEST_1_4_STEP",
+        "5": "CHACK_Current_1_1_STEP",
+        "6": "CHACK_Current_2_1_STEP",
+        "7": "CHACK_Current_2_2_STEP",
+        "8": "CCD_POWER_CHECK_STEP",
+        "9": "OS_TEST_2_1_STEP",
+        "10": "OS_TEST_2_2_STEP",
+        "11": "Check_Screen_STEP",
+        "12": "UR_NG_STEP",
+        "13": "CAR_RIGHT_TEST_1_STEP",
+        "14": "CAR_RIGHT_TEST_2_STEP",
+        "15": "CAR_LEFT_TEST_STEP",
+        "16": "CAR_BACK_TEST_1_STEP",
+        "17": "CAR_BACK_TEST_2_STEP",
+        "18": "SPEED_TEST_STEP",
+        "19": "MCU_VER_STEP",
+        "20": "SOC_VER_STEP",
+        "21": "voltage_test_STEP",
+        "22": "Work_current_test_STEP",
+        "23": "SLEEP_MODE_1_STEP",
+        "24": "SLEEP_MODE_2_STEP",
+        "25": "SLEEP_MODE_3_STEP",
+        "26": "PASS_STEP",
+        "27": "Forced_NG_STEP",
+        "28": "Hide_SOC_VER_STEP",
+        "29": "OS_TEST_2_3_STEP",
+        "32": "ECU_RESET_STEP"
+      },
+      "ng_reasons": {
+        "1": {
+          "step_name": "OS_TEST_1_1_STEP",
+          "description": "OS 自動測試 1-1 電壓超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "2": {
+          "step_name": "OS_TEST_1_2_STEP",
+          "description": "OS 自動測試 1-2 電壓超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "3": {
+          "step_name": "OS_TEST_1_3_STEP",
+          "description": "OS 自動測試 1-3 失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "固定值 1（代表測試失敗）",
+              "map": {
+                "1": "測試失敗"
+              }
+            }
+          ]
+        },
+        "4": {
+          "step_name": "OS_TEST_1_4_STEP",
+          "description": "OS 自動測試 1-4 失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "5": {
+          "step_name": "CHACK_Current_1_1_STEP",
+          "description": "工作電流（第一段）超出規格範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "6": {
+          "step_name": "CHACK_Current_2_1_STEP",
+          "description": "工作電流（第二段第一項）超出規格範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "7": {
+          "step_name": "CHACK_Current_2_2_STEP",
+          "description": "工作電流（第二段第二項）超出規格範圍",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "NG 發生時間戳（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "8": {
+          "step_name": "CCD_POWER_CHECK_STEP",
+          "description": "CCD 電源多路電壓量測失敗，某通道 AD 值超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "失敗的量測通道索引（0=1.8V, 1=3.3V, 2=5V, 3=1.1V）",
+              "map": {}
+            }
+          ]
+        },
+        "9": {
+          "step_name": "OS_TEST_2_1_STEP",
+          "description": "OS 自動測試 2-1 電壓超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "10": {
+          "step_name": "OS_TEST_2_2_STEP",
+          "description": "OS 自動測試 2-2 電壓超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流/電壓 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "11": {
+          "step_name": "Check_Screen_STEP",
+          "description": "畫面確認（人員判定NG）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "通訊步驟旗標",
+              "map": {
+                "0": "未完成",
+                "1": "第一筆",
+                "2": "第二筆",
+                "3": "第三筆"
+              }
+            }
+          ]
+        },
+        "12": {
+          "step_name": "UR_NG_STEP",
+          "description": "通訊失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "通訊步驟旗標",
+              "map": {
+                "0": "未完成",
+                "1": "第一筆",
+                "2": "第二筆",
+                "3": "第三筆"
+              }
+            }
+          ]
+        },
+        "13": {
+          "step_name": "CAR_RIGHT_TEST_1_STEP",
+          "description": "右觸發失敗（自動測）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "14": {
+          "step_name": "CAR_RIGHT_TEST_2_STEP",
+          "description": "右觸發失敗（人員判定）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "15": {
+          "step_name": "CAR_LEFT_TEST_STEP",
+          "description": "左觸發/賦歸失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "16": {
+          "step_name": "CAR_BACK_TEST_1_STEP",
+          "description": "後觸發失敗（自動測）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "時間量測值（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "17": {
+          "step_name": "CAR_BACK_TEST_2_STEP",
+          "description": "後觸發失敗（人員判定）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "CAR_BACK_OUT_V 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "18": {
+          "step_name": "SPEED_TEST_STEP",
+          "description": "車速訊號測試失敗",
+          "err_data": []
+        },
+        "19": {
+          "step_name": "MCU_VER_STEP",
+          "description": "MCU 版本確認失敗",
+          "err_data": []
+        },
+        "20": {
+          "step_name": "SOC_VER_STEP",
+          "description": "SOC 版本確認失敗",
+          "err_data": []
+        },
+        "21": {
+          "step_name": "voltage_test_STEP",
+          "description": "電源電壓測試失敗",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "失敗的量測通道索引（0=1.8V, 1=3.3V, 2=5V, 3=1.1V）",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "math_buff 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "22": {
+          "step_name": "Work_current_test_STEP",
+          "description": "工作電流量測（僅記錄，無獨立 NG 判斷）",
+          "err_data": []
+        },
+        "23": {
+          "step_name": "SLEEP_MODE_1_STEP",
+          "description": "無法進入休眠模式，電流超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "工作電流 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "休眠等待時間（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "24": {
+          "step_name": "SLEEP_MODE_2_STEP",
+          "description": "POWER KEEP 失效",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "工作電流 AD 量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "休眠等待時間（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "25": {
+          "step_name": "SLEEP_MODE_3_STEP",
+          "description": "暗電流超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "暗電流 AD 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "26": {
+          "step_name": "PASS_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
+        "27": {
+          "step_name": "Forced_NG_STEP",
+          "description": "強制 NG 步驟（工程用，強制記錄不良）",
+          "err_data": []
+        },
+        "28": {
+          "step_name": "Hide_SOC_VER_STEP",
+          "description": "隱藏版 SOC 版本確認失敗",
+          "err_data": []
+        },
+        "29": {
+          "step_name": "OS_TEST_2_3_STEP",
+          "description": "OS 自動測試 2-3 電壓超出規格",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "A_PIN29_READ 量測值",
+              "map": {}
+            }
+          ]
+        },
+        "32": {
+          "step_name": "ECU_RESET_STEP",
+          "description": "ECU 重置測試超時",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "實際測試時間（ms）",
+              "map": {}
+            }
+          ]
+        },
+        "30": {
+          "step_name": "UI_SW_TEST_STEP1",
+          "description": "UI 按鍵測試逾時（等待按下超過 3000 或等待釋放超過 300 仍未動作）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "當下計時器值(Real_time)",
+              "map": {}
+            }
+          ]
+        },
+        "31": {
+          "step_name": "UI_SW_TEST_STEP2",
+          "description": "【保留步驟】程式未引用此代碼（Define.h 有定義、Func.C 未使用）",
+          "err_data": []
+        }
+      },
+      "result_count": 12,
+      "time_count": 1,
+      "data_count": 14,
+      "message_count": 3
+    },
+    {
       "version_date": "20260709_0830",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20260709_0830_0xbcb8.hex",
       "folder_path": "D:/yuanyu/321/GL11_GL12/M/A_BOREAD_TESTER_V40_46K80_20260709_0830",
@@ -2037,6 +3051,22 @@
               "map": {}
             }
           ]
+        },
+        "30": {
+          "step_name": "UI_SW_TEST_STEP1",
+          "description": "UI 按鍵測試逾時（等待按下超過 3000 或等待釋放超過 300 仍未動作）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "當下計時器值(Real_time)",
+              "map": {}
+            }
+          ]
+        },
+        "31": {
+          "step_name": "UI_SW_TEST_STEP2",
+          "description": "【保留步驟】程式未引用此代碼（Define.h 有定義、Func.C 未使用）",
+          "err_data": []
         }
       },
       "result_count": 12,
@@ -10072,6 +11102,22 @@
               "map": {}
             }
           ]
+        },
+        "30": {
+          "step_name": "UI_SW_TEST_STEP1",
+          "description": "UI 按鍵測試逾時（等待按下超過 3000 或等待釋放超過 300 仍未動作）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "當下計時器值(Real_time)",
+              "map": {}
+            }
+          ]
+        },
+        "31": {
+          "step_name": "UI_SW_TEST_STEP2",
+          "description": "【保留步驟】程式未引用此代碼（Define.h 有定義、Func.C 未使用）",
+          "err_data": []
         }
       },
       "result_count": 12,
