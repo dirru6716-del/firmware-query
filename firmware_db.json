@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-03T16:03:27",
+  "generated": "2026-08-07T16:03:36",
   "version": "2026_0715_1330",
   "firmware": [
     {
@@ -20,8 +20,231 @@
       "message_count": null
     },
     {
+      "version_date": "20260805_1356",
+      "folder_name": "A_BOREAD_TESTER_V40_46K80_20260805_1356_0x47ee.hex",
+      "folder_path": "D:/yuanyu/321/GL0JC/A_Board/M/A_BOREAD_TESTER_V40_46K80_20260805_1356",
+      "excel_sheet": "321-GL0JC A",
+      "case_name": "EL-321W-GL0JC A板",
+      "change_notes": "初版建立",
+      "release_date": "2026-08-05",
+      "test_results": [
+        "short_circuit_current_result",
+        "Cant_Power_On_result",
+        "MOTOR_TEST_result",
+        "LS_TEST_result",
+        "MOTOR_Reverse_TEST_result",
+        "BL_TEST_result",
+        "TFT_CHECK_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 6,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 7,
+          "name": "TESTER_NAME_DATA"
+        },
+        {
+          "idx": 8,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 9,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 10,
+          "name": "ERR_DATA_2"
+        }
+      ],
+      "test_steps": {
+        "1": "short_ciruit_current_check_STEP",
+        "2": "Floating_PIN_CHECK_FUNC_STEP",
+        "3": "ACC_ON_current_check_STEP",
+        "4": "ACC_ON_Current_err_STEP",
+        "5": "MOTOR_TEST_STEP_1",
+        "6": "MOTOR_TEST_STEP_2",
+        "7": "LS_TEST_STEP_1",
+        "8": "MOTOR_TEST_STEP_3",
+        "9": "BL_TEST_STEP_1",
+        "10": "BL_TEST_STEP_2",
+        "11": "TFT_CHECK_STEP",
+        "12": "SLEEP_TEST_STEP_1",
+        "13": "SLEEP_TEST_STEP_2",
+        "14": "PASS_STEP"
+      },
+      "ng_reasons": {
+        "1": {
+          "step_name": "short_ciruit_current_check_STEP",
+          "description": "上電後電流連續5次AD≥8000（約800mA）判定短路",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流AD值（短路量測值，正常運作範圍80~1000，約8~100mA）",
+              "map": {}
+            }
+          ]
+        },
+        "2": {
+          "step_name": "Floating_PIN_CHECK_FUNC_STEP",
+          "description": "GND/浮接腳位量測值超出範圍，重測3次仍NG",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "該腳位AD量測值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "失敗腳位索引",
+              "map": {
+                "0": "通道0（5V經30K/20K分壓，正常1800~2200）",
+                "1": "通道1（5V經20K/30K分壓，正常2700~3300）",
+                "2": "GND通道（PIN6，正常0~50）"
+              }
+            }
+          ]
+        },
+        "3": {
+          "step_name": "ACC_ON_current_check_STEP",
+          "description": "ACC ON後電流AD值連續25次超出正常範圍（80~1000）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流AD值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "累計不良次數",
+              "map": {}
+            }
+          ]
+        },
+        "4": {
+          "step_name": "ACC_ON_Current_err_STEP",
+          "description": "【保留步驟】Define.h 有定義、Func.C 未引用此代碼，本版未啟用",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "MOTOR_TEST_STEP_1",
+          "description": "馬達正轉方向錯誤，重啟一次後仍反向",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "編碼器起始值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "編碼器結束值",
+              "map": {}
+            }
+          ]
+        },
+        "6": {
+          "step_name": "MOTOR_TEST_STEP_2",
+          "description": "馬達正轉15s內無動作逾時（背光感測AD未達800）；本步驟代碼亦用於反轉測試開始的通過標記，無獨立NG",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "編碼器起始值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "編碼器結束值",
+              "map": {}
+            }
+          ]
+        },
+        "7": {
+          "step_name": "LS_TEST_STEP_1",
+          "description": "微動開關觸發階段標記，無獨立NG記錄",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "MOTOR_TEST_STEP_3",
+          "description": "馬達反轉逾時（已修正無號數相減溢位防護）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "編碼器起始值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "編碼器結束值",
+              "map": {}
+            }
+          ]
+        },
+        "9": {
+          "step_name": "BL_TEST_STEP_1",
+          "description": "背光在時限內未達點亮閥值（AD>1000）逾時",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "背光感測AD值",
+              "map": {}
+            }
+          ]
+        },
+        "10": {
+          "step_name": "BL_TEST_STEP_2",
+          "description": "背光亮起紀錄步驟，無獨立NG觸發",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "TFT_CHECK_STEP",
+          "description": "等待KEY1按下超時（超過設定時限3000+100）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "逾時當下時間值",
+              "map": {}
+            },
+            {
+              "n": 2,
+              "meaning": "設定時限（固定3000）",
+              "map": {}
+            }
+          ]
+        },
+        "12": {
+          "step_name": "SLEEP_TEST_STEP_1",
+          "description": "40秒內待機電流未降到≤90mA以下",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "電流值（mA）",
+              "map": {}
+            }
+          ]
+        },
+        "13": {
+          "step_name": "SLEEP_TEST_STEP_2",
+          "description": "暗電流量測：80秒超時未穩定，或最終暗電流≥1000（約100uA）",
+          "err_data": [
+            {
+              "n": 1,
+              "meaning": "暗電流值（約uA）",
+              "map": {}
+            }
+          ]
+        }
+      },
+      "result_count": 9,
+      "time_count": 1,
+      "data_count": 11,
+      "message_count": 1
+    },
+    {
       "version_date": "20260803_1513",
-      "folder_name": "Main_BOARD_TESTER_20260803_1513_0xdb96.hex",
+      "folder_name": "Main_BOARD_TESTER_20260803_1513_0xdb98.hex",
       "folder_path": "D:/yuanyu/732/HAC1/9Q_ECU/Main_BOARD_TESTER_20260803_1513",
       "excel_sheet": "732-HAC1 ECU半成品",
       "case_name": "732-HAC1 ECU半成品",
