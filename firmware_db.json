@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-18T16:03:29",
+  "generated": "2026-08-20T16:04:03",
   "version": "2026_0715_1330",
   "firmware": [
     {
@@ -25275,6 +25275,182 @@
       "message_count": 3
     },
     {
+      "version_date": "20250618_1045",
+      "folder_name": "esp32test__TY02_TESTER_V40_46K80_20250819_1138_exCanTEST_0x236b.hex",
+      "folder_path": "D:/yuanyu/OEM/TY02_BT_CTRL/TY02_TESTER_V40_46K80/esp32test__TY02_TESTER_V40_46K80_20250819_1138_exCanTEST",
+      "excel_sheet": "OEM-TY02",
+      "case_name": "OEM-TY02",
+      "change_notes": "1.適用料號進版。",
+      "release_date": "2025-08-19",
+      "test_results": [
+        "D3_TEST_result",
+        "POWER_TEST_result",
+        "CAN_BUS_TEST_result",
+        "BT_TEST_result",
+        "SLEEP_ENTER_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 1,
+          "name": "PIN2_forward_V_DATA"
+        },
+        {
+          "idx": 2,
+          "name": "PIN3_forward_V_DATA"
+        },
+        {
+          "idx": 3,
+          "name": "PIN3_reverse_bias_V_DATA"
+        },
+        {
+          "idx": 4,
+          "name": "Dynamic_current_1_DATA"
+        },
+        {
+          "idx": 5,
+          "name": "MCU_3V3_DATA"
+        },
+        {
+          "idx": 8,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 9,
+          "name": "TESTER_NAME_DATA"
+        },
+        {
+          "idx": 10,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 11,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 12,
+          "name": "ERR_DATA_2"
+        }
+      ],
+      "test_steps": {
+        "30": "Wait_start_STEP",
+        "0": "PIN3_TO_PIN2_TEST_STEP",
+        "1": "PIN2_TO_PIN3_TEST_STEP",
+        "2": "Dynamic_current_TEST_STEP",
+        "3": "Program_START_TEST_STEP",
+        "4": "WAIT_Program_TEST_STEP",
+        "5": "Program_END_TEST_STEP",
+        "6": "Can_ID_500_TEST_STEP",
+        "10": "SLEEP_Current_TEST_STEP_2",
+        "11": "SLEEP_Current_TEST_STEP_3",
+        "7": "ASK_BLE_VER_STEP",
+        "8": "ASK_MCU_VER_STEP",
+        "9": "SLEEP_Current_TEST_STEP_1",
+        "12": "Sleep_test_STEP",
+        "40": "esp_bt_scan_STEP",
+        "80": "PASS_TEST_STEP",
+        "90": "NG_MODE2_TEST_STEP",
+        "91": "NG_MODE_TEST_STEP",
+        "100": "End_TEST_STEP"
+      },
+      "ng_reasons": {
+        "30": {
+          "step_name": "Wait_start_STEP",
+          "description": "Wait_start_STEP 測試失敗",
+          "err_data": []
+        },
+        "1": {
+          "step_name": "PIN2_TO_PIN3_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "2": {
+          "step_name": "Dynamic_current_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "3": {
+          "step_name": "Program_START_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "4": {
+          "step_name": "WAIT_Program_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "5": {
+          "step_name": "Program_END_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "6": {
+          "step_name": "Can_ID_500_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "10": {
+          "step_name": "SLEEP_Current_TEST_STEP_2",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "11": {
+          "step_name": "SLEEP_Current_TEST_STEP_3",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "7": {
+          "step_name": "ASK_BLE_VER_STEP",
+          "description": "ASK_BLE_VER_STEP 測試失敗",
+          "err_data": []
+        },
+        "8": {
+          "step_name": "ASK_MCU_VER_STEP",
+          "description": "ASK_MCU_VER_STEP 測試失敗",
+          "err_data": []
+        },
+        "9": {
+          "step_name": "SLEEP_Current_TEST_STEP_1",
+          "description": "省電電流超出規格範圍",
+          "err_data": []
+        },
+        "12": {
+          "step_name": "Sleep_test_STEP",
+          "description": "省電模式（Sleep）測試失敗",
+          "err_data": []
+        },
+        "80": {
+          "step_name": "PASS_TEST_STEP",
+          "description": "通過標記步驟，無 NG 記錄",
+          "err_data": []
+        },
+        "90": {
+          "step_name": "NG_MODE2_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "91": {
+          "step_name": "NG_MODE_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "100": {
+          "step_name": "End_TEST_STEP",
+          "description": "測試失敗",
+          "err_data": []
+        },
+        "40": {
+          "step_name": "esp_bt_scan_STEP",
+          "description": "esp_bt_scan_STEP 測試失敗",
+          "err_data": []
+        }
+      },
+      "result_count": 6,
+      "time_count": 2,
+      "data_count": 13,
+      "message_count": 3
+    },
+    {
       "version_date": "20250613_1023",
       "folder_name": "A_BOREAD_TESTER_V40_46K80_20250613_1023_0XAFA7.hex",
       "folder_path": "D:/yuanyu/321/GL0EA/A_Board/M/A_BOREAD_TESTER_V40_46K80_20250613_1023",
@@ -49379,6 +49555,75 @@
         "27": "motor_test_STEP",
         "28": "brightness_test_STEP",
         "29": "Other_test_STEP"
+      },
+      "ng_reasons": {},
+      "result_count": 2,
+      "time_count": 1,
+      "data_count": 9,
+      "message_count": 1
+    },
+    {
+      "version_date": "20231110_0825",
+      "folder_name": "TS-CAN_BOARD_CTRL_MES_26k80_20260820_0943_0xf0e1.hex",
+      "folder_path": "D:/yuanyu/321/321A-TA01/9U_Function_Test/TS-CAN_BOARD_CTRL_MES_26k80_20260820_0943",
+      "excel_sheet": "321A-TA01成品檢具",
+      "case_name": "321A-TA01 成品",
+      "change_notes": "新增sw4 粉塵異常",
+      "release_date": "2026-08-20",
+      "test_results": [
+        "POWER_ON_result",
+        "SLEEP_TEST_result"
+      ],
+      "test_data": [
+        {
+          "idx": 1,
+          "name": "Correction_value_DATA"
+        },
+        {
+          "idx": 2,
+          "name": "Analyte_power_on_count_DATA"
+        },
+        {
+          "idx": 3,
+          "name": "MAX_Current_DATA"
+        },
+        {
+          "idx": 4,
+          "name": "SLEEP_Current_DATA"
+        },
+        {
+          "idx": 5,
+          "name": "TEST_STEP_DATA"
+        },
+        {
+          "idx": 6,
+          "name": "ERR_DATA_1"
+        },
+        {
+          "idx": 7,
+          "name": "ERR_DATA_2"
+        },
+        {
+          "idx": 8,
+          "name": "retry_DATA"
+        }
+      ],
+      "test_steps": {
+        "6": "Wait_system_power_on_STEP",
+        "7": "IGN_TEST_STEP_1",
+        "8": "IGN_TEST_STEP_2",
+        "9": "IGN_TEST_STEP_3",
+        "20": "USB_TEST_STEP",
+        "21": "TFT_initial_VIEW_CHECK_STEP",
+        "22": "SW_CHECK_STEP",
+        "23": "HW_CHECK_STEP",
+        "24": "E_CHECK_STEP",
+        "25": "Factory_settings_STEP",
+        "26": "can_bus_send_many_time_STEP",
+        "27": "motor_test_STEP",
+        "28": "brightness_test_STEP",
+        "29": "Other_test_STEP",
+        "30": "dust_test_STEP"
       },
       "ng_reasons": {},
       "result_count": 2,
